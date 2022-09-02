@@ -64,6 +64,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  overflow: hidden;
 }
 
 .carousel {
@@ -71,6 +72,8 @@
   flex-direction: column;
   width: 100%;
   align-items: flex-end;
+  height: 900px;
+
   gap: 15px;
   animation: slide 30s linear infinite;
   img {
@@ -84,6 +87,6 @@
     transform: translate3d(0, 0, 0);
   }
   100% {
-    transform: translate3d(0, 1500px, 0);
+    transform: translate3d(0, -1500px, 0);
   }
 }
