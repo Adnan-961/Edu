@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+*{
+    font-family: "Raleway", sans-serif;
+}
 .navbar__container{
     background-color: #081f51;
     height: 75px;
-    padding: 5px 20px;
+    padding: 0px 20px;
 }
 
 .nav__container{
@@ -26,4 +30,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 18px;
+    span{
+    cursor: pointer;
+
+    }
+    button{
+        background-color: #fff;
+        color:#081f51;
+        width: 100px;
+        height: 30px;
+    font-size: 15px;
+    padding: 2px 15px;
+    border:none;
+    border-radius: 40px;
+    cursor: pointer;
+
+
+    }
 }
