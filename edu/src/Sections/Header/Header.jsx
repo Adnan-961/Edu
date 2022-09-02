@@ -21,7 +21,7 @@ export default function Header() {
       </div>
       <div className="header__carousel">
         <div className="carousel">
-        <img src={carousel_img} alt="carousel img" />
+          <img src={carousel_img} alt="carousel img" />
           <img src={carousel_img} alt="carousel img" />
           <img src={carousel_img} alt="carousel img" />
           <img src={carousel_img} alt="carousel img" />
