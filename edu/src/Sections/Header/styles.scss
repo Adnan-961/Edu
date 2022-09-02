@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+.header__container {
+  padding: 150px 15px;
+  display: flex;
+  background-color: #f1f1f1;
+  min-height: 100vh;
+}
+.header__phrase{
+    width: 660px;
+    padding-left: 150px;
+}
+
+.heading{
+    color:#0071DC;
+    font-size: 20px;
+    font-weight: bold;
+}
+.subtitle{
+    font-size: 80px;
+    color:#081F51;
+    font-weight: bold;
+    margin:0;
+}
