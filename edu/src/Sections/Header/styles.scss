@@ -1,40 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Roboto&&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Roboto&&display=swap");
 .header__container {
-  padding: 150px 15px;
+  padding-top: 150px;
   display: flex;
   background-color: #f1f1f1;
   min-height: 100vh;
+  width: 100%;
+  display: flex;
+//   justify-content: center;
 }
-.header__phrase{
-    width: 660px;
-    padding-left: 150px;
-    button{
-        width: 215px;
-        height: 60px;
-        background-color: #0071DC;
-        border:none;
-        color:#fff;
-        font-size: 16px;
-        text-transform: uppercase;
-        font-family: "Ralway", sans-serif;
-        font-weight: 600;
-    }
-}
-
-.heading{
-    color:#0071DC;
-    font-size: 20px;
+.header__phrase {
+  width: 660px;
+  padding-right: 15px;
+  padding-left: 150px;
+  padding-top: 50px;
+  button {
+    padding: 0 20px;
+    width: 215px;
+    height: 60px;
+    background-color: #0071dc;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: "Ralway", sans-serif;
     font-weight: 600;
-}
-.subtitle{
-    font-size: 80px;
-    color:#081F51;
-    font-weight: 700;
-    margin:0;
+  }
 }
 
-.header__text{
-    color: #354C68;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+.heading {
+  color: #0071dc;
+  font-size: 20px;
+  font-weight: 600;
+}
+.subtitle {
+  font-size: 80px;
+  color: #081f51;
+  font-weight: 700;
+  margin: 0;
+}
+
+.header__text {
+  color: #354c68;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+.header__img{
+    padding-top: 50px;
+}
+.header__carousel{
+    padding: 0 15px;
+    padding-left: 50px;
+    max-height: 620px;
+    overflow: hidden;
+    width: 360px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.carousel{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-end;
+    gap: 15px;
+    img{
+        max-width: 250px;
+        max-height: 450px;
+    }
 }

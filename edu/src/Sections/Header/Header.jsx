@@ -1,5 +1,9 @@
 import React from "react";
 import "./styles.scss";
+import header_img from "../../assets/images/header_img.jpg";
+import carousel_img from "../../assets/images/carousel.jpg";
+import team from "../../assets/images/team.jpg";
+
 export default function Header() {
   return (
     <div className="header__container">
@@ -12,6 +16,17 @@ export default function Header() {
         </p>
 
         <button>learn more</button>
+      </div>
+      <div className="header__img">
+        <img src={team} alt="header_img" />
+      </div>
+      <div className="header__carousel">
+        <div className="carousel">
+            <img src={carousel_img} alt="carousel img" />
+            <img src={carousel_img} alt="carousel img" />
+            <img src={carousel_img} alt="carousel img" />
+
+        </div>
       </div>
     </div>
   );
