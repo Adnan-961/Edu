@@ -5,11 +5,10 @@ export default function Navbar() {
   return (
     <div className="navbar__container">
       <div className="nav__container">
-        <img src={Logo} alt="Logo" />
-
+        <img src={Logo} alt="Logo" className="logo"/>
         <div className="navigation">
           <div className="nav__link">
-            <span>Become a student</span>
+            <input type={"text"} placeholder="What would you like to learn?"/>
           </div>
           <div className="nav__link">
             <span>Become a Teacher</span>

@@ -1,5 +1,42 @@
-.course{
+.Course_Container{
     width: 369px;
     height: 477px;
-    background-color: #f1f1f1;
+    color: #081f51;
+    background-color: white;
+    img{
+        width: 100%;
+        height: 50%;
+        object-fit: cover;
+    }
+    .row2{
+        padding: 0 40px;
+        .row2_header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            img{
+                width:40%;
+            }
+         
+            
+        }
+        h3{
+            font-size: 20px;
+        }
+        .teacherRow{
+            border-top: 1px solid rgba($color: #000000, $alpha: .1);
+            padding-top: 20px;
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            img{
+                width: 55px;
+                border-radius: 50%;
+            }
+            .price{
+                color: rgb(17, 212, 251);
+            }
+        }
+    }
+
 }

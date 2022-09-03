@@ -2,51 +2,51 @@
 .our__courses__section {
   display: flex;
   flex-direction: column;
+  background-color: #f1f1f1;
   // align-items: center;
   min-height: 100vh;
   font-family: "Raleway", sans-serif;
   // padding: 100px 5%;
-}
-.courses__title {
-  color: #0071dc;
-  font-family: "Raleway", sans-serif;
-  font-weight: 600;
-  font-size: 18px;
-  margin: 0 auto;
-  padding-top: 80px;
-}
-.courses__subtitle {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 50px;
-  color: #081f51;
-  padding-top: 25px;
-  padding-bottom: 50px;
-  margin: 0 auto;
-}
-
-.courses__categories {
-  display: flex;
-  justify-content: space-between;
-  width: 70%;
-  margin: 0 auto;
-  padding: 10px 40px;
-
-  span {
-    color: #354c68;
-    font-weight: 700;
-    padding: 0 30px;
+  .courses__title {
+    color: #0071dc;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 0 auto;
+    padding-top: 80px;
   }
-  border-bottom: solid rgba(0, 0, 0, 0.2) 1px;
-}
+  .courses__subtitle {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    color: #081f51;
+    padding-top: 25px;
+    padding-bottom: 50px;
+    margin: 0 auto;
+  }
 
-.courses {
-  display: grid;
-  gap: 30px;
-  padding-top: 30px;
-  // margin-left: -70px;
-  // margin-right: 1000px;
+  .courses__categories {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 10px 40px;
 
-  grid-template-columns: repeat(3,370px);
-  justify-content: center;
+    span {
+      color: #354c68;
+      font-weight: 700;
+      padding: 0 30px;
+    }
+    border-bottom: solid rgba(0, 0, 0, 0.2) 1px;
+  }
+
+  .courses {
+    display: grid;
+    gap: 30px;
+    padding-top: 30px;
+    // margin-left: -70px;
+    // margin-right: 1000px;
+
+    grid-template-columns: repeat(3,370px);
+    justify-content: center;
+  }
 }
