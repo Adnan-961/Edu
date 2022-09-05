@@ -79,8 +79,8 @@ export default function CategoryCards() {
           "Life Style",
           "ART & CRAFT",
           "HEALTH & WELLNESS",
-        ].map((cat) => (
-          <span>{cat}</span>
+        ].map((cat,i) => (
+          <span key={i}>{cat}</span>
         ))}
       </div>
 
@@ -94,6 +94,7 @@ export default function CategoryCards() {
               teacher={course.teacher}
               teacherName={course.teacherName}
               teacherPrice={course.teacherPrice}
+              key={i}
             />
           )
         }

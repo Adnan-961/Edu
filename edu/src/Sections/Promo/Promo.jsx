@@ -18,8 +18,8 @@ export default function Promo() {
         <h1>Download Our Mobile App Start Learning Today</h1>
 
         <div className="features">
-          {data.map((feat) => (
-            <div className="feature">
+          {data.map((feat,i) => (
+            <div key={i} className="feature">
               <img src={check} alt="check" />
               <span>{feat.name}</span>
             </div>
