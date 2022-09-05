@@ -6,6 +6,7 @@ import OurCourses from "./Sections/OurCourses/OurCourses";
 import Categories from "./Sections/Categories/Categories";
 import Promo from "./Sections/Promo/Promo";
 import WhereToLearn from "./Sections/WhereToLearn/WhereToLearn";
+import Footer from "./Sections/Footer/Footer";
 function App() {
   return (
     <div className="App">
@@ -13,8 +14,9 @@ function App() {
       <Header />
       <OurCourses />
       <Promo />
-      <Categories />
       <WhereToLearn />
+      <Categories />
+      <Footer />
     </div>
   );
 }

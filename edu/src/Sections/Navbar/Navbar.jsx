@@ -14,9 +14,6 @@ export default function Navbar() {
             <span>Become a Teacher</span>
           </div>
           <div className="nav__link">
-            <span>Login</span>
-          </div>
-          <div className="nav__link">
             <button>Login</button>
           </div>
         </div>

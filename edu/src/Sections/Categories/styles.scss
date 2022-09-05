@@ -7,9 +7,25 @@
     .category__title{
         color:rgb(17, 212, 251);
     }
-}
-.categories_container{
-    // margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
+    .category_card{
+        width: auto;
+        height: 60px;
+        padding: 0px 20px;
+        background-color: rgba(0,0,0,.07);
+        border-radius: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        margin: 10px 5px;
+        color: #081f51;
+        cursor: pointer;
+        text-align: center;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 6px;
+    }
+    .categories_container{
+        // margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
 }

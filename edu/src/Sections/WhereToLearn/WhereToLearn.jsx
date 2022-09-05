@@ -1,12 +1,49 @@
 import React from "react";
 import "./styles.scss";
 import machine from "../../assets/images/machine-learning.png"
+import three from "../../assets/images/three.png"
+
+let data = [
+  {
+    title: "Home",
+    icon: machine,
+    description: "Do you want your teacher to come to your house for music lessons? Well, wherever you are, we’ll be coming for you.",
+  },
+  {
+    title: "Location",
+    icon: machine,
+    description: "Want to take music lessons at your favorite place? We are on the go! Yes, that’s right! The choice of place is all yours, whether in a cafe, in a library, in our studio or wherever you want, we’ll be there for you."
+  },
+  {
+    title: "Virtual",
+    icon: machine,
+    description: "Are you up to learning music lessons in our virtual classrooms? Then, meet your music teacher online through your smartphones, laptop or computer."
+  }
+]
+
+const LearningContainer = ({title, description, icon}) => {
+  return(
+    <div className="learn_feature">
+      <img src={icon} alt="machine" className="learn_img"/>
+      <div className="learn_text">
+        <div cp lassName="title">
+          <h3>{title}</h3>
+          <p>
+            {description}
+          </p>
+        </div>
+      </div>
+  </div>
+  )
+}
+
 export default function WhereToLearn() {
+  let description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur dolorum magnam, facilis sunt ipsam officia"
   return (
     <div className="learn__container">
       <div className="learn__about">
         <h3>About Company</h3>
-        <h1>We Are Truly Best For Distance Learning</h1>
+        <h1>Where Do You Want To Learn</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam
           voluptatum vel ullam culpa alias quas nesciunt maiores itaque
@@ -14,41 +51,15 @@ export default function WhereToLearn() {
           unde?
         </p>
         <div className="learn__features">
-          <div className="learn_feature">
-            <div className="learn_img"><img src={machine} alt="machine" width={"50px"} /></div>
-            <div className="learn_text">
-              <div cp lassName="title">
-                <h3>App-Based Learning</h3>{" "}
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Consectetur dolorum magnam, facilis sunt ipsam officia
-                </p>
-              </div>
-            </div>
+          {
+            data && data.map((item, i) =>  <LearningContainer  title={item.title} description={item.description} icon={item.icon} key={i}/>)
+          }
+          <div className="learn__contact_btn">
+            <span>More About</span>
           </div>
-{/*                                                                              */}
-          <div className="learn_feature">
-            <div className="learn_img"><img src={machine} alt="machine" width={"50px"} /></div>
-            <div className="learn_text">
-              <div cp lassName="title">
-                <h3>App-Based Learning</h3>{" "}
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Consectetur dolorum magnam, facilis sunt ipsam officia
-                </p>
-              </div>
-            </div>
-          </div>
-{/*                                                                               */}
-
-            <div className="learn__contact">
-                <div className="btn">
-                    <span>More About</span>
-                </div>
-            </div>
         </div>
       </div>
-      <div className="learn__images"></div>
+        <img alt="" src={three} className="learn__images"/>
     </div>
   );
 }
