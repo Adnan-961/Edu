@@ -2,6 +2,8 @@ import React from "react";
 import "./styles.scss";
 import img from "../../assets/images/kids.jpg";
 import google from "../../assets/images/google-play.png";
+import apple from "../../assets/images/apple.png";
+
 import check from "../../assets/images/check.png";
 import { data } from "./data";
 export default function Promo() {
@@ -32,7 +34,13 @@ export default function Promo() {
               <span>GOOGLE PLAY</span>
             </div>
           </div>
-          <div className="apple"></div>
+          <div className="apple">
+            <img src={apple} alt="googleplay" />
+            <div className="title">
+              <p>AVAILABLE ON THE</p>
+              <span>Apple Store</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -12,7 +12,7 @@
   .app__container {
     width: 600px;
     height: 470px;
-    background-color: #dedede;
+    background-color: #f4f4f4;
     margin-top: 80px;
     padding: 100px;
     z-index: 2;
@@ -47,7 +47,9 @@
   }
   .promo__btns {
     margin-top: 40px;
-    .google {
+    display: flex;
+    gap: 20px;
+    .google,.apple {
       width: 150px;
       height: 60px;
       background-color: rgb(255, 255, 255);
