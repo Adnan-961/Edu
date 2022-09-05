@@ -3,6 +3,7 @@
 .learn__container {
   padding: 100px 50px;
   min-height: 100vh;
+  width: 100%;
   .learn__about {
     width: 50%;
     h3 {
@@ -25,7 +26,19 @@
         .learn_feature{
             display: flex;
             gap: 10px;
+            padding:10px 0 ;
+            .learn_text{
+                width: 50%;
+            }
         }
     }
-  }
+.learn__contact{
+    .btn{
+        width: 100px;
+        padding:10px 30px ;
+        color:#fff;
+        background-color: rgb(47, 47, 230);
+    }
+}  
+}
 }
