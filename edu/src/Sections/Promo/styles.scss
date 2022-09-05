@@ -1,0 +1,27 @@
+.promo_container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 100px 0;
+  .promo_img {
+    width: 700px;
+    min-height: 670px;
+    z-index: 1;
+  }
+
+  .app__container {
+    width: 600px;
+    height: 470px;
+    background-color: #dedede;
+    margin-top: 80px;
+    padding: 100px;
+    z-index: 2;
+    margin-left: -270px;
+    h3 {
+      color: rgb(17, 212, 251);
+    }
+    h1 {
+      color: #081f51;
+    }
+  }
+}
