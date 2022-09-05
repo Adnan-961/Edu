@@ -26,11 +26,11 @@
     .features {
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-between;
       .feature {
         display: flex;
         align-items: center;
-        min-width: 50%;
-        max-width: 50%;
+        width: 50%;
         padding: 10px 0;
 
         img {
@@ -41,6 +41,36 @@
           font-weight: 600;
           font-size: 18px;
           padding: 0 20px;
+        }
+      }
+    }
+  }
+  .promo__btns {
+    margin-top: 40px;
+    .google {
+      width: 150px;
+      height: 60px;
+      background-color: rgb(255, 255, 255);
+      display: flex;
+      align-items: center;
+      padding: 0 30px;
+      border-radius: 6px;
+      cursor: pointer;
+
+      img {
+        width: 30px;
+      }
+      .title {
+        padding-left: 10px;
+
+        p {
+          font-weight: 500;
+          margin: 0;
+          font-size: 10px;
+        }
+        span {
+          font-weight: bold;
+          padding-top: 3px;
         }
       }
     }
