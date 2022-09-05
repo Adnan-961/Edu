@@ -21,5 +21,11 @@
         font-family: "Raleway", sans-serif;
         color: rgv(0,0,0,0.1);
     }
+    .learn__features{
+        .learn_feature{
+            display: flex;
+            gap: 10px;
+        }
+    }
   }
 }
