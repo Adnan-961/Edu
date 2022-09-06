@@ -107,8 +107,6 @@ const NewsLetter = () => {
   return (
     <div className="Logos_Container">
       <div className="title">
-        {/* <img alt="reboost logo" src={whiteLogo} className="Footer_logo" /> */}
-        {/* <h1>Let's connect</h1> */}
         <h2>
           Sign Up For <br /> a Newsletter
         </h2>

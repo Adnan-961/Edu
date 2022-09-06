@@ -4,6 +4,9 @@ import machine from "../../assets/images/machine-learning.png";
 import three from "../../assets/images/three.png";
 import Location from "../../assets/images/location.png";
 import globe from "../../assets/images/globe.png";
+import team1 from "../../assets/images/person1.jpg";
+import team2 from "../../assets/images/person2.jpg";
+import team3 from "../../assets/images/team3.jpg";
 
 let data = [
   {
@@ -69,7 +72,11 @@ export default function WhereToLearn() {
           </div>
         </div>
       </div>
-      <img alt="" src={three} className="learn__images" />
+      <div className="learn__images__container">
+        <img alt="three" src={team1} className="learn__images img1" />
+        <img alt="three" src={team2} className="learn__images img2" />
+        <img alt="three" src={team3} className="learn__images img3" />
+      </div>
     </div>
   );
 }
