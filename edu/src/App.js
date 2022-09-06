@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Header />
-      {/* <OurCourses /> */}
+      <OurCourses />
       <Promo />
       <WhereToLearn />
       <Categories />

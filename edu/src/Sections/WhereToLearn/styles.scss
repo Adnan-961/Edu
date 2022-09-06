@@ -3,35 +3,41 @@
 .learn__container {
   display: flex;
   color: #081f51;
-  padding: 100px;
   min-height: 100vh;
   width: 100%;
+  max-width: 100vw;
   .learn__images__container {
     position: relative;
+
     .learn__images {
       position: absolute;
       &:first-child {
         width: 300px;
         height: 400px;
-        left: 300px;
+        // left: 300px;
+        right: -500px;
       }
       &:nth-child(2) {
         width: 350px;
         height: 380px;
-        left: 60px;
+        // left: 60px;
+        right: -300px;
         top: 180px;
         z-index: 2;
       }
       &:nth-child(3) {
         width: 480px;
-        left: 220px;
-        top: 440px;
+        // left: 220px;
+        right: -550px;
+        top: 430px;
         z-index: 3;
       }
     }
   }
   .learn__about {
     max-width: 45vw;
+    padding: 80px;
+
     .learn_img {
       width: 50px;
       height: 50px;
