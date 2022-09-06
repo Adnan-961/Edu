@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import "./Footer.styles.scss";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -11,56 +11,55 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import whiteLogo from "../../assets/images/logo.png";
 import SendIcon from "@mui/icons-material/Send";
 
+let footerCols = [
+  {
+    name: "Company",
+    links: ["Home", "Career", "Contact Us"],
+    href: ["/#", "/#", "/#"],
+  },
+  {
+    name: "Students",
+    links: ["How It Works", "Safety", "Lesson Fees", "Packages/Combo"],
+    href: ["/#", "/#", "/#", "/#"],
+  },
+  {
+    name: "Teachers",
+    links: ["How It Works", "Background Check", "Sign Up", "Packages/Combo"],
+    href: ["/#", "/#", "/#", "/#"],
+  },
+  {
+    name: "Apps",
+    links: ["Play Store", "App Store"],
+    href: ["/#", "/#"],
+  },
+];
 const Column1 = () => {
   return (
-    <div className="Footer_Column">
-      <h1>Explore</h1>
-      <a>Home</a>
-      <a
-        to="/#about"
-        scroll={(el) =>
-          el.scrollIntoView({ behavior: "auto", block: "center" })
-        }
-      >
-        About Us
-      </a>
-      <a
-        to="/#team"
-        scroll={(el) =>
-          el.scrollIntoView({
-            behavior: "auto",
-            block: "center",
-          })
-        }
-      >
-        Become A Teacher
-      </a>
-      <a to="/#contact">Become A Student</a>
-      <a
-        to="/#newsletter"
-        scroll={(el) =>
-          el.scrollIntoView({
-            behavior: "auto",
-            block: "center",
-          })
-        }
-      >
-        Subscribe
-      </a>
-    </div>
+    <>
+      {footerCols.map((col) => (
+        <div className="Footer_Column">
+          <h1>{col.name}</h1>
+          {col.links.map((link, i) => (
+            <a href={col.href[i]}>{link}</a>
+          ))}
+        </div>
+      ))}
+    </>
   );
 };
 
-const Logos = () => {
+const NewsLetter = () => {
   return (
     <div className="Logos_Container">
       <div className="title">
         {/* <img alt="reboost logo" src={whiteLogo} className="Footer_logo" /> */}
         {/* <h1>Let's connect</h1> */}
-        <h1>
-          Sign Up For a <br /> Newsletter
-        </h1>
-        <p>Offers, promotion and educational contents</p>
+        <h2>
+          Sign Up For <br /> a Newsletter
+        </h2>
+        <p>
+          Offers, promotion and educational <br /> contents
+        </p>
       </div>
 
       <div className="send__email">
@@ -102,13 +101,12 @@ const Logos = () => {
     </div>
   );
 };
-const Links = ["About", "Portfolio", "Contact", "Templates"];
 
 function InfoSection() {
   return (
     <div className="Info_Container" id="footer">
-      <Logos />
-      <Column1 title="Info" links={Links} />
+      <NewsLetter />
+      <Column1 />
       <div className="ContactInfo">
         <h1>Contact Info</h1>
         <a href="mailto:bowlakemusic@gmail.com" id="Contact">
