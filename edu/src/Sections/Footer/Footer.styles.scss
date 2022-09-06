@@ -1,174 +1,220 @@
-.Info_Container{
-    display: flex;
-    min-height: 200px;
-    justify-content: space-between;
-    a{
-        color: #081f51;
-        cursor: pointer;
-    }
-    .ContactInfo{
-        display: flex;
-        flex-direction: column;
-        a{
-            display: flex;
-            align-items: center;
-            .icons{
-                margin-right: 30px;
-            }
-        }
-    }
-}
-.Footer_Container{
-    background-color: #F7F7F7;
+.Info_Container {
+  display: flex;
+  min-height: 200px;
+  justify-content: space-between;
+  a {
     color: #081f51;
-    display: flex;
-    flex-direction: column;
-    padding: 140px 10vw 0;
-  
-    
-    h1{
-        margin: 0px;
-        margin-bottom: 20px;
-    }
-    a{
-        text-decoration: none;
-    }
-}
-.Footer_Copyright{
-    padding-top: 100px;
-    padding-bottom: 60px;
-    align-self: center;
-}
-.Footer_Column{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    h1{
-        height: 25px;
-    }
-}
-
-.Footer_icons{
-    margin-right: 20px;
-    transform: scale(1.3);
     cursor: pointer;
-}
-a:hover{
-    color: rgb(21, 151, 229);
-
-}
-.Footer_icons:hover{
-    color: rgb(21, 151, 229);
-    animation: grow;
-    animation-duration: 1s;
-    animation-direction: alternate;
-}
-.Logos_Container{
+  }
+  .ContactInfo {
     display: flex;
     flex-direction: column;
-    .title{
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
-        h1{
-            margin: 0;
-        }
-        .Footer_logo{
-            height: 50px;
-        }
+    a {
+      display: flex;
+      align-items: center;
+      .icons {
+        margin-right: 30px;
+      }
     }
+  }
 }
-.Logos{
+.Footer_Container {
+  background-color: #f7f7f7;
+  color: #081f51;
+  display: flex;
+  flex-direction: column;
+  padding: 140px 10vw 0;
+
+  h1 {
+    margin: 0px;
+    margin-bottom: 20px;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+.Footer_Copyright {
+  padding-top: 100px;
+  padding-bottom: 60px;
+  align-self: center;
+}
+.Footer_Column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  h1 {
+    height: 25px;
+  }
+}
+
+.Footer_icons {
+  margin-right: 20px;
+  transform: scale(1.3);
+  cursor: pointer;
+}
+a:hover {
+  color: rgb(21, 151, 229);
+}
+.Footer_icons:hover {
+  color: rgb(21, 151, 229);
+  animation: grow;
+  animation-duration: 1s;
+  animation-direction: alternate;
+}
+.Logos_Container {
+  display: flex;
+  flex-direction: column;
+  .title {
     display: flex;
-    justify-content: flex-start;
-  
+    flex-direction: column;
+    // align-items: center;
+    font-size: 18px;
+    font-family: "Raleway", sans-serif;
+    margin-bottom: 20px;
+    h1 {
+      margin: 0;
+    }
+    .Footer_logo {
+      height: 50px;
+    }
+  }
+  .send__email {
+    background-color: #fff !important;
+    width: 260px;
+    height: 60px;
+    // padding: 15px 35px;
+    border-radius: 3px;
+    border: #11d4fb solid 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+
+    input {
+      width: 90%;
+      height: 90%;
+      border: none;
+      color: rgb(0, 0, 0, 0.5);
+      outline: none;
+    }
+    .email__icon {
+      min-height: 100%;
+      width: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all ease 0.3s;
+      background-color: #11d4fb;
+      border: #11d4fb solid 1px;
+      border-right: none;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #fff;
+        border: #11d4fb solid 1px;
+        border-right: none;
+      }
+      &:hover > svg {
+        color: #11d4fb;
+        transition: all ease 0.3s;
+      }
+      svg {
+        cursor: pointer;
+        transition: all ease 0.3s;
+        color: #fff;
+      }
+    }
+  }
+}
+.Logos {
+  display: flex;
+  justify-content: flex-start;
 }
 @keyframes grow {
-    0%{   color: white; transform: scale(1.5);}
-    100%{   color: rgb(21, 151, 229); transform: scale(1.5);}
+  0% {
+    color: white;
+    transform: scale(1.5);
   }
+  100% {
+    color: rgb(21, 151, 229);
+    transform: scale(1.5);
+  }
+}
 // ----------------- Media Query ------------------- //
 
-
 @media only screen and (max-width: 1280px) {
-  
 }
 @media only screen and (max-width: 1039px) {
-    .Info_Container{
-        .ContactInfo{
-            a{
-                .icons{
-                    margin-right: 10px;
-                }
-            }
+  .Info_Container {
+    .ContactInfo {
+      a {
+        .icons {
+          margin-right: 10px;
         }
+      }
     }
-    .Footer_Container{
-        padding: 80px;
+  }
+  .Footer_Container {
+    padding: 80px;
+  }
+  .Logos_Container {
+    .title {
+      .Footer_logo {
+        height: 35px;
+      }
     }
-    .Logos_Container{
+  }
 
-        .title{
-            .Footer_logo{
-                height: 35px;
-            }
-        }
+  .Footer_Copyright {
+    padding-top: 70px;
+    padding-bottom: 0px;
+    margin-bottom: 0;
+  }
+  .Footer_Column {
+    h1 {
+      height: 0px;
     }
-   
-    .Footer_Copyright{
-        padding-top: 70px;
-        padding-bottom: 0px;
-        margin-bottom: 0;
-    }
-    .Footer_Column{
-        h1{
-            height: 0px;
-        }
-    }
-  
+  }
 }
 @media only screen and (max-width: 821px) {
-    .Footer_logo{
-        height: 25px;
-    }
-   
-    .Footer_Container{
-        padding: 60px;
-    }
-    .Footer_icons{
-       transform: scale(.8);
-        margin-right: 5px;
+  .Footer_logo {
+    height: 25px;
+  }
 
-    }
+  .Footer_Container {
+    padding: 60px;
+  }
+  .Footer_icons {
+    transform: scale(0.8);
+    margin-right: 5px;
+  }
 }
 @media only screen and (max-width: 600px) {
-    .Info_Container{
-        flex-direction: column;
-        align-items: flex-start;
-        margin: 0;
-    
-    }
+  .Info_Container {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+  }
 
-    .Footer_Container{
-        padding: 60px 20px;
+  .Footer_Container {
+    padding: 60px 20px;
+  }
+  .Logos_Container {
+    .title {
+      margin-bottom: 20px;
+      a {
+        font-size: inherit;
+        margin-bottom: 0 !important;
+      }
     }
-    .Logos_Container{
-        .title{
-            margin-bottom: 20px;
-            a{
-                font-size: inherit;
-                margin-bottom: 0 !important;
-            }
-        }
+  }
+  .Footer_Column {
+    margin-bottom: 30px;
+    h1 {
+      margin: 40px 0;
     }
-    .Footer_Column{
-        margin-bottom: 30px;
-        h1{
-            margin: 40px 0;
-        }
-        a{
-            margin: 5px 0;
-        }
+    a {
+      margin: 5px 0;
     }
-  
+  }
 }

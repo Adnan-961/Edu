@@ -17,7 +17,7 @@
       padding: 0 20px;
       width: 215px;
       height: 60px;
-      background-color: #11D4FB;
+      background-color: #11d4fb;
       border: none;
       color: #fff;
       font-size: 16px;
@@ -25,14 +25,16 @@
       font-family: "Ralway", sans-serif;
       font-weight: 600;
       cursor: pointer;
+      transition: all ease 0.3s;
     }
-    .button:hover{
+    .button:hover {
       background-color: #081f51;
+      transition: all ease 0.3s;
     }
   }
 
   .heading {
-    color: #11D4FB;
+    color: #11d4fb;
     font-size: 20px;
     font-weight: 600;
   }
@@ -81,14 +83,12 @@
       width: 220px;
       height: 450px;
       object-fit: cover;
-
     }
   }
 }
 
-
 @keyframes slide {
-  100% { 
-    transform: translateY(-50.6666%);  
+  100% {
+    transform: translateY(-50.6666%);
   }
 }
