@@ -6,11 +6,47 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
 import whiteLogo from "../../assets/images/logo.png";
 import SendIcon from "@mui/icons-material/Send";
-
+import PhoneInTalkIcon from "@mui/icons-material/PhoneInTalk";
+import EmailIcon from "@mui/icons-material/Email";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import TelegramIcon from "@mui/icons-material/Telegram";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import TwitchIcon from "../../assets/images/twitch.svg";
+let socials = [
+  {
+    name: "fb",
+    icon: <FacebookIcon />,
+    href: "https://m.facebook.com/educifyinc",
+  },
+  {
+    name: "insta",
+    icon: <InstagramIcon />,
+    href: "https://instagram.com/educifyinc/",
+  },
+  {
+    name: "twitter",
+    icon: <TwitterIcon />,
+    href: "https://twitter.com/",
+  },
+  {
+    name: "twitch",
+    icon: <img src={TwitchIcon} className="twitch" />,
+    href: "https://www.twitch.tv/",
+  },
+  {
+    name: "youtube",
+    icon: <YouTubeIcon />,
+    href: "https://www.youtube.com/",
+  },
+  {
+    name: "Telegram",
+    icon: <TelegramIcon />,
+    href: "https://www.telegram.org/",
+  },
+];
 let footerCols = [
   {
     name: "Company",
@@ -33,11 +69,30 @@ let footerCols = [
     href: ["/#", "/#"],
   },
 ];
-const Column1 = () => {
+
+let contactus = [
+  {
+    icon: <PhoneInTalkIcon htmlColor="#11d4fb" />,
+    text: "(+001) 000 000 000",
+    isLink: false,
+  },
+  {
+    icon: <EmailIcon htmlColor="#11d4fb" />,
+    text: "mailto:learnway@gmail.com",
+    isLink: true,
+  },
+  {
+    icon: <LocationOnIcon htmlColor="#11d4fb" />,
+    text: "9FW6+599 Egham, United Kingdom",
+    isLink: false,
+  },
+];
+
+const Column = () => {
   return (
     <>
-      {footerCols.map((col) => (
-        <div className="Footer_Column">
+      {footerCols.map((col, i) => (
+        <div key={i} className="Footer_Column">
           <h1>{col.name}</h1>
           {col.links.map((link, i) => (
             <a href={col.href[i]}>{link}</a>
@@ -68,36 +123,6 @@ const NewsLetter = () => {
           <SendIcon />
         </div>
       </div>
-      {/* <div className="Logos">
-        <a
-          href="https://www.instagram.com/educifyinc/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <InstagramIcon className="Footer_icons" />
-        </a>
-        <a
-          href="https://www.facebook.com/educifyinc"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FacebookIcon className="Footer_icons" />
-        </a>
-        <a
-          href="https://www.linkedin.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <LinkedInIcon className="Footer_icons" />
-        </a>
-        <a
-          href="https://twitter.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <TwitterIcon className="Footer_icons" />
-        </a>
-      </div> */}
     </div>
   );
 };
@@ -106,21 +131,29 @@ function InfoSection() {
   return (
     <div className="Info_Container" id="footer">
       <NewsLetter />
-      <Column1 />
+      <Column />
       <div className="ContactInfo">
-        <h1>Contact Info</h1>
-        <a href="mailto:bowlakemusic@gmail.com" id="Contact">
-          <EmailIcon className="icons" />
-          <p className="">bowlakemusic@gmail.com</p>
-        </a>
-        <a title="Call SF" href="tel:+96171523153">
-          <PhoneIcon className="icons" />
-          <p className=""> +(000)-00-000000</p>
-        </a>
-        <a href="https://api.whatsapp.com/send?phone=000000000">
-          <WhatsAppIcon className="icons" />
-          <p>Contact us on WhatsApp</p>
-        </a>
+        <h1>Get In Touch</h1>
+        {contactus.map((contact) => (
+          <div className="footer__col">
+            {contact.icon}
+            <span>
+              {contact.isLink ? (
+                <a href={contact.text}>{contact.text.split(":")[1]}</a>
+              ) : (
+                <span> {contact.text}</span>
+              )}{" "}
+            </span>
+          </div>
+        ))}
+
+        <div className="footer__socials">
+          {socials.map((social) => (
+            <a target={"_blank"} href={social.href}>
+              {social.icon}
+            </a>
+          ))}
+        </div>
       </div>
     </div>
   );
