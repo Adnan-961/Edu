@@ -11,7 +11,7 @@
     align-items: center;
     justify-content: center;
     padding-bottom: 50px;
-   }
+  }
   //   justify-content: center;
   .header__phrase {
     width: 660px;
@@ -36,6 +36,32 @@
       background-color: #081f51;
       transition: all ease 0.3s;
     }
+    @media screen and (max-width: 1050px) {
+      width: 100%;
+      padding: 25px;
+    }
+    @media screen and (max-width: 700px) {
+      .heading {
+        font-size: 18px;
+      }
+      .subtitle {
+        font-size: 40px;
+      }
+    }
+    @media screen and (max-width: 500px) {
+      .heading {
+        font-size: 14px;
+      }
+      .subtitle {
+        font-size: 30px;
+      }
+      .button {
+        margin-top: 20px;
+        width: 100%;
+        height: 60px;
+        font-size: 16px;
+      }
+    }
   }
 
   .heading {
@@ -59,23 +85,29 @@
   .header_img {
     padding-top: 50px;
     padding-left: 10px;
+    padding-right: 10px;
     width: 400px;
     object-fit: cover;
     height: 400px;
+    @media screen and (max-width: 1050px) {
+      width: 100%;
+      padding: 0px;
+    }
   }
   .header__carousel {
     padding: 0 15px;
-    padding-left: 50px;
-    margin-left: -25px;
+    // padding-left: 50px;
+    // padding-right: 50px;
+    // margin-left: -25px;
     height: 600px;
     overflow: hidden;
-    width: 250px;
+    width: auto;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     overflow: hidden;
     @media only screen and (max-width: 1050px) {
-     display: none;
+      display: none;
     }
   }
 
@@ -89,7 +121,8 @@
     transition: opacity 0.5s ease-out;
     animation: slide 10s linear infinite;
     img {
-      width: 220px;
+      width: 100%;
+      max-width: 250px;
       height: 450px;
       object-fit: cover;
     }
@@ -100,4 +133,7 @@
   100% {
     transform: translateY(-50.6666%);
   }
+}
+
+@media screen and (max-width: 1050px) {
 }
