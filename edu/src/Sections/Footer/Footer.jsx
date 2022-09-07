@@ -130,11 +130,11 @@ function InfoSection() {
         {contactus.map((contact) => (
           <div className="footer__col">
             {contact.icon}
-              {contact.isLink ? (
-                <a href={contact.text}>{contact.text.split(":")[1]}</a>
-              ) : (
-                <span> {contact.text}</span>
-              )}
+            {contact.isLink ? (
+              <a href={contact.text}>{contact.text.split(":")[1]}</a>
+            ) : (
+              <span> {contact.text}</span>
+            )}
           </div>
         ))}
 

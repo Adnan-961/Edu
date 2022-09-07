@@ -7,10 +7,11 @@
     cursor: pointer;
   }
   .ContactInfo {
+    padding: 0 20px;
     .footer__socials {
       display: grid;
       //   justify-content: space-between;
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       grid-gap: 10px;
       padding-top: 20px;
       svg {
@@ -21,10 +22,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
         background-color: #f1f1f1;
+        margin: 0 5px;
         transition: all ease 0.2s;
         &:hover {
           background-color: #081f51;
@@ -58,7 +60,7 @@
   display: flex;
   flex-direction: column;
   padding: 140px 5vw 0;
-
+  overflow: hidden;
   h1 {
     margin: 0px;
     margin-bottom: 20px;
@@ -178,79 +180,255 @@ a:hover {
 }
 // ----------------- Media Query ------------------- //
 
-@media only screen and (max-width: 1280px) {
-}
-@media only screen and (max-width: 1039px) {
-  .Info_Container {
-    .ContactInfo {
-      a {
-        .icons {
-          margin-right: 10px;
+@media only screen and (max-width: 1250px) {
+  .Footer_Container {
+    padding: 120px 3vw 0;
+    .Info_Container {
+      .Footer_Column,
+      .ContactInfo,
+      .Logos_Container {
+        h1 {
+          font-size: 25px;
+        }
+        h2 {
+          font-size: 23px;
         }
       }
     }
   }
+}
+
+@media only screen and (max-width: 1190px) {
   .Footer_Container {
-    padding: 80px;
-  }
-  .Logos_Container {
-    .title {
-      .Footer_logo {
-        height: 35px;
+    // padding: 80px 5vw 0;
+    .Info_Container {
+      .Footer_Column {
+        gap: 10px;
+      }
+      .Footer_Column,
+      .ContactInfo,
+      .Logos_Container {
+        h1 {
+          font-size: 25px;
+        }
+        h2 {
+          font-size: 23px;
+        }
       }
     }
   }
 
-  .Footer_Copyright {
-    padding-top: 70px;
-    padding-bottom: 0px;
-    margin-bottom: 0;
-  }
-  .Footer_Column {
-    h1 {
-      height: 0px;
+  .send__email {
+    width: 170px !important;
+    height: 50px !important;
+    padding-left: 20px !important;
+
+    .email__icon {
+      width: 50px !important;
     }
   }
 }
-@media only screen and (max-width: 821px) {
-  .Footer_logo {
-    height: 25px;
-  }
 
-  .Footer_Container {
-    padding: 60px;
-  }
-  .Footer_icons {
-    transform: scale(0.8);
-    margin-right: 5px;
-  }
-}
-@media only screen and (max-width: 600px) {
-  .Info_Container {
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 0;
-  }
+// @media only screen and (max-width: 1039px) {
+//   .Info_Container {
+//     .ContactInfo {
+//       a {
+//         .icons {
+//           margin-right: 10px;
+//         }
+//       }
+//     }
+//   }
+//   .Footer_Container {
+//     padding: 80px;
+//   }
+//   .Logos_Container {
+//     .title {
+//       .Footer_logo {
+//         height: 35px;
+//       }
+//     }
+//   }
 
+//   .Footer_Copyright {
+//     padding-top: 70px;
+//     padding-bottom: 0px;
+//     margin-bottom: 0;
+//   }
+//   .Footer_Column {
+//     h1 {
+//       height: 0px;
+//     }
+//   }
+// }
+@media only screen and (max-width: 910px) {
   .Footer_Container {
-    padding: 60px 20px;
-  }
-  .Logos_Container {
-    .title {
-      margin-bottom: 20px;
-      a {
-        font-size: inherit;
-        margin-bottom: 0 !important;
+    padding: 80px 5vw 0;
+    .Info_Container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-row-gap: 50px;
+      justify-content: center;
+      .Footer_Column {
+        padding: 0;
+        gap: 10px;
+      }
+      .Logos_Container {
+        padding: 0;
+      }
+      .ContactInfo {
+        padding: 0;
+      }
+      .Footer_Column,
+      .ContactInfo,
+      .Logos_Container {
+        h1 {
+          font-size: 25px;
+        }
+        h2 {
+          font-size: 23px;
+        }
       }
     }
   }
-  .Footer_Column {
-    margin-bottom: 30px;
-    h1 {
-      margin: 40px 0;
+  .send__email {
+    width: 180px !important;
+    height: 50px !important;
+    padding-left: 20px !important;
+
+    .email__icon {
+      width: 70px !important;
     }
-    a {
-      margin: 5px 0;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .Footer_Container {
+    padding: 80px 5vw 0;
+    .Info_Container {
+      display: grid;
+      grid-template-columns: repeat(2, 280px) !important;
+      grid-row-gap: 50px;
+      justify-content: center;
+      .Footer_Column {
+        padding: 0;
+        gap: 10px;
+      }
+      .ContactInfo {
+        padding: 0;
+      }
+      .Footer_Column,
+      .ContactInfo,
+      .Logos_Container {
+        h1 {
+          font-size: 25px;
+        }
+        h2 {
+          font-size: 23px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 610px) {
+  .Footer_Container {
+    padding: 80px 5vw 0;
+    .Info_Container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .Footer_Column {
+        padding: 0;
+        gap: 10px;
+      }
+      .ContactInfo {
+        padding: 0;
+      }
+      .Footer_Column,
+      .ContactInfo,
+      .Logos_Container {
+        h1 {
+          font-size: 30px;
+        }
+        h2 {
+          font-size: 28px;
+        }
+        .send__email {
+          background-color: #fff !important;
+          width: 260px !important;
+          // padding: 15px 35px;
+          border-radius: 3px;
+          border: #11d4fb solid 1px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-left: 30px;
+
+          input {
+            width: 90%;
+            height: 90%;
+            border: none;
+            color: rgb(0, 0, 0, 0.5);
+            outline: none;
+          }
+          .email__icon {
+            min-height: 100%;
+            width: 80px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .Footer_Container {
+    padding: 80px 5vw 0;
+    .Info_Container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .Footer_Column {
+        padding: 0;
+        gap: 10px;
+      }
+      .ContactInfo {
+        padding: 0;
+      }
+      .Footer_Column,
+      .ContactInfo,
+      .Logos_Container {
+        h1 {
+          font-size: 30px;
+        }
+        h2 {
+          font-size: 28px;
+        }
+        .send__email {
+          background-color: #fff !important;
+          width: 200px !important;
+          // padding: 15px 35px;
+          border-radius: 3px;
+          border: #11d4fb solid 1px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-left: 30px;
+
+          input {
+            width: 90%;
+            height: 90%;
+            border: none;
+            color: rgb(0, 0, 0, 0.5);
+            outline: none;
+          }
+          .email__icon {
+            min-height: 100%;
+            width: 50px !important;
+          }
+        }
+      }
     }
   }
 }
