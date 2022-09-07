@@ -19,17 +19,15 @@
       object-fit: cover;
     }
   }
-  @media screen and (max-width: 550px) {
-    .app__container {
-      padding: 80px 40px !important;
-    }
-  }
 
   .promo_img {
     width: 650px;
     height: 600px;
     z-index: 1;
     object-fit: cover;
+    @media screen and (max-width: 1025px) {
+      width: 100%;
+    }
   }
 
   .app__container {
@@ -40,6 +38,14 @@
     padding: 100px 50px;
     z-index: 2;
     margin-left: -270px;
+    @media screen and (max-width: 1025px) {
+      width: fit-content !important;
+      margin: 0 !important;
+      padding: 100px 60px !important;
+    }
+    @media screen and (max-width: 550px) {
+      padding: 80px 40px !important;
+    }
     @media screen and (max-width: 475px) {
       h1 {
         font-size: 28px;
