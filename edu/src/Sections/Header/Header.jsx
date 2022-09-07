@@ -18,7 +18,6 @@ export default function Header() {
         <p className="header__text">
           Are you ready to start your education path?
         </p>
-
         <button className="button">learn more</button>
       </div>
       <img src={team} alt="header_img"  className="header_img"/>
@@ -26,8 +25,8 @@ export default function Header() {
         <div className="carousel">
           {
             teamImages.map((image, i) =>
-            <img src={image} alt="carousel img" key={i}/>
-          )
+              <img src={image} alt="carousel img" key={i}/>
+            )
           }
         </div>
       </div>

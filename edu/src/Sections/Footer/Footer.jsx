@@ -49,11 +49,6 @@ let socials = [
 ];
 let footerCols = [
   {
-    name: "Company",
-    links: ["Home", "Career", "Contact Us"],
-    href: ["/#", "/#", "/#"],
-  },
-  {
     name: "Students",
     links: ["How It Works", "Safety", "Lesson Fees", "Packages/Combo"],
     href: ["/#", "/#", "/#", "/#"],
@@ -108,7 +103,7 @@ const NewsLetter = () => {
     <div className="Logos_Container">
       <div className="title">
         <h2>
-          Sign Up For <br /> a Newsletter
+          Sign Up For <br /> our newsletter
         </h2>
         <p>
           Offers, promotion and educational <br /> contents
@@ -135,13 +130,11 @@ function InfoSection() {
         {contactus.map((contact) => (
           <div className="footer__col">
             {contact.icon}
-            <span>
               {contact.isLink ? (
                 <a href={contact.text}>{contact.text.split(":")[1]}</a>
               ) : (
                 <span> {contact.text}</span>
-              )}{" "}
-            </span>
+              )}
           </div>
         ))}
 

@@ -6,7 +6,12 @@
   min-height: 65vh;
   overflow: hidden;
   width: 100%;
-  display: flex;
+  @media only screen and (max-width: 1050px) {
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+   }
   //   justify-content: center;
   .header__phrase {
     width: 660px;
@@ -61,6 +66,7 @@
   .header__carousel {
     padding: 0 15px;
     padding-left: 50px;
+    margin-left: -25px;
     height: 600px;
     overflow: hidden;
     width: 250px;
@@ -68,6 +74,9 @@
     justify-content: flex-end;
     align-items: flex-end;
     overflow: hidden;
+    @media only screen and (max-width: 1050px) {
+     display: none;
+    }
   }
 
   .carousel {

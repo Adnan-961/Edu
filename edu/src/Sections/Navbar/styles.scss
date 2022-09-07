@@ -2,7 +2,11 @@
 * {
   font-family: "Raleway", sans-serif;
 }
+
 .navbar__container {
+  input:focus{
+    outline: none;
+  }
   background-color: #11D4FB;
   height: 90px;
   padding: 0px 20px;
@@ -10,7 +14,7 @@
   min-width: 100vw;
   z-index: 10;
   .logo {
-    margin-left: 80px;
+    margin-left: 50px;
   }
   .nav__container {
     width: 100%;
@@ -19,6 +23,51 @@
     justify-content: space-between;
     align-items: center;
    
+  }
+  .nav__container_mobile{
+    background-color: #11D4FB;
+    width: 100vw;
+    margin-left: -20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+ 
+  .nav__link_mobile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    height: 100%;
+    margin:  10px 20px;
+    span {
+      cursor: pointer;
+      color: white;
+    }
+    button {
+      background-color: #fff;
+      color: #081f51;
+      width: 100px;
+      height: 30px;
+      font-size: 15px;
+      padding: 2px 15px;
+      border: none;
+      border-radius: 40px;
+      margin-right: 20px;
+      cursor: pointer;
+    }
+    input{
+      width:200px;
+      height: 30px;
+      border-radius: 10px;
+      border: none;
+      background-image: url(../../assets/images/searchIcon.png);
+      background-repeat: no-repeat;
+      background-position-x: 97%;
+      background-size: 15px;
+      background-position-y: center;
+      padding: 0 20px;
+    }
   }
 
   .navigation {
@@ -29,6 +78,13 @@
     justify-content: flex-end;
     color: #fff;
   }
+  .nav_menu_mobile{
+    margin-right: 30px;
+    display: flex;
+    width: 80px;
+    justify-content: space-between;
+    cursor: pointer;
+  }
 
   .nav__link {
     display: flex;
@@ -36,7 +92,7 @@
     align-items: center;
     font-size: 18px;
     height: 100%;
-    margin: 0 40px;
+    margin: 0 20px;
     span {
       cursor: pointer;
     }
@@ -49,6 +105,7 @@
       padding: 2px 15px;
       border: none;
       border-radius: 40px;
+      margin-right: 20px;
       cursor: pointer;
     }
     input{
@@ -63,5 +120,24 @@
       background-position-y: center;
       padding: 0 20px;
     }
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .navbar__container{
+    .logo {
+      margin-left: 0px;
+    }
+    .nav__link{
+      display: none  !important;
+    }
+  }
+}
+@media only screen and (min-width: 1050px) {
+  .navbar__container{
+    .nav__link_mobile, .nav_menu_mobile{
+      display: none;
+    }
+   
   }
 }
