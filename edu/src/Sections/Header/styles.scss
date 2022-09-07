@@ -6,7 +6,7 @@
   min-height: 65vh;
   overflow: hidden;
   width: 100%;
-  @media only screen and (max-width: 1050px) {
+  @media only screen and (max-width: 1025px) {
     flex-wrap: wrap-reverse;
     align-items: center;
     justify-content: center;
@@ -89,7 +89,7 @@
     width: 400px;
     object-fit: cover;
     height: 400px;
-    @media screen and (max-width: 1050px) {
+    @media screen and (max-width: 1025px) {
       width: 100%;
       padding: 0px;
     }
@@ -106,7 +106,7 @@
     justify-content: flex-end;
     align-items: flex-end;
     overflow: hidden;
-    @media only screen and (max-width: 1050px) {
+    @media only screen and (max-width: 1025px) {
       display: none;
     }
   }

@@ -10,13 +10,13 @@ import Footer from "./Sections/Footer/Footer";
 function App() {
   return (
     <div className="App">
-      {/* <Navbar /> */}
-      {/* <Header /> */}
+      <Navbar />
+      <Header />
       {/* <OurCourses /> */}
-      {/* <Promo /> */}
+      <Promo />
       <WhereToLearn />
-      {/* <Categories /> */}
-      {/* <Footer /> */}
+      <Categories />
+      <Footer />
     </div>
   );
 }

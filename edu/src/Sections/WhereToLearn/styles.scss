@@ -50,6 +50,9 @@
   .learn__about {
     max-width: 45vw;
     padding: 80px;
+    @media screen and (max-width: 1025px) {
+      padding: 25px;
+    }
     overflow: hidden;
     .learn_img {
       width: 50px;
