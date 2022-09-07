@@ -3,6 +3,7 @@
   width: 100%;
   justify-content: center;
   padding: 100px 0;
+  padding-bottom: 0;
   @media screen and (max-width: 1025px) {
     flex-direction: column !important;
     .app__container {
@@ -41,10 +42,10 @@
     @media screen and (max-width: 1025px) {
       width: fit-content !important;
       margin: 0 !important;
-      padding: 100px 60px !important;
+      padding: 100px 25px !important;
     }
     @media screen and (max-width: 550px) {
-      padding: 80px 40px !important;
+      padding: 80px 25px !important;
     }
     @media screen and (max-width: 475px) {
       h1 {
