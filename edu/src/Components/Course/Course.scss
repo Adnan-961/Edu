@@ -1,42 +1,66 @@
-.Course_Container{
-    width: 369px;
+.Course_Container {
+  width: 369px;
+  height: 477px;
+  color: #081f51;
+  background-color: white;
+  @media screen and (max-width: 780px) {
+    margin: 0 auto;
+    width: 95%;
     height: 477px;
-    color: #081f51;
-    background-color: white;
-    img{
-        width: 100%;
-        height: 50%;
-        object-fit: cover;
+  }
+  @media screen and (max-width: 330px) {
+    height: 507px;
+  }
+  img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    &:last-child {
+      max-width: 130px;
+      min-width: 100px;
     }
-    .row2{
-        padding: 0 40px;
-        .row2_header{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            img{
-                width:40%;
-            }
-         
-            
-        }
-        h3{
-            font-size: 20px;
-        }
-        .teacherRow{
-            border-top: 1px solid rgba($color: #000000, $alpha: .1);
-            padding-top: 20px;
-            margin-top: 40px;
-            display: flex;
-            justify-content: space-between;
-            img{
-                width: 55px;
-                border-radius: 50%;
-            }
-            .price{
-                color: rgb(17, 212, 251);
-            }
-        }
+  }
+  .row2 {
+    padding: 0 40px;
+    @media screen and (max-width: 400px) {
+      padding: 0 15px;
     }
+    .row2_header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      img {
+        width: 40%;
+      }
+    }
+    h3 {
+      font-size: 20px;
+      @media screen and (max-width: 330px) {
+        font-size: 16px;
+      }
+    }
+    .teacherRow {
+      border-top: 1px solid rgba($color: #000000, $alpha: 0.1);
+      padding-top: 20px;
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-between;
 
+      img {
+        width: 55px;
+        border-radius: 50%;
+      }
+      .price {
+        font-weight: 600;
+
+        color: rgb(17, 212, 251);
+        @media screen and (max-width: 780px) {
+          font-size: 20px;
+        }
+        @media screen and (max-width: 400px) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
 }

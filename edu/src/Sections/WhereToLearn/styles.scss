@@ -7,32 +7,65 @@
   min-height: 100vh;
   width: 100%;
   max-width: 100vw;
+  position: relative;
 
   .learn__images__container {
-    position: relative;
+    // position: relative;
     .learn__images {
       position: absolute;
+
       &:first-child {
-        width: 300px;
-        height: 300px;
-        // left: 300px;
-        right: -500px;
-        top: -270px;
+        width: 370px;
+        height: 400px;
+        top: 100px;
+        right: 100px;
+        @media screen and (max-width: 1400px) {
+          width: 270px;
+          height: 300px;
+          right: 70px;
+        }
+        @media screen and (max-width: 1180px) {
+          width: 220px;
+          height: 300px;
+          right: 70px;
+        }
       }
       &:nth-child(2) {
-        width: 310px;
-        height: 300px;
-        // left: 60px;
-        right: -280px;
-        top: -100px;
+        width: 330px;
+        height: 400px;
+        top: 250px;
+        right: 380px;
         z-index: 2;
+        @media screen and (max-width: 1400px) {
+          width: 230px;
+          height: 300px;
+          top: 250px;
+          right: 280px;
+        }
+        @media screen and (max-width: 1180px) {
+          width: 230px;
+          height: 300px;
+          top: 220px;
+          right: 230px;
+        }
       }
       &:nth-child(3) {
-        width: 480px;
-        // left: 220px;
-        right: -550px;
-        top: 70px;
+        width: 500px;
+        // height: 400px;
         z-index: 3;
+        top: 530px;
+        right: 60px;
+        @media screen and (max-width: 1400px) {
+          height: 250px;
+          width: 400px;
+          top: 430px;
+          right: 30px;
+        }
+        @media screen and (max-width: 1180px) {
+          height: 250px;
+          width: 400px;
+          top: 430px;
+        }
       }
       @media screen and (max-width: 1025px) {
         position: static;
@@ -42,7 +75,8 @@
         }
 
         &:nth-child(3) {
-          width: 100%;
+          width: 100vw;
+          height: 100%;
         }
       }
     }
