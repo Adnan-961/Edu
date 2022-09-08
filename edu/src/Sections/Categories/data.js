@@ -1,5 +1,6 @@
 export const countries = [
   {
+    name: "Countries",
     array: [
       "USA",
       "Canada",

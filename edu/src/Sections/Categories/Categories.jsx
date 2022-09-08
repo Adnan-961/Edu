@@ -46,7 +46,7 @@ export default function Categories() {
 
       {isActiveCountries &&
         countries.map((item, i) => (
-          <CategoryContainer key={i} array={item.array} title={item.array[i]} />
+          <CategoryContainer key={i} array={item.array} title={item.name} />
         ))}
     </div>
   );
