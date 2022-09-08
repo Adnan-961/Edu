@@ -1,7 +1,6 @@
 import React from "react";
 import "./styles.scss";
 import machine from "../../assets/images/machine-learning.png";
-import three from "../../assets/images/three.png";
 import Location from "../../assets/images/location.png";
 import globe from "../../assets/images/globe.png";
 import team1 from "../../assets/images/person1.jpg";
@@ -44,8 +43,6 @@ const LearningContainer = ({ title, description, icon }) => {
 };
 
 export default function WhereToLearn() {
-  let description =
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur dolorum magnam, facilis sunt ipsam officia";
   return (
     <div className="learn__container">
       <div className="learn__about">

@@ -1,10 +1,10 @@
 .category__section {
-  padding: 100px 25px;
+  padding: 100px 0 25px;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  max-width: 100%;
 
-  margin: 0 auto;
+  padding-left: 25px;
   .category__title {
     color: rgb(17, 212, 251);
   }
@@ -28,13 +28,16 @@
     // margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    width: 95%;
   }
 }
 
 .categories__filter {
+  h4 {
+    cursor: pointer;
+  }
   display: flex;
   gap: 30px;
-  cursor: pointer;
   white-space: nowrap;
 
   @media screen and (max-width: 555px) {
@@ -53,6 +56,11 @@
     text-align: left;
     max-width: min-content;
   }
+  @media screen and (max-width: 400px) {
+    h4 {
+      font-size: 18px !important;
+    }
+  }
   h4 {
     font-size: 20px;
     font-weight: 600;
@@ -64,7 +72,6 @@
 
   .active {
     border-bottom: solid rgb(17, 212, 251, 1) 3px;
-    cursor: pointer;
     transition: all ease 0.3s;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;

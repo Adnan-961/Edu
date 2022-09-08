@@ -11,7 +11,7 @@
     .footer__socials {
       display: grid;
       //   justify-content: space-between;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, 50px);
       grid-gap: 10px;
       padding-top: 20px;
       svg {
@@ -344,6 +344,9 @@ a:hover {
       }
       .ContactInfo {
         padding: 0;
+        .footer__socials {
+          grid-template-columns: repeat(auto-fill, 50px);
+        }
       }
       .Footer_Column,
       .ContactInfo,

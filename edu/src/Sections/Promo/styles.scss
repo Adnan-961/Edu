@@ -6,6 +6,7 @@
   padding-bottom: 0;
   @media screen and (max-width: 1025px) {
     flex-direction: column !important;
+    margin: 100px 0;
     padding-top: 0px;
     .app__container {
       width: fit-content !important;
