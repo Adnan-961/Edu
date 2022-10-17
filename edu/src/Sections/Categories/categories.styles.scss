@@ -1,0 +1,177 @@
+@import "../../variables.scss";
+.category__section {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+
+  .headers {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+    color: $darkblue;
+    h2 {
+      color: $darkblue;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .selected {
+      position: relative;
+      color: $selectedHeader;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 50%;
+        height: 1px;
+        bottom: -5px;
+        left: 0;
+        border-bottom: 3px solid $selectedHeader;
+      }
+    }
+  }
+  button {
+    background-color: $accentblue;
+    cursor: pointer;
+    padding: 20px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border: none;
+    border-radius: 8px;
+    img {
+      width: 30px;
+    }
+  }
+  .findateacher__section {
+    display: flex;
+    gap: 20px;
+
+    .select__container {
+      width: 300px;
+      padding: 20px;
+      // height: 50px;
+      background-color: #f4f8fc;
+      border-radius: 8px;
+      border: solid $accentblue 1px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      select {
+        background: none;
+        border: none;
+        width: 100%;
+        margin-left: 50px;
+        outline: none;
+        font-size: $lesson_title_size;
+        font-weight: 700;
+        color: rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+
+  .filter {
+    .header {
+      display: flex;
+      align-items: center;
+      margin: 50px 0 !important;
+      gap: 8px;
+      span {
+        font-size: $header_xs;
+        color: $darkblue;
+        font-weight: 700;
+      }
+      img {
+        width: 25px;
+      }
+    }
+    .filter__search {
+      display: flex;
+      flex-direction: column;
+      .search {
+        border: none;
+        outline: none;
+        width: 280px;
+        border: solid $accentblue 1px;
+        padding: 10px 20px;
+        gap: 20px;
+        border-radius: 12px;
+        height: 30px;
+        display: flex;
+        img {
+          width: 25px;
+        }
+        input {
+          background: none;
+          border: none;
+          outline: none;
+          width: 100%;
+        }
+      }
+      .cities {
+        display: flex;
+        max-width: 80%;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        .category_card {
+          min-width: 80px;
+
+          text-align: center;
+          background-color: $category_card;
+          color: $category_card_color;
+          min-height: 30px;
+          margin: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 20px;
+          border-radius: 7px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .privates__lessons {
+    .lesson__category {
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+      h2 {
+        color: $accentblue;
+      }
+      .details {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+    }
+
+    .lesson {
+      display: flex;
+      flex-direction: column;
+      width: 150px;
+      background: $related__lesson__bg;
+      border-radius: 10px;
+      align-items: center;
+      padding: 20px;
+      height: 70px;
+      text-align: center;
+      cursor: pointer;
+      justify-content: space-between;
+      img {
+        width: 35px;
+      }
+      span {
+        color: $darkblue;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .category__section {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+}

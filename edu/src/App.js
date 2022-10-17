@@ -21,9 +21,8 @@ function App() {
       <WhereToLearn />
       <Newsletter />
       <Info />
+      <Categories />
       {/* <Promo /> */}
-      {/* <Categories /> */}
-      {/* <NavCategories /> */}
       {/* <Footer /> */}
     </div>
   );

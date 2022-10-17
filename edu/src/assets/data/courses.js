@@ -6,11 +6,12 @@ import image3 from "../images/3.jpg";
 export const courses = [
   {
     title: "Languages",
+
     link: { href: "/#", text: "View all" },
     array: [
       {
         category: "Languages",
-        courseName: "French Course For Beginners",
+        courseName: "French Course",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -18,7 +19,7 @@ export const courses = [
       },
       {
         category: "Music",
-        courseName: "Guitar Course For Beginners",
+        courseName: "Guitar Course",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -26,7 +27,7 @@ export const courses = [
       },
       {
         category: "ACADEMIC TUTORING",
-        courseName: "French Course For Beginners",
+        courseName: "French Course",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -34,7 +35,7 @@ export const courses = [
       },
       {
         category: "Languages",
-        courseName: "French Course For Beginners",
+        courseName: "French Course",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -42,7 +43,7 @@ export const courses = [
       },
       {
         category: "Music",
-        courseName: "Guitar Course For Beginners",
+        courseName: "Guitar Course",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -50,7 +51,7 @@ export const courses = [
       },
       {
         category: "ACADEMIC TUTORING",
-        courseName: "French Course For Beginners",
+        courseName: "French Course",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -65,7 +66,7 @@ export const courses = [
     array: [
       {
         category: "Languages",
-        courseName: "French Course For Beginners",
+        courseName: "French Course",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -73,7 +74,7 @@ export const courses = [
       },
       {
         category: "Music",
-        courseName: "Guitar Course For Beginners",
+        courseName: "Guitar Course",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -81,7 +82,7 @@ export const courses = [
       },
       {
         category: "ACADEMIC TUTORING",
-        courseName: "French Course For Beginners",
+        courseName: "French Course",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -89,7 +90,7 @@ export const courses = [
       },
       {
         category: "Languages",
-        courseName: "French Course For Beginners",
+        courseName: "French Course",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -97,7 +98,7 @@ export const courses = [
       },
       {
         category: "Music",
-        courseName: "Guitar Course For Beginners",
+        courseName: "Guitar Course",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -105,7 +106,7 @@ export const courses = [
       },
       {
         category: "ACADEMIC TUTORING",
-        courseName: "French Course For Beginners",
+        courseName: "French Course",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -120,7 +121,7 @@ export const courses = [
     array: [
       {
         category: "Languages",
-        courseName: "French Course For Beginners",
+        courseName: "French Course",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -128,7 +129,7 @@ export const courses = [
       },
       {
         category: "Music",
-        courseName: "Guitar Course For Beginners",
+        courseName: "Guitar Course",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -136,7 +137,7 @@ export const courses = [
       },
       {
         category: "ACADEMIC TUTORING",
-        courseName: "French Course For Beginners",
+        courseName: "French Course",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -144,7 +145,7 @@ export const courses = [
       },
       {
         category: "Languages",
-        courseName: "French Course For Beginners",
+        courseName: "French Course",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -152,7 +153,7 @@ export const courses = [
       },
       {
         category: "Music",
-        courseName: "Guitar Course For Beginners",
+        courseName: "Guitar Course",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -160,7 +161,7 @@ export const courses = [
       },
       {
         category: "ACADEMIC TUTORING",
-        courseName: "French Course For Beginners",
+        courseName: "French Course",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
