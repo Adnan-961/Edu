@@ -1,105 +1,77 @@
 import React from "react";
-import "./styles.scss";
+import "./ourCourses.styles.scss";
 import Course from "../../Components/Course/Course";
 
-import image1 from '../../assets/images/1.jpg'
-import image2 from '../../assets/images/2.jpg'
-import image3 from '../../assets/images/3.jpg'
-import image4 from '../../assets/images/4.jpg'
-import image5 from '../../assets/images/5.jpg'
-import image6 from '../../assets/images/team.jpg'
-import teacher from '../../assets/images/teacher.jpg'
+import arrow_right from "../../assets/svgs/arrow-right.svg";
+import arrow_left from "../../assets/svgs/arrow-left.svg";
+import { useState, useRef } from "react";
+import { useEffect } from "react";
+import { courses } from "../../assets/data/courses";
+import { text } from "../../assets/data/courses";
 
 export default function CategoryCards() {
+  const [carousel, setCarousel] = useState(0);
+  const [carouselWidth, setCarouselWidth] = useState(0);
+  const [lessonWidth, setLessonWidth] = useState(0);
 
-  const courses = [
-    {
-      category:"Languages",
-      courseName:"French Course For Beginners",
-      teacher:teacher,
-      teacherName:"John Smith",
-      teacherPrice:"60.00$",
-      image: image1
-    },
-    {
-      category:"Music",
-      courseName:"Guitar Course For Beginners",
-      teacher:teacher,
-      teacherName:"John Smith",
-      teacherPrice:"60.00$",
-      image: image2
-    },
-    {
-      category:"ACADEMIC TUTORING",
-      courseName:"French Course For Beginners",
-      teacher:teacher,
-      teacherName:"John Smith",
-      teacherPrice:"60.00$",
-      image: image3
-    },
-    {
-      category:"GYM & SPORTS",
-      courseName:"French Course For Beginners",
-      teacher:teacher,
-      teacherName:"John Smith",
-      teacherPrice:"60.00$",
-      image: image4
-    },
-    {
-      category:"Life Style",
-      courseName:"French Course For Beginners",
-      teacher:teacher,
-      teacherName:"John Smith",
-      teacherPrice:"60.00$",
-      image: image5
-    },
-    {
-      category:"ART & CRAFT",
-      courseName:"French Course For Beginners",
-      teacher:teacher,
-      teacherName:"John Smith",
-      teacherPrice:"60.00$",
-      image: image6
-    },
-  ]
+  const ref = useRef(null);
+
+  useEffect(() => {
+    setCarouselWidth(ref.current.scrollWidth);
+  }, []);
+
+  let nbCourses = parseInt(courses.length * 280);
+
   return (
-    <div className="our__courses__section">
-      <div className="courses__title">
-        <span>Our Courses</span>
+    <div className="lessons__section">
+      <div className="lessons__title">
+        <span>{text.header}</span>
+        <p>{text.p}</p>
       </div>
-      <div className="courses__subtitle">
-        <span>Show Our Unique Course</span>
-      </div>
-      <div className="courses__categories">
-        {[
-          "Languages",
-          "Music",
-          "ACADEMIC TUTORING",
-          "GYM & SPORTS",
-          "Life Style",
-          "ART & CRAFT",
-          "HEALTH & WELLNESS",
-        ].map((cat,i) => (
-          <span key={i}>{cat}</span>
-        ))}
-      </div>
-
-      <div className="courses">
-        {
-          courses.map((course, i) =>
-            <Course 
-              image={course.image} 
-              category={course.category}
-              courseName={course.courseName}
-              teacher={course.teacher}
-              teacherName={course.teacherName}
-              teacherPrice={course.teacherPrice}
-              key={i}
+      {courses.map((category) => (
+        <div className="lesson__category__container">
+          <div className="lesson__category">
+            <div className="lesson__category__title">
+              <h1>{category.title}</h1>
+              <span>
+                <a href={category.link.href}>{category.link.text}</a>
+              </span>
+            </div>
+            <img
+              src={arrow_right}
+              alt="arrow right"
+              className="arrow_right"
+              onClick={() => setCarousel(carousel + 310)}
             />
-          )
-        }
-    
-      </div>
+            <img
+              src={arrow_left}
+              alt="arrow left"
+              className="arrow_left"
+              onClick={() => setCarousel(carousel - 310)}
+            />
+            <div className="lessons" ref={ref}>
+              <div
+                className="carousel"
+                style={
+                  carousel > nbCourses
+                    ? setCarousel(0)
+                    : { transform: `translate(-${carousel}px` }
+                }
+              >
+                {category.array.map((item, i) => (
+                  <Course
+                    key={i}
+                    category={item.category}
+                    name={item.courseName}
+                    rating={3}
+                    image={item.image}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
     </div>
   );
 }

@@ -1,0 +1,124 @@
+@import "../../variables.scss";
+
+.wheretolearn__container {
+  display: flex;
+  width: 1400px;
+  margin: 0 auto;
+  justify-content: space-around;
+  .col1 {
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    padding: 40px;
+    img {
+      max-width: 100%;
+      max-height: 700px;
+    }
+    h1 {
+      color: $darkblue;
+
+      margin-top: 0;
+      font-size: $header_size;
+      font-weight: 700;
+    }
+    p {
+      width: 550px;
+    }
+  }
+  .col2 {
+    display: flex;
+    width: calc(40% - 50px);
+    flex-direction: column;
+    padding: 20px;
+    button {
+      display: flex;
+      align-items: center;
+      width: 180px;
+      height: 50px;
+      padding: 20px;
+      justify-content: space-between;
+      margin-top: 20px;
+      background: linear-gradient(97.95deg, #ffa800 -22.37%, #ffd074 100%);
+      box-shadow: 0px 30px 24px -20px rgba(35, 18, 117, 0.24);
+      border-radius: 6px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      color: $white;
+      font-weight: 500;
+      font-size: $p_size;
+    }
+    .feature {
+      display: flex;
+      flex-direction: column;
+      max-width: 520px;
+      min-height: 252px;
+      margin: 20px 0;
+      img {
+        width: 80px;
+      }
+      h1 {
+        color: $lesson_color;
+        font-size: 25px;
+      }
+      p {
+        color: $p_color;
+        margin: 0;
+      }
+    }
+  }
+}
+
+// @media screen and (min-width: 1500px) {
+//   .wheretolearn__container {
+//     max-width: 1500px;
+//     margin: 0 auto;
+//   }
+// }
+@media screen and (max-width: 1500px) {
+  .wheretolearn__container {
+    display: flex;
+    width: 80%;
+    .col1 {
+      p {
+        width: 400px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 975px) {
+  .wheretolearn__container {
+    flex-direction: column;
+    width: 90%;
+    .col1,
+    .col2 {
+      width: calc(100% - 40px);
+    }
+    .col1 {
+      h1 {
+        font-size: $header_xs;
+      }
+      p {
+        width: auto;
+      }
+      padding: 20px;
+    }
+    .col2 {
+      padding-left: 40px;
+      .feature {
+        max-width: 600px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .wheretolearn__container {
+    .col2 {
+      padding-left: 20px;
+      .feature {
+        max-width: 500px;
+        width: auto;
+      }
+    }
+  }
+}

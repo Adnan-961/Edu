@@ -1,0 +1,100 @@
+@import "../../variables.scss";
+.lessons__section {
+  display: flex;
+  flex-direction: column;
+  // min-height: 100vh;
+  position: relative;
+  .arrow_right {
+    position: absolute;
+    top: 42%;
+    right: 18%;
+    z-index: 10;
+    cursor: pointer;
+  }
+  .arrow_left {
+    position: absolute;
+    top: 42%;
+    left: 18%;
+    z-index: 10;
+    cursor: pointer;
+  }
+  .lessons__title {
+    width: 510px;
+    margin: 0 auto;
+    span {
+      color: $darkblue;
+      font-size: $header_size;
+      font-weight: $header_weight;
+    }
+    p {
+      color: $p_color;
+    }
+    text-align: center;
+  }
+  .lesson__category__container {
+    width: 100%;
+    height: 100%;
+    .lesson__category {
+      display: flex;
+      flex-direction: column;
+      width: 1150px;
+      height: 100%;
+      margin: 0 auto;
+      background-image: url("data:image/svg+xml,%3csvg width='100%25' height='85' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='24' ry='24' stroke='%23333' stroke-width='3' stroke-dasharray='6%2c 14' stroke-dashoffset='35' stroke-linecap='square'/%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      border-radius: 24px;
+      margin-top: 50px;
+      transition: all ease-in-out 0.3s;
+
+      .lessons {
+        background-color: $white;
+        margin-top: 30px;
+        margin-left: -40px;
+        margin-right: -40px;
+        display: flex;
+        overflow: hidden;
+        gap: 30px;
+        transition: all ease-in-out 0.3s;
+        padding-bottom: 80px;
+        .carousel {
+          width: 100%;
+          display: flex;
+          gap: 30px;
+          transition: all ease 0.3s;
+        }
+      }
+      .lesson__category__title {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        align-items: flex-start;
+        margin: 0 auto;
+
+        h1 {
+          margin-top: -18px;
+          background-color: $white;
+          color: $darkblue;
+          font-size: $lesson_header_size;
+          text-transform: uppercase;
+          font-weight: $header_weight;
+        }
+        span {
+          margin-top: -18px;
+          background-color: $white;
+          color: $accentblue;
+          font-size: $lesson_header_size;
+          text-transform: capitalize;
+          font-weight: 500;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .lessons__section {
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+}

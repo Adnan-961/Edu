@@ -1,35 +1,55 @@
 import React from "react";
-import "./styles.scss";
-import carousel_img from "../../assets/images/carousel.jpg";
-import team from "../../assets/images/team.jpg";
-import team1 from "../../assets/images/1.jpg";
-import team2 from "../../assets/images/2.jpg";
-import team3 from "../../assets/images/3.jpg";
-import team4 from "../../assets/images/4.jpg";
-import team5 from "../../assets/images/5.jpg";
-
+import "./header.styles.scss";
+import rocket from "../../assets/svgs/rocket.svg";
+import kickstart from "../../assets/svgs/kickstart.svg";
+import searchIcon from "../../assets/svgs/search.svg";
+import vector from "../../assets/svgs/Vector.svg";
+import vectorTopRight from "../../assets/svgs/vector-top-right.svg";
+import vector_search from "../../assets/svgs/Vectorbehind-search.svg";
+import { HeaderData } from "../../assets/data/header-data";
+import header from "../../assets/images/header.png";
 export default function Header() {
-  const teamImages = [team, team1, team2, team3, team4, team5, team, team1] 
   return (
     <div className="header__container">
       <div className="header__phrase">
-        <p className="heading">Learning With Educify</p>
-        <p className="subtitle"> Education Is The Bedrock Of Success Today, I Am Going To Learn</p>
-        <p className="header__text">
-          Are you ready to start your education path?
+        <div className="header__img">
+          <img src={kickstart} alt="kickstart" className="kickstart" />
+          <img src={rocket} alt="rocket icon" className="rocket" />
+        </div>
+        <h1 className="subtitle">
+          {HeaderData.header.phrase.split(HeaderData.header.highlight)[0]}{" "}
+          <span className="highlighted">{HeaderData.header.highlight}</span>
+          {HeaderData.header.phrase.split(HeaderData.header.highlight)[1]}
+        </h1>
+        <p>
+          {HeaderData.paragraph.phrase.split(HeaderData.paragraph.highlight)[0]}{" "}
+          <span className="highlighted">{HeaderData.paragraph.highlight}</span>
+          {HeaderData.paragraph.phrase.split(HeaderData.paragraph.highlight)[1]}
         </p>
-        <button className="button">learn more</button>
-      </div>
-      <img src={team} alt="header_img"  className="header_img"/>
-      <div className="header__carousel">
-        <div className="carousel">
-          {
-            teamImages.map((image, i) =>
-              <img src={image} alt="carousel img" key={i}/>
-            )
-          }
+        <div className="header__inputs">
+          <input type="text" placeholder="What do you want to learn ?" />
+          <button>
+            <img src={searchIcon} alt="search" />
+          </button>
         </div>
       </div>
+      <div className="header__bg__image">
+        <img src={header} alt="" />
+      </div>
+      <div className="header__inputs__mobile">
+        <input type="text" placeholder="What do you want to learn ?" />
+        <button>
+          <img src={searchIcon} alt="search" />
+        </button>
+      </div>
+      <img src={vector} alt="vector" className="vector vector1" />
+      <img src={vector_search} alt="vector" className="vector vector__search" />
+
+      <img
+        src={vectorTopRight}
+        alt="vector"
+        className="vector vector__top__right"
+      />
     </div>
   );
 }

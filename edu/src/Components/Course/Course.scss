@@ -1,65 +1,73 @@
-.Course_Container {
-  width: 369px;
-  height: 477px;
-  color: #081f51;
-  background-color: white;
-  @media screen and (max-width: 780px) {
-    margin: 0 auto;
-    width: 95%;
-    height: 477px;
-  }
-  @media screen and (max-width: 330px) {
-    height: 507px;
-  }
+@import "../../variables.scss";
+.lesson__container {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  // border: 3px solid black;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 4.53648px rgba(35, 18, 117, 0.12),
+    0px 25.7067px 30.2432px -15.1216px rgba(35, 18, 117, 0.18);
+  background-color: $white;
+  cursor: pointer;
+
   img {
+    width: 260px;
+    height: 160px;
+    border-radius: 5px;
+  }
+  .lesson__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
-    height: 50%;
-    object-fit: cover;
-    &:last-child {
-      max-width: 130px;
-      min-width: 100px;
+    padding-top: 10px;
+    .lesson__title {
+      color: $lesson_color;
+      font-size: $lesson_title_size;
+      display: flex;
+      align-self: flex-start;
+    }
+    .lesson__rating {
+      display: flex;
+      flex-direction: column;
+      color: $p_color;
+
+      span {
+        font-size: 16px;
+      }
+      p {
+        font-size: 13px;
+        margin: 0;
+      }
     }
   }
-  .row2 {
-    padding: 0 40px;
-    @media screen and (max-width: 400px) {
-      padding: 0 15px;
-    }
-    .row2_header {
+  .course__btn {
+    padding: 10px;
+    width: 100%;
+
+    button {
+      width: 100%;
+      background: linear-gradient(92.75deg, #ffae42 -6.65%, #ffc842 100.01%);
+      border-radius: 4.53648px;
+      border: none;
+      width: 257px;
+      height: 53px;
+      color: $white;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      img {
-        width: 40%;
+      padding: 20px;
+      cursor: pointer;
+      transition: all ease-in-out 0.3s;
+      &:hover > svg {
+        transition: all ease-in-out 0.3s;
+        transform: translateX(10px);
       }
-    }
-    h3 {
-      font-size: 20px;
-      @media screen and (max-width: 330px) {
-        font-size: 16px;
-      }
-    }
-    .teacherRow {
-      border-top: 1px solid rgba($color: #000000, $alpha: 0.1);
-      padding-top: 20px;
-      margin-top: 40px;
-      display: flex;
-      justify-content: space-between;
-
-      img {
-        width: 55px;
-        border-radius: 50%;
-      }
-      .price {
-        font-weight: 600;
-
-        color: rgb(17, 212, 251);
-        @media screen and (max-width: 780px) {
-          font-size: 20px;
-        }
-        @media screen and (max-width: 400px) {
-          font-size: 16px;
-        }
+      svg {
+        font-size: 30px;
+        transition: all ease-in-out 0.3s;
       }
     }
   }

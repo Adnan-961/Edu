@@ -1,51 +1,67 @@
-import React, {useState} from "react";
-import MenuIcon from '@mui/icons-material/Menu';
-
-import "./styles.scss";
+import React, { useState, useRef, useEffect } from "react";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+import hamburger from "../../assets/svgs/menu.svg";
+import "./navbar.styles.scss";
 import Logo from "../../assets/images/logo.png";
-import SearchIcon from '@mui/icons-material/Search';
-
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import searchsvg from "../../assets/svgs/searchicon.svg";
+import NavCategories from "../../Sections/NavCategories/NavCategories";
+import { categories } from "../../assets/data/navbar-Modal-data";
+import { inputs } from "../../assets/data/navbar-data";
+import search from "../../assets/svgs/search.svg";
 export default function Navbar() {
-  const [openNav, seOpenNav] = useState(false)
-  const [search, setSearch] = useState(false)
+  const [openMenu, setOpenMenu] = useState(false);
+  const [openNav, setOpenNav] = useState(false);
+
+  const toggleMenu = () => {
+    setOpenMenu(!openMenu);
+  };
   return (
-    <div className="navbar__container">
-      <div className="nav__container">
-        {
-          search 
-          ?  <div className="nav__link_mobile">
-              <input type={"text"} placeholder="What would you like to learn?"/>
-            </div>
-          : <img src={Logo} alt="Logo" className="logo"/>
-        }
-        <div className="navigation">
-          <div className="nav__link">
-            <input type={"text"} placeholder="What would you like to learn?"/>
-          </div>
-          <div className="nav__link">
-            <span>Become a Teacher</span>
-          </div>
-          <div className="nav__link">
-            <button>Login</button>
-          </div>
-          <div className="nav_menu_mobile" >
-            <SearchIcon onClick={() => setSearch(!search)} fontSize={"large"} />
-            <MenuIcon onClick={() => seOpenNav(!openNav)} fontSize={"large"}/>
-          </div>
+    <nav className="navbar__container">
+      <div
+        className={`navbar__mobile ${openNav ? "navbar__mobile__active" : ""}`}
+      ></div>
+      <div className="navbar__menu mobile">
+        <img src={hamburger} alt="" onClick={() => setOpenNav(!openNav)} />
+        <div
+          className={`close__navbar ${openNav ? "close__navbar__active" : ""}`}
+          onClick={() => setOpenNav(false)}
+        >
+          <CloseIcon />
         </div>
       </div>
-      {
-        openNav && 
-          <div className="nav__container_mobile">
-          
-            <div className="nav__link_mobile">
-              <span>Become a Teacher</span>
-            </div>
-            <div className="nav__link_mobile">
-              <button>Login</button>
-            </div>
+      <div className="navbar__logo">
+        <img src={Logo} alt="" />
+      </div>
+      <div className="navbar__menu mobile">
+        <img src={search} alt="" className="mobile" />
+      </div>
+      <div className={`navbar__links`}>
+        <div className="nav__dropdown">
+          <button
+            className="primary"
+            onBlur={() => setOpenMenu(false)}
+            onClick={toggleMenu}
+          >
+            {inputs.primary}
+            <ExpandMoreIcon
+              className={`${openMenu && "btn__chevron__rotate"}`}
+            />
+          </button>
+          <div className={`nav__menu ${openMenu ? "active" : ""}`}>
+            <NavCategories categories={categories} />
           </div>
-      }
-    </div>
+        </div>
+
+        <div className="nav__search">
+          <img src={searchsvg} alt="" />{" "}
+          <input type="text" placeholder={inputs.search} />
+        </div>
+
+        <button className="teacher__btn"> {inputs.teacher}</button>
+        <button className="nav__login"> {inputs.login}</button>
+      </div>
+    </nav>
   );
 }
