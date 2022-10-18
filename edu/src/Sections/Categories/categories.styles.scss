@@ -14,6 +14,12 @@
       color: $darkblue;
       font-weight: 600;
       cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      svg {
+        font-size: 28px;
+      }
     }
     .selected {
       position: relative;
@@ -173,5 +179,26 @@
   .category__section {
     max-width: 1300px;
     margin: 0 auto;
+  }
+}
+// .headers > h2:not(.selected) {
+//   opacity: 0.3;
+// }
+@media screen and (max-width: 975px) {
+  .category__section {
+    // .teacher__section__container:has(.selected) {
+    //   display: none;
+    // }
+    // .privates__lessons:has(.selected) {
+    //   display: none;
+    // }
+    .headers {
+      flex-direction: column;
+      .selected {
+        &::before {
+          content: none;
+        }
+      }
+    }
   }
 }

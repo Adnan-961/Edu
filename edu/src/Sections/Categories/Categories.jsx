@@ -4,8 +4,11 @@ import locationImg from "../../assets/svgs/locations.svg";
 import searchIcon from "../../assets/svgs/search.svg";
 import usa from "../../assets/svgs/united-states 1.svg";
 import searchsvg from "../../assets/svgs/searchicon.svg";
-import { countries } from "../../assets/data/teachers";
-import { courses } from "../../assets/data/courses";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import { lessons } from "../../assets/data/Teacher-Lessons";
+import { text } from "../../assets/data/Teacher-Lessons";
+import { countries } from "../../assets/data/Teacher-Lessons";
+
 export default function Categories() {
   const [toggleTeacher, setToggleTeacher] = useState(true);
   const [toggleLesson, setToggleLesson] = useState(false);
@@ -23,7 +26,8 @@ export default function Categories() {
             setToggleLesson(false);
           }}
         >
-          Find a Teacher Anywhere
+          {text.header1}
+          <KeyboardArrowUpIcon />
         </h2>
         <h2
           className={toggleLesson ? "selected" : ""}
@@ -32,13 +36,14 @@ export default function Categories() {
             setToggleLesson(true);
           }}
         >
-          Trending Private Lessons
+          {text.header1}
+          <KeyboardArrowUpIcon />
         </h2>
       </div>
 
       {toggleTeacher && (
-        <>
-          <div className="findateacher__section">
+        <div className="teacher__section__container">
+          <div className="findateacher__section hidden">
             <div className="select__container">
               <img src={locationImg} alt="loaction" />
               <select onChange={(e) => setSelectedCountry(e.target.value)}>
@@ -65,7 +70,7 @@ export default function Categories() {
                   onChange={(e) => setSearch(e.target.value)}
                 />
               </div>
-              <div className="cities">
+              <div className="cities hidden">
                 {!search &&
                   countries
                     .find((country) => country.country === selectedCountry)
@@ -85,12 +90,12 @@ export default function Categories() {
               </div>
             </div>
           </div>
-        </>
+        </div>
       )}
       {toggleLesson && (
-        <div className="privates__lessons">
-          {courses &&
-            courses.map((lesson) => (
+        <div className="privates__lessons ">
+          {lessons &&
+            lessons.map((lesson) => (
               <LessonContainer header={lesson.title} array={lesson.array} />
             ))}
         </div>

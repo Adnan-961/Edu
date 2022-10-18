@@ -2,19 +2,17 @@
 .lessons__section {
   display: flex;
   flex-direction: column;
-  // min-height: 100vh;
-  position: relative;
   .arrow_right {
     position: absolute;
     top: 42%;
-    right: 18%;
+    right: 150px;
     z-index: 10;
     cursor: pointer;
   }
   .arrow_left {
     position: absolute;
     top: 42%;
-    left: 18%;
+    left: 120px;
     z-index: 10;
     cursor: pointer;
   }
@@ -34,6 +32,7 @@
   .lesson__category__container {
     width: 100%;
     height: 100%;
+    position: relative;
     .lesson__category {
       display: flex;
       flex-direction: column;

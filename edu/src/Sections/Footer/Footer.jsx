@@ -1,162 +1,67 @@
 import React from "react";
-
 import "./Footer.styles.scss";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import PhoneIcon from "@mui/icons-material/Phone";
-import whiteLogo from "../../assets/images/logo.png";
-import SendIcon from "@mui/icons-material/Send";
-import PhoneInTalkIcon from "@mui/icons-material/PhoneInTalk";
-import EmailIcon from "@mui/icons-material/Email";
-import YouTubeIcon from "@mui/icons-material/YouTube";
-import TelegramIcon from "@mui/icons-material/Telegram";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import TwitchIcon from "../../assets/images/twitch.svg";
-let socials = [
-  {
-    name: "fb",
-    icon: <FacebookIcon />,
-    href: "https://m.facebook.com/educifyinc",
-  },
-  {
-    name: "insta",
-    icon: <InstagramIcon />,
-    href: "https://instagram.com/educifyinc/",
-  },
-  {
-    name: "twitter",
-    icon: <TwitterIcon />,
-    href: "https://twitter.com/",
-  },
-  {
-    name: "twitch",
-    icon: <img src={TwitchIcon} className="twitch" />,
-    href: "https://www.twitch.tv/",
-  },
-  {
-    name: "youtube",
-    icon: <YouTubeIcon />,
-    href: "https://www.youtube.com/",
-  },
-  {
-    name: "Telegram",
-    icon: <TelegramIcon />,
-    href: "https://www.telegram.org/",
-  },
-];
-let footerCols = [
-  {
-    name: "Students",
-    links: ["How It Works", "Safety", "Lesson Fees", "Packages/Combo"],
-    href: ["/#", "/#", "/#", "/#"],
-  },
-  {
-    name: "Teachers",
-    links: ["How It Works", "Background Check", "Sign Up", "Packages/Combo"],
-    href: ["/#", "/#", "/#", "/#"],
-  },
-  {
-    name: "Apps",
-    links: ["Play Store", "App Store"],
-    href: ["/#", "/#"],
-  },
-];
+import logo from "../../assets/images/logo.png";
+import phone from "../../assets/svgs/phone.svg";
+import location from "../../assets/svgs/location.svg";
+import mail from "../../assets/svgs/mail.svg";
 
-let contactus = [
-  {
-    icon: <PhoneInTalkIcon htmlColor="#11d4fb" />,
-    text: "(+001) 000 000 000",
-    isLink: false,
-  },
-  {
-    icon: <EmailIcon htmlColor="#11d4fb" />,
-    text: "mailto:learnway@gmail.com",
-    isLink: true,
-  },
-  {
-    icon: <LocationOnIcon htmlColor="#11d4fb" />,
-    text: "9FW6+599 Egham, United Kingdom",
-    isLink: false,
-  },
-];
+import { socials } from "../../assets/data/footer";
+import { contact } from "../../assets/data/footer";
+import { footerCols } from "../../assets/data/footer";
+import { text } from "../../assets/data/footer";
 
-const Column = () => {
+export default function Footer() {
   return (
-    <>
-      {footerCols.map((col, i) => (
-        <div key={i} className="Footer_Column">
-          <h1>{col.name}</h1>
-          {col.links.map((link, i) => (
-            <a href={col.href[i]}>{link}</a>
+    <footer>
+      <div className="footer__container">
+        <div className="footer__logo">
+          <img src={logo} alt="" />
+          <p>{text.text}</p>
+        </div>
+        <div className="columns">
+          {footerCols.map((col, i) => (
+            <div className="col">
+              <h4>{col.name}</h4>
+              <ul>
+                {col.links.map((link, j) => (
+                  <li>
+                    <a href={col.href[j]}>{link}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
-        </div>
-      ))}
-    </>
-  );
-};
-
-const NewsLetter = () => {
-  return (
-    <div className="Logos_Container">
-      <div className="title">
-        <h2>
-          Sign Up For <br /> our newsletter
-        </h2>
-        <p>
-          Offers, promotion and educational <br /> contents
-        </p>
-      </div>
-
-      <div className="send__email">
-        <input type="text" placeholder="Email Address" />
-        <div className="email__icon">
-          <SendIcon />
-        </div>
-      </div>
-    </div>
-  );
-};
-
-function InfoSection() {
-  return (
-    <div className="Info_Container" id="footer">
-      <NewsLetter />
-      <Column />
-      <div className="ContactInfo">
-        <h1>Get In Touch</h1>
-        {contactus.map((contact) => (
-          <div className="footer__col">
-            {contact.icon}
-            {contact.isLink ? (
-              <a href={contact.text}>{contact.text.split(":")[1]}</a>
-            ) : (
-              <span> {contact.text}</span>
-            )}
+          <div className="col footer__contact">
+            <h4>{contact.header}</h4>
+            <ul>
+              <li>
+                <img src={phone} alt="" />
+                {contact.number}
+              </li>
+              <li>
+                <img src={mail} alt="" />
+                {contact.email}
+              </li>
+              <li>
+                <img src={location} alt="" />
+                {contact.location}
+              </li>
+            </ul>
           </div>
-        ))}
-
-        <div className="footer__socials">
+        </div>
+      </div>
+      <div className="bottom__section">
+        <p>{text.copyright}</p>
+        <p>{text.terms}</p>
+        <div className="socials">
           {socials.map((social) => (
-            <a target={"_blank"} href={social.href}>
-              {social.icon}
+            <a href={social.link}>
+              {" "}
+              <img src={social.image} alt="socials" />
             </a>
           ))}
         </div>
       </div>
-    </div>
+    </footer>
   );
 }
-function Footer() {
-  let year = new Date().getFullYear();
-  return (
-    <div className="Footer_Container" id="footer">
-      <InfoSection />
-      <p className="Footer_Copyright">Copyright ©{year} All rights reserved</p>
-    </div>
-  );
-}
-
-export default Footer;
