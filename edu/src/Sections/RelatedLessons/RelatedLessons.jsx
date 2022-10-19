@@ -23,6 +23,7 @@ export default function RelatedLessons() {
                   <a href={lesson.url}>... See All</a>
                 </span>
               </p>
+              <span className="lesson__categories">8 Categories</span>
             </div>
           ))}
       </div>

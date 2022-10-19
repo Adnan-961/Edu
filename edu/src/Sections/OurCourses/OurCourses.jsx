@@ -63,7 +63,7 @@ export default function CategoryCards() {
                     key={i}
                     category={item.category}
                     name={item.courseName}
-                    rating={3}
+                    rating={5}
                     image={item.image}
                   />
                 ))}

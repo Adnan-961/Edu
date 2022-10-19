@@ -5,7 +5,7 @@
   background-color: $accentblue;
   color: $white;
   padding: 20px;
-  max-height: 60px;
+  height: 40px;
   align-items: center;
   p {
     margin: 0;
@@ -21,7 +21,6 @@
 }
 .footer__container {
   background-color: $footer_bg;
-  // width: calc(100% - 130px);
   background-color: 500px;
   padding: 85px 65px;
   padding-right: 20px;
@@ -82,6 +81,7 @@
   .bottom__section {
     flex-direction: column-reverse;
     height: auto;
+    align-items: flex-start;
   }
   .footer__container {
     display: flex;

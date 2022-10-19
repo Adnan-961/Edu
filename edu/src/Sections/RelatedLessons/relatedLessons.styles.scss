@@ -17,15 +17,18 @@
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     align-self: center;
-    gap: 30px;
+    gap: 20px;
     .lesson {
-      //   width: 350px;
-      //   height: 150px;
+      max-width: 345px;
       padding: 10px 20px;
-      border: solid rgba(0, 0, 0, 0.1) 2px;
+      border: solid #e4e6ef 2px;
       border-style: dashed;
       border-radius: 9px;
       background-color: $related__lesson__bg;
+      color: $lesson_p_color;
+      .lesson__categories {
+        display: none;
+      }
       .lesson__details {
         border-bottom: solid rgba(0, 0, 0, 0.1) 2px;
         border-bottom-style: dashed;
@@ -50,26 +53,6 @@
   }
 }
 
-@media screen and (max-width: 975px) {
-  .related__lessons__container {
-    .related__header {
-      h1 {
-        font-size: $lesson_header_size;
-      }
-    }
-    .related__lessons {
-      width: 90%;
-
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: repeat(1, 1fr);
-
-      justify-content: center;
-      align-self: center;
-      gap: 30px;
-    }
-  }
-}
-
 @media screen and (min-width: 1500px) {
   .related__lessons__container {
     h1 {
@@ -80,7 +63,56 @@
 
       justify-content: center;
       align-self: center;
-      gap: 30px;
+      gap: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 975px) {
+  .related__lessons__container {
+    .related__header {
+      h1 {
+        font-size: $lesson_header_size;
+      }
+    }
+    .related__lessons {
+      width: 90%;
+
+      grid-template-columns: repeat(2, 200px);
+      // grid-template-rows: repeat(auto-fill, 90px);
+
+      justify-content: center;
+      align-self: center;
+      gap: 20px;
+      .lesson {
+        max-width: 150px;
+        max-height: 90px;
+        .lesson__categories {
+          display: flex;
+          padding-left: 10px;
+          white-space: nowrap;
+        }
+        p {
+          display: none;
+        }
+        span {
+          font-size: 14px;
+        }
+        .lesson__details {
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .related__lessons__container {
+    .related__lessons {
+      grid-template-columns: repeat(1, 200px);
+      // gap: 5px;
+
+      justify-content: center;
     }
   }
 }

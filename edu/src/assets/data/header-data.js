@@ -8,4 +8,5 @@ export const HeaderData = {
       "Are you ready to start your education path? EDUCIFY is here for you",
     highlight: "EDUCIFY",
   },
+  placeholder: "What do you want to learn ?",
 };
