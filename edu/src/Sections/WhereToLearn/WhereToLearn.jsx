@@ -13,6 +13,7 @@ export default function WhereToLearn() {
       <div className="col1">
         <h1>{text.header}</h1>
         <p>{text.p}</p>
+        <img src={wheretotlearn} alt="" />
       </div>
       <div className="col2">
         {data &&

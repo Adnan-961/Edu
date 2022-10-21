@@ -27,7 +27,7 @@
     }
   }
   .header__phrase {
-    width: 600px;
+    width: 50%;
     font-weight: 700;
     display: flex;
     flex-direction: column;
@@ -38,6 +38,7 @@
       color: $p_color;
       font-weight: 600;
       font-size: $header_p;
+      font-family: "Open Sans", sans-serif !important;
       line-height: 150%;
     }
     .header__inputs {
@@ -84,9 +85,16 @@
     }
   }
   .header__bg__image {
+    display: flex;
+    width: 50%;
+    justify-content: center;
     img {
-      width: 85%;
+      width: 100%;
+      object-fit: contain;
+      // max-width: 700px;
       max-width: 700px;
+
+      height: 90%;
     }
   }
   .highlighted {
@@ -121,17 +129,32 @@
   left: 30px;
 }
 
-@media screen and (max-width: 1250px) {
-  .header__container {
-    .header__bg__image {
-      display: flex;
-      align-items: center;
-      img {
-        width: 470px;
-      }
-    }
-  }
-}
+// @media screen and (max-width: 1250px) {
+//   .header__container {
+//     .header__bg__image {
+//       display: flex;
+//       align-items: center;
+//       img {
+//         width: 470px;
+//       }
+//     }
+//   }
+// }
+
+// @media screen and (max-width: 975px) {
+//   .header__container {
+//     .header__bg__image {
+//       display: flex;
+//       width: 50%;
+//       justify-content: center;
+//       img {
+//         width: 100%;
+//         object-fit: contain;
+//         // max-width: 700px;
+//       }
+//     }
+//   }
+// }
 
 @media screen and (max-width: 1050px) {
   .header__container {
@@ -203,18 +226,35 @@
 .header__inputs__mobile {
   display: none;
 }
-@media screen and (max-width: 975px) {
-  .header__inputs__mobile {
-    display: flex;
-  }
+// @media screen and (max-width: 975px) {
+//   .header__inputs__mobile {
+//     display: flex;
+//   }
+//   .header__container {
+//     flex-direction: column;
+//     padding-right: 0;
+//   }
+//   .header__inputs {
+//     display: none !important;
+//   }
+// }
+
+@media screen and (max-width: 768px) {
   .header__container {
     flex-direction: column;
-    padding-right: 0;
-  }
-  .header__inputs {
-    display: none !important;
+    .header__phrase {
+      width: 70%;
+      .subtitle {
+        width: 100% !important;
+        margin: 0 auto;
+      }
+    }
+    .header__bg__image {
+      width: 100%;
+    }
   }
 }
+
 @media screen and (max-width: 550px) {
   .header__container {
     padding-right: 0px;
@@ -241,6 +281,11 @@
       width: 450px;
     }
     .header__phrase {
+      .header__img {
+        img {
+          width: 175px;
+        }
+      }
       width: 80%;
       p {
         font-size: $p_xs !important;
@@ -252,49 +297,62 @@
     width: 90%;
   }
 }
-
 @media screen and (max-width: 450px) {
   .header__container {
-    padding: 5px;
-    padding-left: 10px;
-    padding-top: 140px;
-
-    .subtitle {
-      width: 310px !important;
-      font-size: $header_s !important;
-    }
-    .header__inputs {
-      width: 230px;
-      input {
-        font-size: $p_xs;
-        &::placeholder {
-          font-size: $p_xs;
-        }
+    .header__phrase {
+      .subtitle {
+        font-size: $header_xs !important;
       }
     }
   }
 }
+// @media screen and (max-width: 450px) {
+//   .header__container {
+//     .header__bg__image {
+//       img {
+//         width: 80%;
+//       }
+//     }
+//     padding: 5px;
+//     padding-left: 20px;
+//     padding-top: 140px;
 
-@media screen and (max-width: 310px) {
-  .header__container {
-    padding: 5px;
-    padding-top: 140px;
+//     .subtitle {
+//       width: 310px !important;
+//       font-size: $header_s !important;
+//     }
+//     .header__inputs {
+//       width: 230px;
+//       input {
+//         font-size: $p_xs;
+//         &::placeholder {
+//           font-size: $p_xs;
+//         }
+//       }
+//     }
+//   }
+// }
 
-    .subtitle {
-      width: 280px !important;
-      font-size: $header_xs !important;
-    }
-    .header__inputs {
-      width: 230px;
-      input {
-        font-size: $p_xs;
-        &::placeholder {
-          font-size: $p_xs;
-        }
-      }
-    }
-  }
-}
+// @media screen and (max-width: 310px) {
+//   .header__container {
+//     padding: 5px;
+//     padding-top: 140px;
+
+//     .subtitle {
+//       width: 280px !important;
+//       font-size: $header_xs !important;
+//     }
+//     .header__inputs {
+//       width: 230px;
+//       input {
+//         font-size: $p_xs;
+//         &::placeholder {
+//           font-size: $p_xs;
+//         }
+//       }
+//     }
+//   }
+// }
 
 @media screen and (min-width: 1500px) {
   .header__container {

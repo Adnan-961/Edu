@@ -8,15 +8,20 @@
   justify-content: center;
   .col1 {
     display: flex;
-    width: 40%;
+    width: 50%;
     flex-direction: column;
     padding: 40px;
-    background-image: url("../../assets/images/wheretotlearn.png");
-    background-size: 110% 70%;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    // background-position-x: left;
-    height: 900px;
+    // background-image: url("../../assets/images/wheretotlearn.png");
+    // background-size: 110% 70%;
+    // background-repeat: no-repeat;
+    // background-position: bottom;
+    // // background-position-x: left;
+    height: auto;
+    img {
+      width: 100%;
+      // object-fit: ;
+    }
+    height: auto;
 
     // height: 1100px;
     // background-position-y: 270px;
@@ -39,7 +44,7 @@
   }
   .col2 {
     display: flex;
-    width: calc(40% - 50px);
+    width: calc(50% - 50px);
     flex-direction: column;
     padding: 20px;
     button {
@@ -98,7 +103,42 @@
     }
   }
 }
-@media screen and (max-width: 975px) {
+@media screen and (max-width: 1050px) {
+  .wheretolearn__container {
+    .col1 {
+      h1 {
+        font-size: 35px;
+      }
+      padding-right: 0;
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  .wheretolearn__container {
+    .col1 {
+      h1 {
+        font-size: 25px !important;
+        max-width: 280px !important;
+      }
+      padding-right: 0;
+    }
+  }
+}
+// @media screen and (max-width: 1050px) {
+//   .wheretolearn__container {
+//     .col1 {
+//       h1 {
+//         font-size: 30px;
+//         max-width: 340px;
+//       }
+//       p {
+//         max-width: 90%;
+//         margin: 0;
+//       }
+//     }
+//   }
+// }
+@media screen and (max-width: 768px) {
   .wheretolearn__container {
     flex-direction: column;
     width: 95%;
@@ -107,45 +147,56 @@
       width: calc(100% - 40px);
     }
     .col1 {
-      height: 500px;
+      // height: 500px;
       // min-width: 350px;
-      width: 350px;
+      // width: 350px;
       h1 {
-        font-size: $header_xs;
-        max-width: 400px;
+        font-size: 35px;
+        max-width: 380px;
+        font-weight: 700;
+        text-transform: capitalize;
         // text-align: center;
+        line-height: 100%;
       }
       p {
         width: auto;
-        max-width: 400px;
+        max-width: 500px;
         // text-align: center;
+        margin: 0;
       }
-      padding: 20px;
+      // line-height: 0%;
+      padding: 30px;
+      padding-bottom: 0;
+      img {
+        width: 120%;
+        object-fit: contain;
+        margin-left: -30px;
+      }
     }
     .col2 {
       padding-left: 40px;
       .feature {
-        max-width: 600px;
+        // max-width: 600px;
       }
     }
   }
 }
-@media screen and (max-width: 600px) {
-  .wheretolearn__container {
-    .col2 {
-      padding-left: 20px;
-      .feature {
-        max-width: 500px;
-        width: auto;
-      }
-    }
-  }
-}
-@media screen and (max-width: 400px) {
-  .wheretolearn__container {
-    .col1 {
-      background-size: 400px 340px !important;
-      width: auto !important;
-    }
-  }
-}
+// @media screen and (max-width: 600px) {
+//   .wheretolearn__container {
+//     .col2 {
+//       padding-left: 20px;
+//       .feature {
+//         max-width: 500px;
+//         width: auto;
+//       }
+//     }
+//   }
+// }
+// @media screen and (max-width: 400px) {
+//   .wheretolearn__container {
+//     .col1 {
+//       background-size: 400px 340px !important;
+//       width: auto !important;
+//     }
+//   }
+// }

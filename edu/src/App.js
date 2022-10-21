@@ -17,7 +17,7 @@ function App() {
       <Navbar />
       <Header />
       {/* <OurCourses /> */}
-      <RelatedLessons />
+      {/* <RelatedLessons /> */}
       <WhereToLearn />
       <Categories />
       <Promo />

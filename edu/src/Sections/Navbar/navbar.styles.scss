@@ -91,14 +91,15 @@
         position: absolute;
         left: 13vw;
         top: 90px;
-        background-color: #f1f1f1;
+        background: #f3f6f9;
+        box-shadow: 0px 0px 4.53648px rgba(35, 18, 117, 0.12),
+          0px 25.7067px 30.2432px -15.1216px rgba(35, 18, 117, 0.18);
+        border-radius: 7.56081px;
         padding: 0.75rem;
         border-radius: 0.25rem;
         width: calc(100% - 27vw);
         overflow: hidden;
-        box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
-          rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
-          rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+
         opacity: 0;
         pointer-events: none;
         transform: translateY(-15px);
