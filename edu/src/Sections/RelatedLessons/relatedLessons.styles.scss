@@ -10,7 +10,7 @@
     font-size: $lesson_header_size;
     text-align: center;
   }
-  margin: 100px 20px;
+  margin: 50px 0px;
   .related__lessons {
     display: grid;
     width: 80%;
@@ -21,17 +21,15 @@
     .lesson {
       max-width: 345px;
       padding: 10px 20px;
-      border: solid #e4e6ef 2px;
-      border-style: dashed;
+      background: $related__lesson__bg;
+      border: 1px dashed $related__lesson__border;
       border-radius: 9px;
-      background-color: $related__lesson__bg;
       color: $lesson_p_color;
       .lesson__categories {
         display: none;
       }
       .lesson__details {
-        border-bottom: solid rgba(0, 0, 0, 0.1) 2px;
-        border-bottom-style: dashed;
+        border-bottom: 1px dashed $related__lesson__border;
         display: flex;
         align-items: center;
         gap: 10px;
@@ -70,7 +68,9 @@
 
 @media screen and (max-width: 975px) {
   .related__lessons__container {
+    padding: 0 30px;
     .related__header {
+      justify-content: start;
       h1 {
         font-size: $lesson_header_size;
       }
@@ -78,15 +78,16 @@
     .related__lessons {
       width: 90%;
 
-      grid-template-columns: repeat(2, 200px);
-      // grid-template-rows: repeat(auto-fill, 90px);
+      grid-template-columns: repeat(2, 180px);
+      grid-template-rows: 90px;
 
-      justify-content: center;
-      align-self: center;
+      justify-content: start;
+      align-self: flex-start;
       gap: 20px;
       .lesson {
-        max-width: 150px;
-        max-height: 90px;
+        // max-width: 150px;
+        // max-height: 90px;
+        padding: 10px;
         .lesson__categories {
           display: flex;
           padding-left: 10px;
@@ -100,6 +101,7 @@
         }
         .lesson__details {
           border: none;
+          padding: 0;
         }
       }
     }
@@ -109,10 +111,11 @@
 @media screen and (max-width: 450px) {
   .related__lessons__container {
     .related__lessons {
-      grid-template-columns: repeat(1, 200px);
+      grid-template-columns: repeat(auto-fill, 180px);
+      padding-right: 0;
       // gap: 5px;
 
-      justify-content: center;
+      justify-content: start;
     }
   }
 }

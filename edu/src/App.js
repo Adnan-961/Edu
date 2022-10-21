@@ -4,7 +4,7 @@ import Navbar from "./Sections/Navbar/Navbar";
 import Header from "./Sections/Header/Header";
 import OurCourses from "./Sections/OurCourses/OurCourses";
 import Categories from "./Sections/Categories/Categories";
-import Promo from "./Sections/Promo/Promo";
+import Promo from "./Sections/MobileApp/MobileApp";
 import WhereToLearn from "./Sections/WhereToLearn/WhereToLearn";
 import Footer from "./Sections/Footer/Footer";
 import NavCategories from "./Sections/NavCategories/NavCategories";
@@ -16,14 +16,14 @@ function App() {
     <div className="App">
       <Navbar />
       <Header />
-      <OurCourses />
-      {/* <RelatedLessons /> */}
-      {/* <WhereToLearn /> */}
-      {/* <Newsletter /> */}
+      {/* <OurCourses /> */}
+      <RelatedLessons />
+      <WhereToLearn />
+      <Categories />
+      <Promo />
+      <Newsletter />
+      <Footer />
       {/* <Info /> */}
-      {/* <Categories /> */}
-      {/* <Promo /> */}
-      {/* <Footer /> */}
     </div>
   );
 }

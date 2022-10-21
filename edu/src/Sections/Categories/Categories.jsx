@@ -27,7 +27,7 @@ export default function Categories() {
           }}
         >
           {text.header1}
-          <KeyboardArrowUpIcon />
+          <KeyboardArrowUpIcon className={`${toggleLesson && "invert"}`} />
         </h2>
         <h2
           className={toggleLesson ? "selected" : ""}
@@ -37,69 +37,12 @@ export default function Categories() {
           }}
         >
           {text.header1}
-          <KeyboardArrowUpIcon />
+          <KeyboardArrowUpIcon className={`${toggleTeacher && "invert"}`} />
         </h2>
       </div>
 
-      {toggleTeacher && (
-        <div className="teacher__section__container">
-          <div className="findateacher__section hidden">
-            <div className="select__container">
-              <img src={locationImg} alt="loaction" />
-              <select onChange={(e) => setSelectedCountry(e.target.value)}>
-                {countries.map((country) => (
-                  <option value={country.country}>{country.country}</option>
-                ))}
-              </select>
-            </div>
-
-            <button>
-              <img src={searchIcon} alt="search" />
-            </button>
-          </div>
-          <div className="filter">
-            <div className="header">
-              <img src={usa} alt="flag" /> <span>{selectedCountry}</span>
-            </div>
-            <div className="filter__search">
-              <div className="search">
-                <img src={searchsvg} alt="" />
-                <input
-                  type="text"
-                  placeholder={"Search For Cities..."}
-                  onChange={(e) => setSearch(e.target.value)}
-                />
-              </div>
-              <div className="cities hidden">
-                {!search &&
-                  countries
-                    .find((country) => country.country === selectedCountry)
-                    .cities.map((city, i) => (
-                      <CategoryContainer key={i} title={city} />
-                    ))}
-
-                {search &&
-                  countries
-                    .find((country) => country.country === selectedCountry)
-                    .cities.filter((city) =>
-                      city.toLowerCase().startsWith(search)
-                    )
-                    .map((city, i) => (
-                      <CategoryContainer key={i} title={city} />
-                    ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {toggleLesson && (
-        <div className="privates__lessons ">
-          {lessons &&
-            lessons.map((lesson) => (
-              <LessonContainer header={lesson.title} array={lesson.array} />
-            ))}
-        </div>
-      )}
+      {toggleTeacher && <FindTeacher />}
+      {toggleLesson && <TrendingLessons />}
     </div>
   );
 }
@@ -120,6 +63,70 @@ const LessonContainer = ({ header, array }) => {
               <span>{lesson.courseName}</span>
             </div>
           ))}
+      </div>
+    </div>
+  );
+};
+
+const TrendingLessons = () => {
+  return (
+    <div className="privates__lessons ">
+      {lessons &&
+        lessons.map((lesson) => (
+          <LessonContainer header={lesson.title} array={lesson.array} />
+        ))}
+    </div>
+  );
+};
+
+const FindTeacher = () => {
+  const [search, setSearch] = useState("");
+  const [selectedCountry, setSelectedCountry] = useState("united states");
+
+  return (
+    <div className="teacher__section__container">
+      <div className="findateacher__section hidden">
+        <div className="select__container">
+          <img src={locationImg} alt="loaction" />
+          <select onChange={(e) => setSelectedCountry(e.target.value)}>
+            {countries.map((country) => (
+              <option value={country.country}>{country.country}</option>
+            ))}
+          </select>
+        </div>
+
+        <button>
+          <img src={searchIcon} alt="search" />
+        </button>
+      </div>
+      <div className="filter">
+        <div className="header">
+          <img src={usa} alt="flag" /> <span>{selectedCountry}</span>
+        </div>
+        <div className="filter__search">
+          <div className="search">
+            <img src={searchsvg} alt="" />
+            <input
+              type="text"
+              placeholder={"Search For Cities..."}
+              onChange={(e) => setSearch(e.target.value)}
+            />
+          </div>
+          <div className="cities hidden">
+            {!search &&
+              countries
+                .find((country) => country.country === selectedCountry)
+                .cities.map((city, i) => (
+                  <CategoryContainer key={i} title={city} />
+                ))}
+
+            {search &&
+              countries
+                .find((country) => country.country === selectedCountry)
+                .cities.filter((city) => city.toLowerCase().startsWith(search))
+                .map((city, i) => <CategoryContainer key={i} title={city} />)}
+          </div>
+        </div>
       </div>
     </div>
   );

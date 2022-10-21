@@ -2,10 +2,11 @@
 
 .nav__categories {
   width: 100%;
-  height: min-content;
+  height: 80vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-around;
+  overflow-y: scroll !important;
   .category {
     padding: 20px;
     list-style-type: none;

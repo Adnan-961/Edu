@@ -13,7 +13,7 @@
   .socials {
     display: flex;
     justify-content: space-between;
-    gap: 30px;
+    gap: 20px;
     img {
       width: 25px;
     }
@@ -158,11 +158,13 @@
 }
 @media screen and (max-width: 400px) {
   .bottom__section {
-    padding: 20px;
+    padding: 10px;
     .socials {
       width: auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
     }
   }
   .footer__container {

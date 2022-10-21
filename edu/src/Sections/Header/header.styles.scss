@@ -13,6 +13,7 @@
   position: sticky;
   overflow: hidden;
   padding: 30px;
+  font-weight: bold !important;
   padding-top: 140px;
   .header__img {
     display: flex;
@@ -234,12 +235,13 @@
   .header__container {
     padding: 5px;
     padding-top: 140px;
-    padding-left: 30px;
+    padding-left: 20px;
+    padding-right: 0;
     .subtitle {
       width: 450px;
     }
     .header__phrase {
-      width: 100%;
+      width: 80%;
       p {
         font-size: $p_xs !important;
       }
@@ -254,7 +256,7 @@
 @media screen and (max-width: 450px) {
   .header__container {
     padding: 5px;
-    padding-left: 15px;
+    padding-left: 10px;
     padding-top: 140px;
 
     .subtitle {

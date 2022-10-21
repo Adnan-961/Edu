@@ -2,18 +2,25 @@
 
 .wheretolearn__container {
   display: flex;
-  width: 1400px;
-  margin: 0 auto;
-  justify-content: space-around;
+  width: 100%;
+  // margin: 0 auto;
+  // justify-content: space-around;
+  justify-content: center;
   .col1 {
     display: flex;
     width: 40%;
     flex-direction: column;
     padding: 40px;
-    img {
-      max-width: 100%;
-      max-height: 700px;
-    }
+    background-image: url("../../assets/images/wheretotlearn.png");
+    background-size: 110% 70%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    // background-position-x: left;
+    height: 900px;
+
+    // height: 1100px;
+    // background-position-y: 270px;
+
     h1 {
       color: $darkblue;
 
@@ -23,6 +30,11 @@
     }
     p {
       width: 550px;
+      color: $lesson_color;
+      font-size: $header_p;
+      font-weight: 600;
+      font-family: "Open Sans", sans-serif !important;
+      line-height: 22px;
     }
   }
   .col2 {
@@ -69,16 +81,16 @@
   }
 }
 
-// @media screen and (min-width: 1500px) {
-//   .wheretolearn__container {
-//     max-width: 1500px;
-//     margin: 0 auto;
-//   }
-// }
+@media screen and (min-width: 1500px) {
+  .wheretolearn__container {
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+}
 @media screen and (max-width: 1500px) {
   .wheretolearn__container {
     display: flex;
-    width: 80%;
+    // width: 80%;
     .col1 {
       p {
         width: 400px;
@@ -89,21 +101,24 @@
 @media screen and (max-width: 975px) {
   .wheretolearn__container {
     flex-direction: column;
-    width: 90%;
+    width: 95%;
     .col1,
     .col2 {
       width: calc(100% - 40px);
     }
     .col1 {
+      height: 500px;
+      // min-width: 350px;
+      width: 350px;
       h1 {
         font-size: $header_xs;
         max-width: 400px;
-        text-align: center;
+        // text-align: center;
       }
       p {
         width: auto;
         max-width: 400px;
-        text-align: center;
+        // text-align: center;
       }
       padding: 20px;
     }
@@ -123,6 +138,14 @@
         max-width: 500px;
         width: auto;
       }
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .wheretolearn__container {
+    .col1 {
+      background-size: 400px 340px !important;
+      width: auto !important;
     }
   }
 }

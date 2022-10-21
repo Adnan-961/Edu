@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from "react";
-import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import hamburger from "../../assets/svgs/menu.svg";
 import "./navbar.styles.scss";
@@ -55,7 +54,7 @@ export default function Navbar() {
         </div>
 
         <div className="nav__search">
-          <img src={searchsvg} alt="" />{" "}
+          <img src={searchsvg} alt="" />
           <input type="text" placeholder={inputs.search} />
         </div>
 

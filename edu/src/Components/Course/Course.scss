@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   width: 260px;
-  // border: 3px solid black;
   align-items: center;
   padding: 10px;
   border-radius: 8px;
@@ -28,11 +27,13 @@
       font-size: $lesson_title_size;
       display: flex;
       align-self: flex-start;
+      font-weight: bold;
     }
     .lesson__rating {
       display: flex;
       flex-direction: column;
-      color: $p_color;
+      color: $rating_color;
+      font-weight: 500;
 
       span {
         font-size: 16px;
@@ -61,6 +62,9 @@
       padding: 20px;
       cursor: pointer;
       transition: all ease-in-out 0.3s;
+      font-weight: bold;
+      font-size: 15px;
+      font-family: "Open Sans", sans-serif !important;
       &:hover > svg {
         transition: all ease-in-out 0.3s;
         transform: translateX(10px);

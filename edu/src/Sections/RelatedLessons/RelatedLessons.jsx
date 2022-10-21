@@ -20,10 +20,12 @@ export default function RelatedLessons() {
               <p>
                 {lesson.details.split("... See All")[0]}
                 <span className="lesson__seeall">
-                  <a href={lesson.url}>... See All</a>
+                  <a href={lesson.url}>... {text.seeAll}</a>
                 </span>
               </p>
-              <span className="lesson__categories">8 Categories</span>
+              <span className="lesson__categories">
+                {lesson.categories} {text.categories}
+              </span>
             </div>
           ))}
       </div>

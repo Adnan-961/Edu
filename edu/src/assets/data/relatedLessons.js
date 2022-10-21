@@ -14,12 +14,14 @@ export const data = [
     details:
       "Activities: Computer programming, Python,  MineCraft, Web Designing, HTML, JavaScript,Computer Graphics... See All",
     url: "/#",
+    categories: 8,
   },
   {
     name: "culinary",
     image: culinary,
     details:
       "Activities: Cake Decoration, Cooking Class, Baking Class... See All",
+    categories: 8,
     url: "/#",
   },
   {
@@ -27,6 +29,7 @@ export const data = [
     image: dance,
     details:
       "Activities: Ballets, Salsa Lessons, Hip-Hop Dance, Freestyle Dance, Wattz Lessons, Folk Dance, Ballroom Dance... See All",
+    categories: 8,
     url: "/#",
   },
   {
@@ -34,6 +37,7 @@ export const data = [
     image: examanation,
     details:
       "Activities: Cake Decoration, Cooking Class, Baking Class... See All",
+    categories: 8,
     url: "/#",
   },
   {
@@ -41,6 +45,7 @@ export const data = [
     image: racing,
     details:
       "Activities: Racing, Car Driving Lessons, Truck Driving Lessons, Bike Riding, Horse Riding... See All",
+    categories: 8,
     url: "/#",
   },
   {
@@ -48,6 +53,7 @@ export const data = [
     image: maths,
     details:
       "Activities: Algebra, Calculus, Pre-Calculus, Geometry, Statistics & Probability, Arithmetics, Logic & Reasoning... See All",
+    categories: 8,
     url: "/#",
   },
   {
@@ -55,12 +61,14 @@ export const data = [
     image: gym_sport,
     details:
       "Activities: Lawn Tennis, Karate, Judo, Skating, Gymnastics, Ice Hockey, Badminton, Taekwondo... See All",
+    categories: 8,
     url: "/#",
   },
   {
     name: "health",
     image: health,
     details: "Activities: Yoga, CPR... See All",
+    categories: 8,
     url: "/#",
   },
   {
@@ -68,10 +76,13 @@ export const data = [
     image: Art,
     details:
       "Activities: Knitting, Photography, Videography, Sewing Class, Drawing Class, Sculpting Class, Graphic Design... See All",
+    categories: 8,
     url: "/#",
   },
 ];
 
 export const text = {
   header: "Other Related Lessons",
+  categories: "categories",
+  seeAll: "See All",
 };
