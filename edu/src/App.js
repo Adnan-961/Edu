@@ -18,7 +18,7 @@ function App() {
       <Header />
       {/* <OurCourses /> */}
       <RelatedLessons />
-      <WhereToLearn />
+      {/* <WhereToLearn /> */}
       {/* <Categories /> */}
       {/* <Promo /> */}
       {/* <Newsletter /> */}
