@@ -11,6 +11,7 @@
     width: 50%;
     flex-direction: column;
     padding: 40px;
+    overflow: hidden;
     // background-image: url("../../assets/images/wheretotlearn.png");
     // background-size: 110% 70%;
     // background-repeat: no-repeat;
@@ -120,6 +121,9 @@
         font-size: 25px !important;
         max-width: 280px !important;
       }
+      img {
+        width: 130% !important;
+      }
       padding-right: 0;
     }
   }
@@ -145,11 +149,13 @@
     .col1,
     .col2 {
       width: calc(100% - 40px);
+      padding: 20px;
     }
     .col1 {
       // height: 500px;
       // min-width: 350px;
       // width: 350px;
+      // display: none;
       h1 {
         font-size: 35px;
         max-width: 380px;
@@ -165,16 +171,15 @@
         margin: 0;
       }
       // line-height: 0%;
-      padding: 30px;
+      padding: 20px;
       padding-bottom: 0;
       img {
-        width: 120%;
+        width: 100%;
         object-fit: contain;
         margin-left: -30px;
       }
     }
     .col2 {
-      padding-left: 40px;
       .feature {
         // max-width: 600px;
       }

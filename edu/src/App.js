@@ -17,11 +17,11 @@ function App() {
       <Navbar />
       <Header />
       {/* <OurCourses /> */}
-      {/* <RelatedLessons /> */}
+      <RelatedLessons />
       <WhereToLearn />
-      <Categories />
-      <Promo />
-      <Newsletter />
+      {/* <Categories /> */}
+      {/* <Promo /> */}
+      {/* <Newsletter /> */}
       <Footer />
       {/* <Info /> */}
     </div>
