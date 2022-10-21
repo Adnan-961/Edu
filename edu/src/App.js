@@ -18,10 +18,10 @@ function App() {
       <Header />
       {/* <OurCourses /> */}
       <RelatedLessons />
-      {/* <WhereToLearn /> */}
-      {/* <Categories /> */}
-      {/* <Promo /> */}
-      {/* <Newsletter /> */}
+      <WhereToLearn />
+      <Categories />
+      <Promo />
+      <Newsletter />
       <Footer />
       {/* <Info /> */}
     </div>

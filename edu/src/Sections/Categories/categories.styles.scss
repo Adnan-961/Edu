@@ -123,7 +123,8 @@
       .cities {
         display: flex;
         max-width: 90%;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
+        overflow-x: scroll;
         margin-top: 50px;
         .category_card {
           min-width: 80px;
