@@ -299,9 +299,48 @@
     width: 90%;
   }
 }
+@media screen and (max-width: 375px) {
+  .header__container {
+    .header__phrase {
+      .header__inputs {
+        // display: none;
+        input {
+          width: 250px;
+          height: 40px;
+          &::placeholder {
+            font-size: 11px;
+          }
+        }
+        button {
+          width: 50px;
+          height: 50px;
+          img {
+            // width: 10px !important;
+            height: 20px;
+          }
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width: 450px) {
   .header__container {
     .header__phrase {
+      .header__inputs {
+        // display: none;
+        input {
+          width: 250px;
+          height: 40px;
+        }
+        button {
+          width: 50px;
+          height: 50px;
+          img {
+            // width: 10px !important;
+            height: 20px;
+          }
+        }
+      }
       .subtitle {
         font-size: $header_xs !important;
         min-width: 260px;

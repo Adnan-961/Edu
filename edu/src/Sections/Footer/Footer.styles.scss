@@ -6,6 +6,7 @@
   color: $white;
   padding: 20px;
   height: 40px;
+  font-size: 14px;
   align-items: center;
   p {
     margin: 0;
@@ -17,6 +18,11 @@
     img {
       width: 25px;
     }
+  }
+  .terms {
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
   }
 }
 .footer__container {
@@ -154,6 +160,28 @@
   .footer__container {
     padding: 80px 20px;
     width: auto;
+  }
+  footer {
+    .socials {
+      gap: 5px !important;
+      justify-content: space-between !important;
+      width: 90% !important;
+      img {
+        width: 20px !important;
+      }
+    }
+    .terms {
+      // display: none !important;
+      width: 290px !important;
+      font-size: 12px;
+      span {
+        white-space: nowrap;
+      }
+      @media screen and (max-width: 320px) {
+        font-size: 11px;
+        width: 90% !important;
+      }
+    }
   }
 }
 @media screen and (max-width: 400px) {

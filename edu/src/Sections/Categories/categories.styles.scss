@@ -5,12 +5,12 @@
   flex-direction: column;
   max-width: 90%;
   background-image: url("../../assets/images/teacherbg.png");
-  background-size: cover;
-  background-position: 100%;
+  background-size: 1300px 800px;
+  background-position: top;
   .headers {
     display: flex;
     gap: 30px;
-    margin-bottom: 50px;
+    margin: 50px 0;
     color: $darkblue;
 
     .invert {

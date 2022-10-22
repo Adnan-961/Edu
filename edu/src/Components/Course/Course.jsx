@@ -1,11 +1,10 @@
 import React from "react";
 import Rating from "@mui/material/Rating";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
-import stars from "../../assets/images/stars.png";
 import "./Course.scss";
-export default function Course({ image, category, name, rating, ref }) {
+export default function Course({ image, category, name, rating }) {
   return (
-    <div className="lesson__container" ref={ref && ref}>
+    <div className="lesson__container">
       <img alt="" src={image} />
       <div className="lesson__info">
         <div className="lesson__title">
@@ -13,7 +12,7 @@ export default function Course({ image, category, name, rating, ref }) {
         </div>
         <div className="lesson__rating">
           <Rating name="read-only" value={rating} readOnly />
-          <p>Best Rated</p>
+          <p style={{ "white-space": "nowrap" }}>Best Rated</p>
         </div>
       </div>
       <div className="course__btn">

@@ -5,7 +5,7 @@
   border-radius: 2px;
   display: flex;
   height: 40px;
-  margin: 50px 0;
+  margin: 10px 0;
   padding: 20px 0;
   align-items: center;
   .group {
@@ -78,5 +78,10 @@
     .group {
       max-width: 1500px;
     }
+  }
+}
+@media screen and (max-width: 1050px) {
+  .info__container {
+    display: none;
   }
 }

@@ -52,7 +52,14 @@ export default function Footer() {
       </div>
       <div className="bottom__section">
         <p>{text.copyright}</p>
-        <p>{text.terms}</p>
+
+        <div className="terms">
+          <span>Educify</span>
+          {"  |  "}
+          <span>Terms and Conditions</span>
+          {"  |  "}
+          <span>Privacy Policy</span>
+        </div>
         <div className="socials">
           {socials.map((social) => (
             <a href={social.link}>

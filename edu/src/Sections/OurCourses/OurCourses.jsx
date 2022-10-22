@@ -2,76 +2,48 @@ import React from "react";
 import "./ourCourses.styles.scss";
 import Course from "../../Components/Course/Course";
 
-import arrow_right from "../../assets/svgs/arrow-right.svg";
-import arrow_left from "../../assets/svgs/arrow-left.svg";
-import { useState, useRef } from "react";
-import { useEffect } from "react";
 import { courses } from "../../assets/data/courses";
 import { text } from "../../assets/data/courses";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
-export default function CategoryCards() {
-  const [carousel, setCarousel] = useState(0);
-  const [carouselWidth, setCarouselWidth] = useState(0);
-  const [lessonWidth, setLessonWidth] = useState(0);
-
-  const ref = useRef(null);
-
-  useEffect(() => {
-    setCarouselWidth(ref.current.scrollWidth);
-  }, []);
-
-  let nbCourses = parseInt(courses.length * 280);
-
+export default function Lessons() {
   return (
     <div className="lessons__section">
-      <div className="lessons__title">
-        <span>{text.header}</span>
-        <p>{text.p}</p>
-      </div>
-      {courses.map((category) => (
-        <div className="lesson__category__container">
-          <div className="lesson__category">
-            <div className="lesson__category__title">
-              <h1>{category.title}</h1>
-              <span>
-                <a href={category.link.href}>{category.link.text}</a>
-              </span>
+      <h1>Our Lessons</h1>
+      <p>
+        We offer the best premium education services. Achieve A Better Future &
+        Attain Your Long- Standing Ambition by registering for any of our
+        courses{" "}
+      </p>
+      <div className="carousel">
+        {courses.map((section) => (
+          <div className="inner__carousel">
+            <div className="lesson__header">
+              <h1>{section.title}</h1>
+              <span>View All</span>
             </div>
-            <img
-              src={arrow_right}
-              alt="arrow right"
-              className="arrow_right"
-              onClick={() => setCarousel(carousel + 310)}
-            />
-            <img
-              src={arrow_left}
-              alt="arrow left"
-              className="arrow_left"
-              onClick={() => setCarousel(carousel - 310)}
-            />
-            <div className="lessons" ref={ref}>
-              <div
-                className="carousel"
-                style={
-                  carousel > nbCourses
-                    ? setCarousel(0)
-                    : { transform: `translate(-${carousel}px` }
-                }
+            <div className="lessons">
+              <Slider
+                centerPadding={true}
+                dots={false}
+                slidesToShow={4}
+                slidesToScroll={1}
               >
-                {category.array.map((item, i) => (
+                {section.array.map((lesson) => (
                   <Course
-                    key={i}
-                    category={item.category}
-                    name={item.courseName}
+                    name={lesson.courseName}
+                    category={lesson.category}
+                    image={lesson.image}
                     rating={5}
-                    image={item.image}
                   />
                 ))}
-              </div>
+              </Slider>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

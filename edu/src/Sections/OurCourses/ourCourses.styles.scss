@@ -1,126 +1,198 @@
 @import "../../variables.scss";
+
 .lessons__section {
+  // padding: 30px;
   display: flex;
   flex-direction: column;
-  .arrow_right {
-    position: absolute;
-    top: 42%;
-    right: 150px;
-    z-index: 10;
-    cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  max-width: 1500px;
+  margin: 0 auto;
+  overflow: hidden;
+  h1 {
+    font-size: $header_size;
+    color: $darkblue;
+    margin: 0;
   }
-  .arrow_left {
-    position: absolute;
-    top: 42%;
-    left: 120px;
-    z-index: 10;
-    cursor: pointer;
+  p {
+    text-align: center;
+    max-width: 510px;
+    color: $p_color;
+    line-height: 150%;
+
+    font-family: "Open Sans", sans-serif !important;
+    font-size: $p_size;
+    font-weight: 400;
   }
-  .lessons__title {
-    width: 510px;
+  .carousel {
+    width: 90%;
     margin: 0 auto;
-    span {
-      color: $darkblue;
-      font-size: $header_size;
-      font-weight: $header_weight;
+    .inner__carousel {
+      margin: 30px 0;
+      border-radius: 24px;
+      max-width: 1300px;
+    }
+    .lesson__header {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 80px;
+      align-items: center;
+      border: 2px dashed #b5b5c3;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 0 80px;
+
+      h1 {
+        text-transform: uppercase;
+        margin: 0;
+        font-size: $lesson_header_size;
+        color: $darkblue;
+        font-weight: 700;
+        margin-top: -45px;
+        background-color: $white;
+        transform: translate(30px);
+      }
+      span {
+        color: $accentblue;
+        font-size: 25px;
+        text-decoration: underline;
+        font-weight: 500;
+        line-height: 120%;
+        margin-top: -50px;
+        transform: translate(-30px);
+        background-color: $white;
+      }
+    }
+  }
+  .lessons {
+    background-color: $white;
+    margin-top: -20px;
+  }
+}
+.slick-prev:before,
+.slick-next:before {
+  font-size: 25px !important;
+  color: #a1a5b7 !important;
+  @media screen and (max-width: 1200px) {
+    display: none !important;
+  }
+}
+.slick-arrow.slick-next {
+  // display: none !important;
+  transform: translate(-40px);
+  margin-top: -60px;
+  color: $white !important;
+  // transform: translateY(-10px);
+}
+.slick-arrow.slick-prev {
+  // display: none !important;
+  transform: translate(20px);
+  z-index: 10;
+  margin-top: -60px;
+  color: $white !important;
+  // transform: translateY(-10px);
+}
+@media screen and (max-width: 1300px) {
+  .lessons__section {
+    .carousel {
+      width: 100%;
+      margin: 0;
+      .inner__carousel {
+        width: 100%;
+        .lessons {
+          // display: none;
+          overflow: hidden;
+          // width: 100%;
+
+          min-width: 1200px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1050px) {
+  .lessons__section {
+    h1 {
+      font-size: $header_md;
     }
     p {
-      color: $p_color;
+      font-size: $p_small;
     }
-    text-align: center;
-  }
-  .lesson__category__container {
-    width: 80%;
-    height: 100%;
-    margin: 0 auto;
-    position: relative;
-    .lesson__category {
-      display: flex;
-      flex-direction: column;
-      width: auto;
-      max-width: 1150px;
-      height: 100%;
-      margin: 0 auto;
-      background-image: url("data:image/svg+xml,%3csvg width='100%25' height='85' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='24' ry='24' stroke='%23333' stroke-width='3' stroke-dasharray='6%2c 14' stroke-dashoffset='35' stroke-linecap='square'/%3e%3c/svg%3e");
-      background-repeat: no-repeat;
-      border-radius: 24px;
-      margin-top: 50px;
-      transition: all ease-in-out 0.3s;
-
-      .lessons {
-        background-color: $white;
-        margin-top: 30px;
-        margin-left: -40px;
-        margin-right: -40px;
-        display: flex;
-        overflow-x: scroll;
-        gap: 30px;
-        transition: all ease-in-out 0.3s;
-        padding-bottom: 80px;
-        .carousel {
-          width: 100%;
-          display: flex;
-          gap: 30px;
-          transition: all ease 0.3s;
-        }
-      }
-      .lesson__category__title {
-        display: flex;
-        justify-content: space-between;
-        width: 90%;
-        align-items: flex-start;
-        margin: 0 auto;
-        a:visited {
-          color: $accentblue;
-        }
-        h1 {
-          margin-top: -18px;
-          background-color: $white;
-          color: $darkblue;
-          font-size: $lesson_header_size;
-          text-transform: uppercase;
-          font-weight: $header_weight;
-          line-height: 120%;
-        }
-        span {
-          margin-top: -18px;
-          background-color: $white;
-          color: $accentblue;
-          font-size: $lesson_header_size;
-          text-transform: capitalize;
-          font-weight: 500;
-          text-decoration: underline;
+    .carousel {
+      .inner__carousel {
+        .lesson__header {
+          margin: 0;
+          border: none;
+          font-size: $lesson_title_size;
         }
       }
     }
   }
 }
-
-@media screen and (min-width: 1500px) {
+@media screen and (max-width: 750px) {
   .lessons__section {
-    max-width: 1500px;
-    margin: 0 auto;
-  }
-}
-@media screen and (max-width: 975px) {
-  .lessons__section {
-    max-width: 95%;
-    .lesson__category__container {
-      width: 85%;
-      .lesson__category {
-        background-image: none;
-        .lessons {
-          margin-top: 0;
-        }
-        .lesson__category__title {
-          width: 100%;
-          h1,
+    p {
+      width: 80%;
+    }
+    .carousel {
+      .inner__carousel {
+        .lesson__header {
+          h1 {
+            font-size: 18px;
+          }
           span {
-            margin: 0;
-            text-transform: capitalize;
+            font-size: 13px;
           }
         }
       }
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  .lessons__section {
+    .carousel {
+      .inner__carousel {
+        .lesson__header {
+          // margin: 0;
+          h1 {
+            font-size: $p_small;
+            // transform: translateX(-10px);
+          }
+          span {
+            font-size: $p_xs;
+          }
+        }
+      }
+    }
+    h1 {
+      font-size: $header_xs;
+    }
+    p {
+      font-size: $p_xs;
+      max-width: 85%;
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  .lessons__section {
+    .carousel {
+      .inner__carousel {
+        .lesson__header {
+          h1 {
+            transform: translateX(-10px);
+          }
+          span {
+            transform: translateX(10px);
+          }
+        }
+      }
+    }
+    h1 {
+      font-size: $header_xs;
+    }
+    p {
+      font-size: $p_xs;
+      max-width: 85%;
     }
   }
 }
