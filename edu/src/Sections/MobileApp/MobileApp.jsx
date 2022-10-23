@@ -6,7 +6,7 @@ import google from "../../assets/svgs/google.svg";
 import apple from "../../assets/svgs/apple.svg";
 import { data } from "../../assets/data/app";
 import { text } from "../../assets/data/app";
-
+import img from "../../assets/images/app.png";
 export default function MobileApp() {
   return (
     <>
@@ -30,8 +30,9 @@ export default function MobileApp() {
             ))}
           </div>
         </div>
+        <img src={img} alt="" className="mobile__bg" />
       </div>
-      <div className="btns">
+      {/* <div className="btns">
         <div className="google">
           <img src={google} alt="google btn" />
           <button>
@@ -44,7 +45,7 @@ export default function MobileApp() {
             <span>Get it On</span>Apple Store
           </button>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

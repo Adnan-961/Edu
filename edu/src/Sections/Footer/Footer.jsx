@@ -4,13 +4,54 @@ import logo from "../../assets/images/logo.png";
 import phone from "../../assets/svgs/phone.svg";
 import location from "../../assets/svgs/location.svg";
 import mail from "../../assets/svgs/mail.svg";
+import uk from "../../assets/svgs/england.svg";
+import usa from "../../assets/svgs/usa.svg";
 
 import { socials } from "../../assets/data/footer";
 import { contact } from "../../assets/data/footer";
 import { footerCols } from "../../assets/data/footer";
 import { text } from "../../assets/data/footer";
 
+import Select from "react-select";
 export default function Footer() {
+  const options = [
+    {
+      value: "USA",
+      label: (
+        <div className="select__option">
+          <img src={uk} />
+          England
+        </div>
+      ),
+    },
+    {
+      value: "USA",
+      label: (
+        <div className="select__option">
+          <img src={usa} />
+          USA{" "}
+        </div>
+      ),
+    },
+    {
+      value: "USA",
+      label: (
+        <div className="select__option">
+          <img src={uk} />
+          England{" "}
+        </div>
+      ),
+    },
+    {
+      value: "USA",
+      label: (
+        <div className="select__option">
+          <img src={usa} />
+          USA{" "}
+        </div>
+      ),
+    },
+  ];
   return (
     <footer>
       <div className="footer__container">
@@ -47,6 +88,13 @@ export default function Footer() {
                 {contact.location}
               </li>
             </ul>
+            <div className="location__currency">
+              <Select
+                options={options}
+                className="wtf"
+                styles={{ color: "red" }}
+              />
+            </div>
           </div>
         </div>
       </div>

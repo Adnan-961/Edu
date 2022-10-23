@@ -60,14 +60,17 @@
   display: flex;
   padding: 100px 30px;
   background: rgba(245, 248, 250, 0.5);
-  background-image: url("../../assets/images/app.png");
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: 50%;
+  // background-image: url("../../assets/images/app.png");
+  // background-repeat: no-repeat;
+  // background-position: right;
+  // background-size: 50%;
   max-width: 1500px;
   margin: 0 auto;
-  flex-direction: column;
-
+  // flex-direction: column;
+  .mobile__bg {
+    max-width: 50%;
+    object-position: 0 -60px;
+  }
   .app__container {
     width: 50%;
     span {
@@ -174,6 +177,14 @@
     background-size: 500px;
     padding: 30px;
     background-position-x: -80px;
+    height: auto;
+    .mobile__bg {
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto;
+      object-position: 0px 0px !important;
+      // min-width: 330px;
+    }
     .app__container {
       h1 {
         font-size: $header_xs;
@@ -211,7 +222,6 @@
   .mobileApp__section {
     flex-direction: column;
     background-position: left bottom;
-    height: 800px;
     background-size: 500px;
     background-position-x: -80px;
     padding-right: 10px;
