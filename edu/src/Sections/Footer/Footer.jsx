@@ -89,11 +89,7 @@ export default function Footer() {
               </li>
             </ul>
             <div className="location__currency">
-              <Select
-                options={options}
-                className="wtf"
-                styles={{ color: "red" }}
-              />
+              <Select options={options} />
             </div>
           </div>
         </div>
