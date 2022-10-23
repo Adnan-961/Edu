@@ -91,7 +91,7 @@ export const courses = [
       },
       {
         category: "ACADEMIC TUTORING",
-        courseName: "French Course",
+        courseName: "French ",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -99,7 +99,7 @@ export const courses = [
       },
       {
         category: "Languages",
-        courseName: "French Course",
+        courseName: "French ",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -107,7 +107,7 @@ export const courses = [
       },
       {
         category: "Music",
-        courseName: "Guitar Course",
+        courseName: "Guitar ",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -115,7 +115,7 @@ export const courses = [
       },
       {
         category: "ACADEMIC TUTORING",
-        courseName: "French Course",
+        courseName: "French ",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -130,7 +130,7 @@ export const courses = [
     array: [
       {
         category: "Languages",
-        courseName: "French Course",
+        courseName: "French ",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -138,7 +138,7 @@ export const courses = [
       },
       {
         category: "Music",
-        courseName: "Guitar Course",
+        courseName: "Guitar ",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -146,7 +146,7 @@ export const courses = [
       },
       {
         category: "ACADEMIC TUTORING",
-        courseName: "French Course",
+        courseName: "French ",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -154,7 +154,7 @@ export const courses = [
       },
       {
         category: "ACADEMIC TUTORING",
-        courseName: "French Course",
+        courseName: "French ",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -162,7 +162,7 @@ export const courses = [
       },
       {
         category: "ACADEMIC TUTORING",
-        courseName: "French Course",
+        courseName: "French ",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -170,7 +170,7 @@ export const courses = [
       },
       {
         category: "ACADEMIC TUTORING",
-        courseName: "French Course",
+        courseName: "French ",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -178,7 +178,7 @@ export const courses = [
       },
       {
         category: "ACADEMIC TUTORING",
-        courseName: "French Course",
+        courseName: "French ",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -186,7 +186,7 @@ export const courses = [
       },
       {
         category: "ACADEMIC TUTORING",
-        courseName: "French Course",
+        courseName: "French ",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -194,7 +194,7 @@ export const courses = [
       },
       {
         category: "ACADEMIC TUTORING",
-        courseName: "French Course",
+        courseName: "French ",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -202,7 +202,7 @@ export const courses = [
       },
       {
         category: "ACADEMIC TUTORING",
-        courseName: "French Course",
+        courseName: "French ",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -210,7 +210,7 @@ export const courses = [
       },
       {
         category: "ACADEMIC TUTORING",
-        courseName: "French Course",
+        courseName: "French ",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -218,7 +218,7 @@ export const courses = [
       },
       {
         category: "Languages",
-        courseName: "French Course",
+        courseName: "French ",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -226,7 +226,7 @@ export const courses = [
       },
       {
         category: "Music",
-        courseName: "Guitar Course",
+        courseName: "Guitar ",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -234,7 +234,7 @@ export const courses = [
       },
       {
         category: "ACADEMIC TUTORING",
-        courseName: "French Course",
+        courseName: "French ",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -249,7 +249,7 @@ export const courses = [
     array: [
       {
         category: "Languages",
-        courseName: "French Course",
+        courseName: "French ",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -257,7 +257,7 @@ export const courses = [
       },
       {
         category: "Music",
-        courseName: "Guitar Course",
+        courseName: "Guitar ",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -265,7 +265,7 @@ export const courses = [
       },
       {
         category: "ACADEMIC TUTORING",
-        courseName: "French Course",
+        courseName: "French ",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -273,7 +273,7 @@ export const courses = [
       },
       {
         category: "Languages",
-        courseName: "French Course",
+        courseName: "French ",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -281,7 +281,7 @@ export const courses = [
       },
       {
         category: "Music",
-        courseName: "Guitar Course",
+        courseName: "Guitar ",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",
@@ -289,7 +289,7 @@ export const courses = [
       },
       {
         category: "ACADEMIC TUTORING",
-        courseName: "French Course",
+        courseName: "French ",
         teacher: teacher,
         teacherName: "John Smith",
         teacherPrice: "60.00$",

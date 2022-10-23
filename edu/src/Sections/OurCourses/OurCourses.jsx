@@ -11,18 +11,16 @@ import Slider from "react-slick";
 export default function Lessons() {
   return (
     <div className="lessons__section">
-      <h1>Our Lessons</h1>
-      <p>
-        We offer the best premium education services. Achieve A Better Future &
-        Attain Your Long- Standing Ambition by registering for any of our
-        courses{" "}
-      </p>
+      <h1>{text.header}</h1>
+      <p>{text.p}</p>
       <div className="carousel">
         {courses.map((section) => (
           <div className="inner__carousel">
             <div className="lesson__header">
               <h1>{section.title}</h1>
-              <span>View All</span>
+              <span>
+                <a href={section.link.href}>{section.link.text}</a>
+              </span>
             </div>
             <div className="lessons">
               <Slider
@@ -30,6 +28,15 @@ export default function Lessons() {
                 dots={false}
                 slidesToShow={4}
                 slidesToScroll={1}
+                responsive={[
+                  {
+                    breakpoint: 600,
+                    settings: {
+                      slidesToShow: 3,
+                      slidesToScroll: 1,
+                    },
+                  },
+                ]}
               >
                 {section.array.map((lesson) => (
                   <Course

@@ -165,7 +165,9 @@
     .socials {
       gap: 5px !important;
       justify-content: space-between !important;
-      width: 90% !important;
+      // width: 90% !important;
+      max-width: 300px;
+
       img {
         width: 20px !important;
       }
@@ -179,18 +181,24 @@
       }
       @media screen and (max-width: 320px) {
         font-size: 11px;
-        width: 90% !important;
+        width: 100% !important;
+        font-weight: 600;
       }
     }
   }
 }
 @media screen and (max-width: 400px) {
   .bottom__section {
-    padding: 10px;
+    padding: 20px;
+    p {
+      font-size: 12px;
+    }
     .socials {
-      width: auto;
+      // width: auto;
+      width: 250px;
       display: flex;
       flex-wrap: wrap;
+      align-items: center !important;
       justify-content: flex-start;
       align-items: flex-start;
     }
