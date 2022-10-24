@@ -88,13 +88,13 @@ export default function Footer() {
                 {contact.location}
               </li>
             </ul>
-            <div className="location__currency">
+            {/* <div className="location__currency">
               <Select
                 options={options}
                 styles={{ color: "red" }}
                 defaultValue={options[0].label.type}
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
