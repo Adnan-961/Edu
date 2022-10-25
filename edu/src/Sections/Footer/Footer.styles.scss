@@ -5,6 +5,30 @@
   align-items: center;
   gap: 10px;
 }
+
+.languages {
+  margin: 0 20px;
+  @media screen and (max-width: 1250px) {
+    margin: 0 0px;
+  }
+  .select__option {
+    font-size: 12px;
+  }
+  width: 157px;
+  border: none;
+  outline: none;
+  .css-1s2u09g-control {
+    background-color: transparent;
+    border: none;
+    color: white;
+    .css-1okebmr-indicatorSeparator {
+      display: none;
+    }
+    .css-qc6sy-singleValue {
+      color: #fff;
+    }
+  }
+}
 .bottom__section {
   display: flex;
   justify-content: space-between;

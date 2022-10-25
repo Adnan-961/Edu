@@ -10,6 +10,15 @@
   position: fixed;
   width: calc(100% - 40px);
   z-index: 999;
+
+  .navbar__logo {
+    .logo__mobile {
+      display: none;
+    }
+    img {
+      width: 123px;
+    }
+  }
   .navbar__links {
     display: flex;
     gap: 10px;
@@ -123,11 +132,163 @@
   display: flex;
   position: fixed;
   background-color: $white;
-  width: 80%;
+  max-width: 275px;
+  width: 275px;
+  flex-direction: column;
   left: -900px;
   top: 0px;
   height: 100%;
   transition: left 0.3s ease-in-out;
+  overflow-y: scroll;
+
+  #nav__currency {
+    width: 70px;
+    margin: 10px;
+    height: 40px;
+    border: none;
+    background-color: #f2f3f7;
+    border-radius: 9px;
+    padding: 5px;
+  }
+
+  .nav__teacher {
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-top: solid #eff2f5 1px;
+    .teacher__btn__mobile {
+      // background-color: $accentblue;
+
+      border: solid 1px #afafaf;
+      width: 180px;
+      height: 40px;
+      color: #afafaf;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all ease-in-out 0.2s;
+    }
+  }
+  .nav__category__details {
+    .nav__category__list {
+      border-bottom: solid #eff2f5 1px;
+
+      .cat__seeall {
+        color: #cacaca;
+      }
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      span {
+        cursor: pointer;
+      }
+      h3 {
+        color: $accentblue;
+      }
+    }
+    padding-top: 0;
+    width: 100%;
+    .back {
+      width: 100%;
+      padding: 0;
+      background: #f3f6f9;
+
+      height: 55px;
+      display: flex;
+      align-items: center;
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 70px;
+        color: $p_color;
+        text-decoration: none;
+        font-size: 18px;
+        cursor: pointer;
+        svg {
+          color: $p_color;
+          padding-right: 10px;
+        }
+      }
+    }
+    h3 {
+      color: $nav_title;
+      margin: 0;
+      font-weight: 600;
+    }
+    color: $p_color;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .our__lessons {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 40px);
+    border-top: solid 1px #eff2f5;
+    border-bottom: solid 1px #eff2f5;
+    height: auto;
+    padding: 5px 20px;
+    .other {
+      // display: none;
+      border-top: solid #eff2f5 1px;
+      margin-top: 20px;
+      padding-top: 10px;
+    }
+    .nav__category {
+      cursor: pointer;
+    }
+    .login {
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      border-bottom: solid 1px #eff2f5;
+
+      a {
+        text-decoration: none;
+      }
+      span {
+        color: $gold;
+      }
+    }
+    h3 {
+      color: $accentblue;
+      font-weight: 700;
+      margin-top: 20px;
+    }
+    .nav__categories__mobile {
+      overflow: hidden !important;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      a {
+        text-decoration: none;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .nav__category {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        color: $p_color;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: capitalize;
+
+        svg {
+          color: $p_color;
+        }
+      }
+    }
+  }
 }
 .navbar__mobile__active {
   left: 0px;
@@ -135,7 +296,7 @@
 }
 .close__navbar__active {
   display: flex !important;
-  left: 85% !important;
+  left: 300px !important;
 }
 .close__navbar {
   border-radius: 50%;
@@ -149,6 +310,11 @@
   top: 50px;
   left: -100px;
   transition: left 0.3s ease-in-out;
+  @media screen and (max-width: 360px) {
+    left: 247px !important;
+    width: 35px;
+    height: 35px;
+  }
 }
 @media screen and (min-width: 1051px) {
   .navbar__mobile,
@@ -161,6 +327,7 @@
   .mobile {
     display: block !important;
   }
+
   .nav__login,
   .teacher__btn,
   .nav__search,
@@ -169,7 +336,15 @@
   }
   .navbar__container {
     justify-content: space-between;
-    // padding: 0 0px;
+    .navbar__logo {
+      .logo__mobile {
+        display: block;
+      }
+      img {
+        width: auto;
+        display: none;
+      }
+    }
     .navbar__links {
       display: none !important;
     }

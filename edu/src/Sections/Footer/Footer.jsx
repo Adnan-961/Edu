@@ -14,40 +14,48 @@ import { text } from "../../assets/data/footer";
 
 import Select from "react-select";
 export default function Footer() {
+  const styles = {
+    option: (provided, state) => ({
+      ...provided,
+      fontWeight: state.isSelected ? "normal" : "normal",
+      color: "black",
+      backgroundColor: "#ffffff",
+    }),
+  };
   const options = [
     {
-      value: "USA",
+      value: "UK, English",
       label: (
         <div className="select__option">
           <img src={uk} />
-          England
+          UK, English
         </div>
       ),
     },
     {
-      value: "USA",
+      value: "USA, English",
       label: (
         <div className="select__option">
           <img src={usa} />
-          USA{" "}
+          USA, English
         </div>
       ),
     },
     {
-      value: "USA",
+      value: "USA, English",
       label: (
         <div className="select__option">
           <img src={uk} />
-          England{" "}
+          USA, English
         </div>
       ),
     },
     {
-      value: "USA",
+      value: "USA, English",
       label: (
         <div className="select__option">
           <img src={usa} />
-          USA{" "}
+          USA, English
         </div>
       ),
     },
@@ -88,13 +96,15 @@ export default function Footer() {
                 {contact.location}
               </li>
             </ul>
-            {/* <div className="location__currency">
+            <div className="location__currency">
               <Select
                 options={options}
-                styles={{ color: "red" }}
-                defaultValue={options[0].label.type}
+                className="languages"
+                styles={styles}
+                defaultValue={options[0]}
+                isSearchable={false}
               />
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
