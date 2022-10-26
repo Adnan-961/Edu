@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import hamburger from "../../assets/svgs/menu.svg";
 import "./navbar.styles.scss";
@@ -161,7 +161,7 @@ const GetCategories = ({ category, setPage1, page1 }) => {
       <div className="nav__category__list">
         <h3>{category}</h3>
         {categories
-          .find((cat) => cat.name == category)
+          .find((cat) => cat.name === category)
           .array.map((found) => (
             <span>{found}</span>
           ))}

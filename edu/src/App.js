@@ -10,19 +10,21 @@ import Footer from "./Sections/Footer/Footer";
 import Newsletter from "./Sections/NewsLetter/Newsletter";
 import RelatedLessons from "./Sections/RelatedLessons/RelatedLessons";
 import Info from "./Sections/Info/Info";
+import Landing from "./Sections/Landing/Landing";
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <Header />
-      <OurCourses />
+      {/* <Header /> */}
+      {/* <OurCourses /> */}
+      <Landing />
       <RelatedLessons />
       <WhereToLearn />
       <Info />
-      <Categories />
-      <Promo />
-      <Newsletter />
-      <Footer />
+      {/* <Categories /> */}
+      {/* <Promo /> */}
+      {/* <Newsletter /> */}
+      {/* <Footer /> */}
     </div>
   );
 }

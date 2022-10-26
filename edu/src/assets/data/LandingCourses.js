@@ -4,126 +4,95 @@ import image3 from "../images/3.jpg";
 
 export const courses = [
   {
-    title: "Language",
+    title: "languages",
 
     link: { href: "/#", text: "View all" },
     array: [
       {
-        category: "Languages",
+        category: "languages",
         courseName: "Spanish",
-
-        teacherName: "John Smith",
-        teacherPrice: "60.00$",
         image: image1,
       },
       {
         category: "Languages",
         courseName: "Spanish",
 
-        teacherName: "John Smith",
-        teacherPrice: "60.00$",
         image: image1,
       },
       {
         category: "Languages",
         courseName: "Spanish",
 
-        teacherName: "John Smith",
-        teacherPrice: "60.00$",
+        image: image1,
+      },
+      {
+        category: "Languages",
+        courseName: "Spanish",
+        image: image1,
+      },
+      {
+        category: "Languages",
+        courseName: "Spanish",
         image: image1,
       },
       {
         category: "Languages",
         courseName: "Spanish",
 
-        teacherName: "John Smith",
-        teacherPrice: "60.00$",
         image: image1,
       },
       {
         category: "Languages",
         courseName: "Spanish",
 
-        teacherName: "John Smith",
-        teacherPrice: "60.00$",
         image: image1,
       },
       {
         category: "Languages",
         courseName: "Spanish",
 
-        teacherName: "John Smith",
-        teacherPrice: "60.00$",
         image: image1,
       },
       {
         category: "Languages",
         courseName: "Spanish",
 
-        teacherName: "John Smith",
-        teacherPrice: "60.00$",
-        image: image1,
-      },
-      {
-        category: "Languages",
-        courseName: "Spanish",
-
-        teacherName: "John Smith",
-        teacherPrice: "60.00$",
-        image: image1,
-      },
-      {
-        category: "Languages",
-        courseName: "Spanish",
-
-        teacherName: "John Smith",
-        teacherPrice: "60.00$",
         image: image1,
       },
       {
         category: "Music",
         courseName: "French",
 
-        teacherName: "John Smith",
-        teacherPrice: "60.00$",
         image: image2,
       },
       {
         category: "ACADEMIC TUTORING",
         courseName: "French ",
 
-        teacherName: "John Smith",
-        teacherPrice: "60.00$",
         image: image3,
       },
       {
         category: "Languages",
         courseName: "French ",
 
-        teacherName: "John Smith",
-        teacherPrice: "60.00$",
         image: image1,
       },
       {
         category: "Music",
         courseName: "Guitar ",
 
-        teacherName: "John Smith",
-        teacherPrice: "60.00$",
         image: image2,
       },
       {
         category: "ACADEMIC TUTORING",
         courseName: "French ",
 
-        teacherName: "John Smith",
-        teacherPrice: "60.00$",
         image: image3,
       },
     ],
   },
   {
-    title: "Academic Tutoring",
+    title: "music",
     link: { href: "/#", text: "View all" },
 
     array: [
@@ -131,118 +100,90 @@ export const courses = [
         category: "Languages",
         courseName: "French ",
 
-        teacherName: "John Smith",
-        teacherPrice: "60.00$",
         image: image1,
       },
       {
         category: "Music",
         courseName: "Guitar ",
 
-        teacherName: "John Smith",
-        teacherPrice: "60.00$",
         image: image2,
       },
       {
         category: "ACADEMIC TUTORING",
         courseName: "French ",
 
-        teacherName: "John Smith",
-        teacherPrice: "60.00$",
         image: image3,
       },
       {
         category: "ACADEMIC TUTORING",
         courseName: "French ",
 
-        teacherName: "John Smith",
-        teacherPrice: "60.00$",
         image: image3,
       },
       {
         category: "ACADEMIC TUTORING",
         courseName: "French ",
 
-        teacherName: "John Smith",
-        teacherPrice: "60.00$",
         image: image3,
       },
       {
         category: "ACADEMIC TUTORING",
         courseName: "French ",
 
-        teacherName: "John Smith",
-        teacherPrice: "60.00$",
         image: image3,
       },
       {
         category: "ACADEMIC TUTORING",
         courseName: "French ",
 
-        teacherName: "John Smith",
-        teacherPrice: "60.00$",
         image: image3,
       },
       {
         category: "ACADEMIC TUTORING",
         courseName: "French ",
 
-        teacherName: "John Smith",
-        teacherPrice: "60.00$",
         image: image3,
       },
       {
         category: "ACADEMIC TUTORING",
         courseName: "French ",
 
-        teacherName: "John Smith",
-        teacherPrice: "60.00$",
         image: image3,
       },
       {
         category: "ACADEMIC TUTORING",
         courseName: "French ",
 
-        teacherName: "John Smith",
-        teacherPrice: "60.00$",
         image: image3,
       },
       {
         category: "ACADEMIC TUTORING",
         courseName: "French ",
 
-        teacherName: "John Smith",
-        teacherPrice: "60.00$",
         image: image3,
       },
       {
         category: "Languages",
         courseName: "French ",
 
-        teacherName: "John Smith",
-        teacherPrice: "60.00$",
         image: image1,
       },
       {
         category: "Music",
         courseName: "Guitar ",
 
-        teacherName: "John Smith",
-        teacherPrice: "60.00$",
         image: image2,
       },
       {
         category: "ACADEMIC TUTORING",
         courseName: "French ",
 
-        teacherName: "John Smith",
-        teacherPrice: "60.00$",
         image: image3,
       },
     ],
   },
   {
-    title: "Music",
+    title: "sports",
     link: { href: "/#", text: "View all" },
 
     array: [
@@ -250,55 +191,38 @@ export const courses = [
         category: "Languages",
         courseName: "French ",
 
-        teacherName: "John Smith",
-        teacherPrice: "60.00$",
         image: image1,
       },
       {
         category: "Music",
         courseName: "Guitar ",
 
-        teacherName: "John Smith",
-        teacherPrice: "60.00$",
         image: image2,
       },
       {
         category: "ACADEMIC TUTORING",
         courseName: "French ",
 
-        teacherName: "John Smith",
-        teacherPrice: "60.00$",
         image: image3,
       },
       {
         category: "Languages",
         courseName: "French ",
 
-        teacherName: "John Smith",
-        teacherPrice: "60.00$",
         image: image1,
       },
       {
         category: "Music",
         courseName: "Guitar ",
 
-        teacherName: "John Smith",
-        teacherPrice: "60.00$",
         image: image2,
       },
       {
         category: "ACADEMIC TUTORING",
         courseName: "French ",
 
-        teacherName: "John Smith",
-        teacherPrice: "60.00$",
         image: image3,
       },
     ],
   },
 ];
-
-export const text = {
-  header: "Our Lessons",
-  p: "We offer the best premium education services. Achieve A Better Future & Attain Your Long- Standing Ambition by registering for any of our courses",
-};

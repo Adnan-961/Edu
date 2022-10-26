@@ -140,6 +140,9 @@
   height: 100%;
   transition: left 0.3s ease-in-out;
   overflow-y: scroll;
+  @media screen and (max-width: 360px) {
+    width: 235px;
+  }
 
   #nav__currency {
     width: 70px;
@@ -294,10 +297,7 @@
   left: 0px;
   transition: left 0.3s ease-in-out;
 }
-.close__navbar__active {
-  display: flex !important;
-  left: 300px !important;
-}
+
 .close__navbar {
   border-radius: 50%;
   background-color: $white;
@@ -311,9 +311,16 @@
   left: -100px;
   transition: left 0.3s ease-in-out;
   @media screen and (max-width: 360px) {
-    left: 247px !important;
+    // left: 247px !important;
     width: 35px;
     height: 35px;
+  }
+}
+.close__navbar__active {
+  display: flex !important;
+  left: 300px !important;
+  @media screen and (max-width: 360px) {
+    left: 240px !important;
   }
 }
 @media screen and (min-width: 1051px) {
