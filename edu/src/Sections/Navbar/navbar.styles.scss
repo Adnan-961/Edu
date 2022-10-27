@@ -66,6 +66,7 @@
       position: relative;
       svg {
         font-size: 32px;
+        cursor: pointer;
       }
       &::after {
         content: "2";
@@ -111,6 +112,9 @@
       font-size: 12px;
       cursor: pointer;
       background-color: $white;
+      a {
+        text-decoration: none;
+      }
     }
     .nav__dropdown {
       .active {

@@ -29,86 +29,82 @@ export default function Navbar() {
     setOpenMenu(!openMenu);
   };
   return (
-    <Router>
-      <nav className="navbar__container">
-        <div
-          className={`navbar__mobile ${
-            openNav ? "navbar__mobile__active" : ""
-          }`}
-        >
-          {page1 && (
-            <NavLanding
-              setSelectedCategory={setSelectedCategory}
-              page1={page1}
-              setPage1={setPage1}
-            />
-          )}
-          {!page1 && (
-            <GetCategories
-              category={selectedCategory}
-              setPage1={setPage1}
-              page1={page1}
-            />
-          )}
-        </div>
-        <div className="navbar__menu mobile">
-          <img src={hamburger} alt="" onClick={() => setOpenNav(!openNav)} />
-          <div
-            className={`close__navbar ${
-              openNav ? "close__navbar__active" : ""
-            }`}
-            onClick={() => setOpenNav(false)}
-          >
-            <CloseIcon />
-          </div>
-        </div>
-        <div className="navbar__logo">
-          <img src={Logo} alt="logo" />
-          <img src={logo_mobile} alt="logo" className="logo__mobile" />
-        </div>
-        <div className="navbar__menu mobile">
-          <div className="heart">
-            <FavoriteBorderIcon style={{ color: "#fff" }} />
-          </div>
-          <img src={search} alt="" className="mobile" />
-        </div>
-        <div className={`navbar__links`}>
-          <div className="nav__dropdown">
-            <button
-              className="primary"
-              onBlur={() => setOpenMenu(false)}
-              onClick={toggleMenu}
-            >
-              {inputs.primary}
-              <ExpandMoreIcon
-                className={`${openMenu && "btn__chevron__rotate"}`}
-              />
-            </button>
-            <div className={`nav__menu ${openMenu ? "active" : ""}`}>
-              <NavCategories categories={categories} />
-            </div>
-          </div>
-
-          <div className="nav__search">
-            <img src={searchsvg} alt="" />
-
-            <input type="text" placeholder={inputs.search} />
-          </div>
-          <Select
-            options={options}
-            className="languages"
-            styles={styles}
-            defaultValue={options[0]}
-            isSearchable={false}
+    <nav className="navbar__container">
+      <div
+        className={`navbar__mobile ${openNav ? "navbar__mobile__active" : ""}`}
+      >
+        {page1 && (
+          <NavLanding
+            setSelectedCategory={setSelectedCategory}
+            page1={page1}
+            setPage1={setPage1}
           />
-          <div className="heart">
-            <FavoriteBorderIcon style={{ color: "#fff" }} />
-          </div>
-          <button className="teacher__btn"> {inputs.teacher}</button>
-          <button className="nav__login"> {inputs.login}</button>
+        )}
+        {!page1 && (
+          <GetCategories
+            category={selectedCategory}
+            setPage1={setPage1}
+            page1={page1}
+          />
+        )}
+      </div>
+      <div className="navbar__menu mobile">
+        <img src={hamburger} alt="" onClick={() => setOpenNav(!openNav)} />
+        <div
+          className={`close__navbar ${openNav ? "close__navbar__active" : ""}`}
+          onClick={() => setOpenNav(false)}
+        >
+          <CloseIcon />
         </div>
-      </nav>
-    </Router>
+      </div>
+      <div className="navbar__logo">
+        <img src={Logo} alt="logo" />
+        <img src={logo_mobile} alt="logo" className="logo__mobile" />
+      </div>
+      <div className="navbar__menu mobile">
+        <div className="heart">
+          <FavoriteBorderIcon style={{ color: "#fff" }} />
+        </div>
+        <img src={search} alt="" className="mobile" />
+      </div>
+      <div className={`navbar__links`}>
+        <div className="nav__dropdown">
+          <button
+            className="primary"
+            onBlur={() => setOpenMenu(false)}
+            onClick={toggleMenu}
+          >
+            {inputs.primary}
+            <ExpandMoreIcon
+              className={`${openMenu && "btn__chevron__rotate"}`}
+            />
+          </button>
+          <div className={`nav__menu ${openMenu ? "active" : ""}`}>
+            <NavCategories categories={categories} />
+          </div>
+        </div>
+
+        <div className="nav__search">
+          <img src={searchsvg} alt="" />
+
+          <input type="text" placeholder={inputs.search} />
+        </div>
+        <Select
+          options={options}
+          className="languages"
+          styles={styles}
+          defaultValue={options[0]}
+          isSearchable={false}
+        />
+        <div className="heart">
+          <FavoriteBorderIcon style={{ color: "#fff" }} />
+        </div>
+        <button className="teacher__btn"> {inputs.teacher}</button>
+        <button className="nav__login">
+          <Link to={"/login"}>{inputs.login} </Link>
+        </button>
+      </div>
+    </nav>
   );
 }
 

@@ -11,21 +11,36 @@ import Newsletter from "./Sections/NewsLetter/Newsletter";
 import RelatedLessons from "./Sections/RelatedLessons/RelatedLessons";
 import Info from "./Sections/Info/Info";
 import Landing from "./Sections/Landing/Landing";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Routes,
+} from "react-router-dom";
+import Login from "./Sections/Login/Login";
+import Signup from "./Sections/Signup/Signup";
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      {/* <Header /> */}
-      {/* <OurCourses /> */}
-      <Landing />
-      <RelatedLessons />
-      <WhereToLearn />
-      <Info />
-      {/* <Categories /> */}
-      {/* <Promo /> */}
-      {/* <Newsletter /> */}
-      {/* <Footer /> */}
-    </div>
+    <Router>
+      <div className="App">
+        {/* <Navbar /> */}
+        {/* <Header /> */}
+        {/* <OurCourses /> */}
+        {/* <Landing /> */}
+        {/* <RelatedLessons /> */}
+        {/* <WhereToLearn /> */}
+        {/* <Info /> */}
+        {/* <Categories /> */}
+        {/* <Promo /> */}
+        {/* <Newsletter /> */}
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+        </Routes>
+        {/* <Footer /> */}
+      </div>
+    </Router>
   );
 }
 
