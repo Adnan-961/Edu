@@ -11,7 +11,7 @@ import Select from "react-select";
 import logo_mobile from "../../assets/images/logo_mobile.png";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
 import { categories } from "../../assets/data/navbar-Modal-data";
@@ -67,6 +67,9 @@ export default function Navbar() {
           <img src={logo_mobile} alt="logo" className="logo__mobile" />
         </div>
         <div className="navbar__menu mobile">
+          <div className="heart">
+            <FavoriteBorderIcon style={{ color: "#fff" }} />
+          </div>
           <img src={search} alt="" className="mobile" />
         </div>
         <div className={`navbar__links`}>
@@ -88,6 +91,7 @@ export default function Navbar() {
 
           <div className="nav__search">
             <img src={searchsvg} alt="" />
+
             <input type="text" placeholder={inputs.search} />
           </div>
           <Select
@@ -97,6 +101,9 @@ export default function Navbar() {
             defaultValue={options[0]}
             isSearchable={false}
           />
+          <div className="heart">
+            <FavoriteBorderIcon style={{ color: "#fff" }} />
+          </div>
           <button className="teacher__btn"> {inputs.teacher}</button>
           <button className="nav__login"> {inputs.login}</button>
         </div>

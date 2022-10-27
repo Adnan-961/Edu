@@ -31,9 +31,9 @@ export default function Landing() {
                 HeaderData.header.phrase.split(HeaderData.header.highlight)[1]
               }{" "}
             </h1>
-            <p className="subtitle"> What do you want to learn ?</p>
+            <p className="subtitle"> {HeaderData.paragraph.phrase}</p>
             <div className="landing__inputs">
-              <input type="text" placeholder="What to learn ?" />
+              <input type="text" placeholder={HeaderData.placeholder} />
               <button>
                 <img src={searchIcon} alt="" />
               </button>
@@ -51,11 +51,9 @@ export default function Landing() {
         </div>
         <div className="categories__slider">
           <div className={`dropdown ${showDropDown ? "active" : ""}`}>
-            <span>Language</span>
-            <span>Language</span>
-            <span>Language</span>
-            <span>Language</span>
-            <span>Language</span>
+            {HeaderData.moreDetails.map((detail) => (
+              <span>{detail}</span>
+            ))}
           </div>
 
           {categories.slice(0, 8).map((cat, i) => (

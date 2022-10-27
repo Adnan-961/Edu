@@ -60,6 +60,30 @@
     .btn__chevron__rotate {
       rotate: 180deg;
     }
+    .heart {
+      display: flex;
+      align-items: center;
+      position: relative;
+      svg {
+        font-size: 32px;
+      }
+      &::after {
+        content: "2";
+        font-size: 11px;
+        position: absolute;
+        background-color: #ffa800;
+
+        width: 19px;
+        height: 19px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        top: -2px;
+        right: -7px;
+      }
+    }
     .teacher__btn {
       background-color: $accentblue;
       border: solid 1px $white;
@@ -332,7 +356,34 @@
 
 @media screen and (max-width: 1050px) {
   .mobile {
-    display: block !important;
+    display: flex !important;
+    justify-content: space-between;
+    width: 70px;
+    align-items: center;
+    .heart {
+      display: flex;
+      align-items: center;
+      position: relative;
+      svg {
+        font-size: 20px;
+      }
+      &::after {
+        content: "2";
+        font-size: 7px;
+        position: absolute;
+        background-color: #ffa800;
+
+        width: 15px;
+        height: 15px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        top: -7px;
+        right: -7px;
+      }
+    }
   }
 
   .nav__login,

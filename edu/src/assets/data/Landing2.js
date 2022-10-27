@@ -8,4 +8,5 @@ export const HeaderData = {
     phrase: "What do you want to Learn?",
   },
   placeholder: "What do you want to learn ?",
+  moreDetails: ["language", "language", "language", "language"],
 };
