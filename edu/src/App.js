@@ -11,6 +11,8 @@ import Newsletter from "./Sections/NewsLetter/Newsletter";
 import RelatedLessons from "./Sections/RelatedLessons/RelatedLessons";
 import Info from "./Sections/Info/Info";
 import Landing from "./Sections/Landing/Landing";
+import ForgotPassword from "./Sections/ForgotPassword/ForgotPassword";
+import ChangePassword from "./Sections/ChangePassword/ChangePassword";
 import {
   BrowserRouter as Router,
   Switch,
@@ -20,25 +22,30 @@ import {
 } from "react-router-dom";
 import Login from "./Sections/Login/Login";
 import Signup from "./Sections/Signup/Signup";
+import PasswordChanged from "./Sections/PasswordChanged/PasswordChanged";
 function App() {
   return (
     <Router>
       <div className="App">
         {/* <Navbar /> */}
-        {/* <Header /> */}
-        {/* <OurCourses /> */}
-        {/* <Landing /> */}
-        {/* <RelatedLessons /> */}
-        {/* <WhereToLearn /> */}
-        {/* <Info /> */}
-        {/* <Categories /> */}
-        {/* <Promo /> */}
-        {/* <Newsletter /> */}
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/forget" element={<ForgotPassword />} />
+          <Route path="/change" element={<ChangePassword />} />
+          <Route path="/success" element={<PasswordChanged />} />
         </Routes>
-        {/* <Footer /> */}
+        {/* <Header />
+        <OurCourses />
+        <Landing />
+        <RelatedLessons />
+        <WhereToLearn />
+        <Info />
+        <Categories />
+        <Promo />
+        <Newsletter />
+
+        <Footer /> */}
       </div>
     </Router>
   );

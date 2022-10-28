@@ -4,6 +4,7 @@ import signup from "../../assets/images/signup.png";
 import "./signup.styles.scss";
 import google from "../../assets/svgs/google-icon.svg";
 import facebook from "../../assets/svgs/facebook.svg";
+import { Link } from "react-router-dom";
 
 export default function Signup() {
   return (
@@ -24,7 +25,13 @@ const LoginContainer = () => {
     <div className="inner__login">
       <h1>Sign Up and Start Learning!</h1>
       <p>
-        Already have an account? <span>Log In</span>
+        Already have an account?{" "}
+        <span>
+          <Link style={{ color: "inherit" }} to="/login">
+            {" "}
+            Log In
+          </Link>
+        </span>
       </p>
       <div className="inputs">
         <div className="email">
@@ -45,14 +52,15 @@ const LoginContainer = () => {
         </div>
         <div className="password">
           <div className="header">
-            {" "}
             <h4>Confirm Password</h4>
           </div>
           <input type="password" name="password" />
         </div>
         <div className="agree__condition">
           <input type="checkbox" name="terms" id="" />{" "}
-          <span>I agree to the Terms & Conditions</span>
+          <span>
+            I agree to the <span>Terms & Conditions</span>
+          </span>
         </div>
         <div className="signin__btn">
           <button>Create an Account</button>

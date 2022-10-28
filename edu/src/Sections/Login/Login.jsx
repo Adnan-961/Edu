@@ -4,6 +4,7 @@ import "./Login.styles.scss";
 import google from "../../assets/svgs/google-icon.svg";
 import facebook from "../../assets/svgs/facebook.svg";
 import { Welcome } from "../../Components/Welcome/Welcome";
+import { Link } from "react-router-dom";
 export default function Login() {
   return (
     <div className="login__container">
@@ -18,25 +19,17 @@ export default function Login() {
   );
 }
 
-// export const Welcome = ({ img, text }) => {
-//   return (
-//     <div className="welcome__container">
-//       <img src={Logo} alt="" />
-//       <h1>Welcome To Educify</h1>
-//       <p>{text}</p>
-//       <div className="background">
-//         <img src={img} alt="" />
-//       </div>
-//     </div>
-//   );
-// };
-
 const LoginContainer = () => {
   return (
     <div className="inner__login">
       <h1>Sign In to Learn</h1>
       <p>
-        New Here? <span> Create an Account</span>
+        New Here?{" "}
+        <span>
+          <Link style={{ color: "inherit" }} to={"/signup"}>
+            Create an Account
+          </Link>
+        </span>
       </p>
       <div className="inputs">
         <div className="email">
@@ -46,7 +39,10 @@ const LoginContainer = () => {
         <div className="password">
           <div className="header">
             {" "}
-            <h4>Password</h4> <span>Forgot Password</span>
+            <h4>Password</h4>{" "}
+            <span>
+              <Link to="/forget">Forgot Password</Link>
+            </span>
           </div>
           <input type="password" name="password" />
         </div>
