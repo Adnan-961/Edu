@@ -119,7 +119,7 @@
     align-items: center;
     background-color: #f5f8fa;
     // height: 80px;
-    width: calc(100% - 40px);
+    width: 80%;
     position: relative;
     max-width: 1500px;
     padding: 10px 20px;
@@ -127,8 +127,16 @@
     font-size: 18px;
     letter-spacing: 0.05em;
     gap: 7px;
-    flex-wrap: wrap;
     cursor: pointer;
+    flex-wrap: wrap;
+    .more__details {
+      position: absolute;
+      // background-color: red;
+      right: 0%;
+      top: 8px;
+      margin-left: 20px;
+    }
+
     span {
       color: #a1a5b7;
       text-transform: uppercase;
@@ -137,8 +145,7 @@
       height: 40px;
       padding: 15px 20px;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      text-align: center;
     }
     .selected {
       color: #009ef6;
@@ -191,10 +198,11 @@
   padding: 20px;
   margin: 0 auto;
   max-width: 1500px;
-
+  width: 80%;
   .landing__lessons__container {
     display: grid;
     grid-template-columns: repeat(auto-fill, 300px);
+    // justify-content: center;
     gap: 20px;
   }
   h1 {
@@ -202,6 +210,7 @@
     color: $accentblue;
     font-size: $font_medium;
     font-weight: 700;
+    padding-left: 20px;
   }
   .landing__pagination {
     display: flex;
@@ -264,12 +273,17 @@
       margin-bottom: 30px;
     }
   }
-
+  .landing__category {
+    width: 100%;
+  }
   .landing__container {
     .categories__slider {
       display: flex;
       background-color: transparent;
-      width: calc(100% - 40px);
+      width: 100%;
+      // justify-content: center !important;
+      text-align: center;
+      align-items: center;
       position: relative;
       padding: 10px 20px;
       margin: 0 auto;
@@ -286,11 +300,14 @@
         border-radius: 0px;
         margin: 5px 0;
         font-weight: 700;
-
-        padding: 0 20px;
+        &:nth-child(2) {
+          border-left: none !important;
+        }
+        padding: 0 15px;
         &:not(:first-child) {
           border-left: 1px solid #dae1e8;
         }
+        height: 20px;
       }
 
       .selected {
@@ -397,6 +414,13 @@
           font-size: 25px;
         }
       }
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  .landing__container {
+    .categories__slider {
+      padding: 0px;
     }
   }
 }

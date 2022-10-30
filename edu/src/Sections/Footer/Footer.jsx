@@ -24,15 +24,6 @@ export default function Footer() {
   };
   const options = [
     {
-      value: "UK, English",
-      label: (
-        <div className="select__option">
-          <img src={uk} />
-          UK, English
-        </div>
-      ),
-    },
-    {
       value: "USA, English",
       label: (
         <div className="select__option">
@@ -41,15 +32,7 @@ export default function Footer() {
         </div>
       ),
     },
-    {
-      value: "USA, English",
-      label: (
-        <div className="select__option">
-          <img src={uk} />
-          USA, English
-        </div>
-      ),
-    },
+
     {
       value: "USA, English",
       label: (

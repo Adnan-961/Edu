@@ -11,7 +11,7 @@ export default function PasswordChanged() {
           forget to check your spam folder.
         </p>
         <button className="btn__primary">Sign In</button>
-        <p>
+        <p className="not_received">
           Did’t receive an email? <span>Try Again</span>
         </p>
       </div>

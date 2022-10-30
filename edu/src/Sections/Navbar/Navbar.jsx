@@ -58,7 +58,10 @@ export default function Navbar() {
         </div>
       </div>
       <div className="navbar__logo">
-        <img src={Logo} alt="logo" />
+        <Link to={"/"}>
+          {" "}
+          <img src={Logo} alt="logo" />
+        </Link>
         <img src={logo_mobile} alt="logo" className="logo__mobile" />
       </div>
       <div className="navbar__menu mobile">
