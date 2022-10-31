@@ -16,11 +16,13 @@ import Login from "./Sections/Login/Login";
 import Signup from "./Sections/Signup/Signup";
 import PasswordChanged from "./Sections/PasswordChanged/PasswordChanged";
 import HomePage from "./Sections/HomePage/HomePage";
+import TutorProfile from "./Components/TutorProfile/TutorProfile";
+import Tutors from "./Sections/Tutors/Tutors";
 function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar />
+        {/* <Navbar /> */}
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/landing" element={<Landing />} />
@@ -29,6 +31,8 @@ function App() {
           <Route path="/forget" element={<ForgotPassword />} />
           <Route path="/change" element={<ChangePassword />} />
           <Route path="/success" element={<PasswordChanged />} />
+          <Route path="/tutor" element={<TutorProfile />} />
+          <Route path="/tutors" element={<Tutors />} />
         </Routes>
 
         <Footer />
