@@ -1,0 +1,212 @@
+@import "../../variables.scss";
+
+.lessons__section {
+  // padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1500px;
+  margin: 0 auto;
+  overflow: hidden;
+  h1 {
+    font-size: $header_size;
+    color: $darkblue;
+    margin: 0;
+  }
+  p {
+    text-align: center;
+    max-width: 510px;
+    color: $p_color;
+    line-height: 150%;
+
+    font-family: "Open Sans", sans-serif !important;
+    font-size: $p_size;
+    font-weight: 400;
+  }
+  .carousel {
+    width: 90%;
+    margin: 0 auto;
+    .inner__carousel {
+      margin: 30px 0;
+      border-radius: 25px;
+      max-width: 1300px;
+    }
+    .lesson__header {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 80px;
+      height: 30px;
+      align-items: center;
+      border: 2px dashed #b5b5c3;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 0 80px;
+
+      h1 {
+        text-transform: uppercase;
+        margin: 0;
+        font-size: $lesson_header_size;
+        color: $darkblue;
+        font-weight: 700;
+        margin-top: -70px;
+        background-color: $white;
+        transform: translate(30px);
+      }
+      span {
+        color: $accentblue;
+        font-size: 25px;
+        text-decoration: underline;
+        font-weight: 500;
+        line-height: 120%;
+        margin-top: -78px;
+        transform: translate(-30px);
+        background-color: $white;
+        a {
+          color: $accentblue;
+        }
+      }
+    }
+  }
+  .lessons {
+    background-color: $white;
+    margin-top: -20px;
+  }
+}
+.slick-prev:before,
+.slick-next:before {
+  font-size: 25px !important;
+  color: #a1a5b7 !important;
+  @media screen and (max-width: 1200px) {
+    display: none !important;
+  }
+}
+.slick-arrow.slick-next {
+  // display: none !important;
+  transform: translate(-40px);
+  margin-top: -60px;
+  color: $white !important;
+  // transform: translateY(-10px);
+}
+.slick-arrow.slick-prev {
+  // display: none !important;
+  transform: translate(20px);
+  z-index: 10;
+  margin-top: -60px;
+  color: $white !important;
+  // transform: translateY(-10px);
+}
+@media screen and (max-width: 1300px) {
+  .lessons__section {
+    .carousel {
+      width: 100%;
+      margin: 0;
+      .inner__carousel {
+        width: 100%;
+        .lessons {
+          // display: none;
+          overflow: hidden;
+          // width: 100%;
+
+          min-width: 1200px;
+          @media screen and (max-width: 600px) {
+            min-width: auto;
+            width: 620px !important;
+          }
+          // @media screen and (max-width: 480px) {
+          //   min-width: auto;
+          //   width: 420px;
+          // }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1050px) {
+  .lessons__section {
+    h1 {
+      font-size: $header_md;
+    }
+    p {
+      font-size: $p_small;
+    }
+    .carousel {
+      .inner__carousel {
+        .lesson__header {
+          margin: 0;
+          border: none;
+          font-size: $lesson_title_size;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 750px) {
+  .lessons__section {
+    p {
+      width: 80%;
+    }
+    .carousel {
+      .inner__carousel {
+        .lesson__header {
+          h1 {
+            font-size: 18px;
+            margin: 0;
+          }
+          span {
+            font-size: 13px;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  .lessons__section {
+    .carousel {
+      .inner__carousel {
+        .lesson__header {
+          // margin: 0;
+          h1 {
+            font-size: $p_small;
+            // transform: translateX(-10px);
+          }
+          span {
+            font-size: $p_xs;
+          }
+        }
+      }
+    }
+    h1 {
+      font-size: $header_xs;
+    }
+    p {
+      font-size: $p_xs;
+      max-width: 85%;
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  .lessons__section {
+    .carousel {
+      .inner__carousel {
+        .lesson__header {
+          h1 {
+            transform: translateX(-10px);
+          }
+          span {
+            transform: translateX(10px);
+          }
+        }
+      }
+    }
+    h1 {
+      font-size: $header_xs;
+    }
+    p {
+      font-size: $p_xs;
+      max-width: 85%;
+    }
+  }
+}

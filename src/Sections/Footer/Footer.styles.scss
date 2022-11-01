@@ -1,0 +1,243 @@
+@import "../../variables.scss";
+
+.select__option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.languages {
+  margin: 0 20px;
+  @media screen and (max-width: 1250px) {
+    margin: 0 0px;
+  }
+  .select__option {
+    font-size: 12px;
+  }
+  width: 157px;
+  border: none;
+  outline: none;
+  .css-1s2u09g-control {
+    background-color: transparent;
+    border: none;
+    color: white;
+    .css-1okebmr-indicatorSeparator {
+      display: none;
+    }
+    .css-qc6sy-singleValue {
+      color: #fff;
+    }
+  }
+}
+.bottom__section {
+  display: flex;
+  justify-content: space-between;
+  background-color: $accentblue;
+  color: $white;
+  padding: 20px;
+  height: 40px;
+  font-size: 14px;
+  align-items: center;
+  p {
+    margin: 0;
+  }
+  .socials {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    img {
+      width: 25px;
+    }
+  }
+  .terms {
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+  }
+}
+.footer__container {
+  background-color: $footer_bg;
+  background-color: 500px;
+  padding: 85px 65px;
+  padding-right: 20px;
+  display: flex;
+  .footer__logo {
+    display: flex;
+    flex-direction: column;
+    img {
+      width: 105px;
+      height: 42px;
+    }
+    p {
+      width: 400px;
+      color: $lesson_p_color;
+      font-size: $p_xs;
+    }
+  }
+  .columns {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+
+    .col {
+      display: flex;
+      flex-direction: column;
+      // align-items: center;
+      ul {
+        padding: 0;
+        li {
+          margin: 0;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          list-style: none;
+          color: $lesson_p_color;
+          font-size: $footer_text;
+          padding: 10px 0;
+          font-weight: 500;
+          a {
+            text-decoration: none;
+            color: $lesson_p_color;
+          }
+        }
+      }
+      h4 {
+        color: $white;
+        font-size: $footer_header;
+        margin: 0;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .bottom__section {
+    flex-direction: column-reverse;
+    height: auto;
+    align-items: flex-start;
+  }
+  .footer__container {
+    display: flex;
+    flex-direction: column;
+    .footer__logo {
+      display: flex;
+      flex-direction: column;
+      margin-top: -30px;
+      img {
+        width: 105px;
+        height: 42px;
+      }
+      p {
+        width: auto;
+        font-size: $footer_text_md;
+      }
+      padding: 30px 0;
+    }
+    .columns {
+      display: grid;
+      width: 100%;
+      align-self: center;
+      justify-self: center;
+      grid-template-columns: repeat(2, 1fr);
+      .col {
+        ul {
+          padding: 0;
+          li {
+            margin: 0 !important;
+
+            list-style: none;
+            color: $lesson_p_color;
+            font-size: $footer_text_md;
+            padding: 10px 0;
+            font-weight: 700;
+          }
+        }
+        h4 {
+          color: $white;
+          font-size: 16px;
+          margin: 0;
+        }
+      }
+    }
+  }
+  .bottom__section {
+    display: flex;
+    justify-content: space-between;
+    background-color: $accentblue;
+    color: $white;
+    padding: 30px;
+    height: auto;
+    p {
+      margin: 0;
+    }
+    gap: 20px;
+    .socials {
+      width: 350px;
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      img {
+        width: 25px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer__container {
+    padding: 80px 20px;
+    width: auto;
+  }
+  footer {
+    .socials {
+      gap: 5px !important;
+      justify-content: space-between !important;
+      // width: 90% !important;
+      max-width: 300px;
+
+      img {
+        width: 20px !important;
+      }
+    }
+    .terms {
+      // display: none !important;
+      width: 290px !important;
+      font-size: 12px;
+      span {
+        white-space: nowrap;
+      }
+      @media screen and (max-width: 320px) {
+        font-size: 11px;
+        width: 100% !important;
+        font-weight: 600;
+      }
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .bottom__section {
+    padding: 20px;
+    p {
+      font-size: 12px;
+    }
+    .socials {
+      // width: auto;
+      width: 250px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center !important;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+  .footer__container {
+    padding: 80px 20px;
+    width: auto;
+    .columns {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

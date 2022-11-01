@@ -1,0 +1,162 @@
+@import "../../variables.scss";
+.related__lessons__container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  .related__header {
+    display: flex;
+    justify-content: center;
+    color: $darkblue;
+    font-size: $lesson_header_size;
+    text-align: center;
+  }
+  margin: 50px 0px;
+  .related__lessons {
+    display: grid;
+    width: 80%;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-self: center;
+    gap: 20px;
+    .lesson {
+      max-width: 345px;
+      padding: 10px 20px;
+      background: $related__lesson__bg;
+      border: 1px dashed $related__lesson__border;
+      border-radius: 9px;
+      color: $lesson_p_color;
+      .lesson__categories {
+        display: none;
+      }
+      .lesson__details {
+        border-bottom: 1px dashed $related__lesson__border;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: $accentblue;
+        font-size: $realted__lesson_title_size;
+        font-weight: 500;
+        padding: 10px 0;
+      }
+      p {
+        color: $lesson_p_color;
+      }
+      .lesson__seeall {
+        a {
+          text-decoration: none;
+          color: $see_all;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .related__lessons__container {
+    h1 {
+      text-align: center;
+    }
+    .related__lessons {
+      grid-template-columns: repeat(3, 400px);
+
+      justify-content: center;
+      align-self: center;
+      gap: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 975px) {
+  .related__lessons__container {
+    padding: 0 30px;
+    margin: 30px auto;
+    .related__header {
+      justify-content: center;
+      h1 {
+        font-size: $header_md;
+        // max-width: 280px;
+        text-align: center;
+        line-height: 110%;
+      }
+    }
+    .related__lessons {
+      width: 100%;
+
+      grid-template-columns: repeat(3, 180px);
+      @media screen and (max-width: 625px) {
+        grid-template-columns: repeat(auto-fill, 180px);
+      }
+
+      grid-template-rows: 90px;
+      justify-content: center;
+
+      // justify-content: start;
+      align-self: flex-start;
+      gap: 20px;
+      .lesson {
+        // max-width: 150px;
+        // max-height: 90px;
+        padding: 10px;
+        .lesson__categories {
+          display: flex;
+          padding-left: 10px;
+          white-space: nowrap;
+        }
+        p {
+          display: none;
+        }
+        span {
+          font-size: 14px;
+        }
+        .lesson__details {
+          border: none;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .related__lessons__container {
+    .related__header {
+      h1 {
+        font-size: $header_xs;
+      }
+    }
+    .related__lessons {
+      grid-template-columns: repeat(auto-fit, 180px);
+      padding-right: 0;
+      width: 100%;
+
+      // gap: 5px;
+
+      justify-content: center;
+    }
+  }
+}
+// @media screen and (max-width: 975px) {
+//   .related__lessons__container {
+//     padding: 0 30px;
+//     margin: 30px auto;
+//     .related__header {
+//       justify-content: center;
+//       h1 {
+//         font-size: $header_md;
+//         // max-width: 280px;
+//         text-align: center;
+//         line-height: 110%;
+//       }
+//     }
+//     .related__lessons {
+//       width: 100%;
+
+//       grid-template-columns: repeat(auto-fit, 180px);
+//       grid-template-rows: 90px;
+//       justify-content: center;
+
+//       // justify-content: start;
+//       align-self: flex-start;
+//     }
+//   }
+// }

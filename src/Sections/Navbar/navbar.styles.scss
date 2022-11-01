@@ -1,0 +1,414 @@
+@import "../../variables.scss";
+
+.navbar__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: $accentblue;
+  height: 90px;
+  padding: 0px 20px;
+  position: fixed;
+  width: calc(100% - 40px);
+  z-index: 999;
+
+  .navbar__logo {
+    .logo__mobile {
+      display: none;
+    }
+    img {
+      width: 123px;
+    }
+  }
+  .navbar__links {
+    display: flex;
+    gap: 10px;
+    .nav__search {
+      width: 250px;
+      background-color: $white;
+      height: 40px;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      padding: 0 15px;
+      input {
+        border: none;
+        outline: none;
+        margin-left: 10px;
+        width: 100%;
+        background-color: transparent;
+        &::placeholder {
+          color: rgb(0, 0, 0, 0.5);
+        }
+      }
+      img {
+        width: 18px;
+        height: 18px;
+      }
+    }
+    .primary {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      background-color: $gold;
+      border: none;
+      width: 85px;
+      height: 40px;
+      color: $white;
+      border-radius: 7px;
+      cursor: pointer;
+    }
+    .btn__chevron__rotate {
+      rotate: 180deg;
+    }
+    .heart {
+      display: flex;
+      align-items: center;
+      position: relative;
+      svg {
+        font-size: 32px;
+        cursor: pointer;
+      }
+      &::after {
+        content: "2";
+        font-size: 11px;
+        position: absolute;
+        background-color: #ffa800;
+
+        width: 19px;
+        height: 19px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        top: -2px;
+        right: -7px;
+      }
+    }
+    .teacher__btn {
+      background-color: $accentblue;
+      border: solid 1px $white;
+      width: 180px;
+      height: 40px;
+      color: $white;
+      border-radius: 10px;
+      margin: 0 20px;
+      cursor: pointer;
+      transition: all ease-in-out 0.2s;
+
+      &:hover {
+        background-color: $white;
+        color: $accentblue;
+        transition: all ease-in-out 0.2s;
+        border: solid 1px $accentblue;
+      }
+    }
+    .nav__login {
+      width: 66px;
+      height: 40px;
+      border-radius: 6px;
+      border: none;
+      padding: 10px 16px;
+      font-size: 12px;
+      cursor: pointer;
+      background-color: $white;
+      a {
+        text-decoration: none;
+      }
+    }
+    .nav__dropdown {
+      .active {
+        opacity: 1 !important;
+        transform: translateY(0px) !important;
+        pointer-events: auto !important;
+      }
+      .nav__menu {
+        height: max-content;
+        z-index: 10;
+        position: absolute;
+        left: 13vw;
+        top: 90px;
+        background: #f3f6f9;
+        box-shadow: 0px 0px 4.53648px rgba(35, 18, 117, 0.12),
+          0px 25.7067px 30.2432px -15.1216px rgba(35, 18, 117, 0.18);
+        border-radius: 7.56081px;
+        padding: 0.75rem;
+        border-radius: 0.25rem;
+        width: calc(100% - 27vw);
+        overflow: hidden;
+
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-15px);
+        transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+      }
+    }
+  }
+
+  .navbar__menu {
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+.mobile {
+  display: none;
+}
+
+.navbar__mobile {
+  display: flex;
+  position: fixed;
+  background-color: $white;
+  max-width: 275px;
+  width: 275px;
+  flex-direction: column;
+  left: -900px;
+  top: 0px;
+  height: 100%;
+  transition: left 0.3s ease-in-out;
+  overflow-y: scroll;
+  @media screen and (max-width: 360px) {
+    width: 235px;
+  }
+
+  #nav__currency {
+    width: 70px;
+    margin: 10px;
+    height: 40px;
+    border: none;
+    background-color: #f2f3f7;
+    border-radius: 9px;
+    padding: 5px;
+  }
+
+  .nav__teacher {
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-top: solid #eff2f5 1px;
+    .teacher__btn__mobile {
+      // background-color: $accentblue;
+
+      border: solid 1px #afafaf;
+      width: 180px;
+      height: 40px;
+      color: #afafaf;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all ease-in-out 0.2s;
+    }
+  }
+  .nav__category__details {
+    .nav__category__list {
+      border-bottom: solid #eff2f5 1px;
+
+      .cat__seeall {
+        color: #cacaca;
+      }
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      span {
+        cursor: pointer;
+      }
+      h3 {
+        color: $accentblue;
+      }
+    }
+    padding-top: 0;
+    width: 100%;
+    .back {
+      width: 100%;
+      padding: 0;
+      background: #f3f6f9;
+
+      height: 55px;
+      display: flex;
+      align-items: center;
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 70px;
+        color: $p_color;
+        text-decoration: none;
+        font-size: 18px;
+        cursor: pointer;
+        svg {
+          color: $p_color;
+          padding-right: 10px;
+        }
+      }
+    }
+    h3 {
+      color: $nav_title;
+      margin: 0;
+      font-weight: 600;
+    }
+    color: $p_color;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .our__lessons {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 40px);
+    border-top: solid 1px #eff2f5;
+    border-bottom: solid 1px #eff2f5;
+    height: auto;
+    padding: 5px 20px;
+    .other {
+      // display: none;
+      border-top: solid #eff2f5 1px;
+      margin-top: 20px;
+      padding-top: 10px;
+    }
+    .nav__category {
+      cursor: pointer;
+    }
+    .login {
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      border-bottom: solid 1px #eff2f5;
+
+      a {
+        text-decoration: none;
+      }
+      span {
+        color: $gold;
+      }
+    }
+    h3 {
+      color: $accentblue;
+      font-weight: 700;
+      margin-top: 20px;
+    }
+    .nav__categories__mobile {
+      overflow: hidden !important;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      a {
+        text-decoration: none;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .nav__category {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        color: $p_color;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: capitalize;
+
+        svg {
+          color: $p_color;
+        }
+      }
+    }
+  }
+}
+.navbar__mobile__active {
+  left: 0px;
+  transition: left 0.3s ease-in-out;
+}
+
+.close__navbar {
+  border-radius: 50%;
+  background-color: $white;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50px;
+  left: -100px;
+  transition: left 0.3s ease-in-out;
+  @media screen and (max-width: 360px) {
+    // left: 247px !important;
+    width: 35px;
+    height: 35px;
+  }
+}
+.close__navbar__active {
+  display: flex !important;
+  left: 300px !important;
+  @media screen and (max-width: 360px) {
+    left: 240px !important;
+  }
+}
+@media screen and (min-width: 1051px) {
+  .navbar__mobile,
+  .navbar__mobile__active {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .mobile {
+    display: flex !important;
+    justify-content: space-between;
+    width: 70px;
+    align-items: center;
+    .heart {
+      display: flex;
+      align-items: center;
+      position: relative;
+      svg {
+        font-size: 20px;
+      }
+      &::after {
+        content: "2";
+        font-size: 7px;
+        position: absolute;
+        background-color: #ffa800;
+
+        width: 15px;
+        height: 15px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        top: -7px;
+        right: -7px;
+      }
+    }
+  }
+
+  .nav__login,
+  .teacher__btn,
+  .nav__search,
+  .primary {
+    display: none !important;
+  }
+  .navbar__container {
+    justify-content: space-between;
+    .navbar__logo {
+      .logo__mobile {
+        display: block;
+      }
+      img {
+        width: auto;
+        display: none;
+      }
+    }
+    .navbar__links {
+      display: none !important;
+    }
+  }
+}

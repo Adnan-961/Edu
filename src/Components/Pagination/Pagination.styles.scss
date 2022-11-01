@@ -1,0 +1,51 @@
+@import "../../variables.scss";
+
+.landing__pagination {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding-top: 20px;
+
+  span {
+    color: #5e6278;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .pages {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 230px;
+    color: $lesson_p_color;
+    span {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .current__page {
+      background-color: #e8f1ff;
+      color: $accentblue;
+    }
+    svg {
+      color: $lesson_p_color;
+      cursor: pointer;
+      font-size: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .landing__pagination {
+    span {
+      display: none;
+    }
+    justify-content: center;
+    width: 100%;
+  }
+}
